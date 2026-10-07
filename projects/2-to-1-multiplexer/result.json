@@ -1,0 +1,1048 @@
+{
+  "success": true,
+  "category": "rtl",
+  "static": 100,
+  "compilation": 100,
+  "functional": 100,
+  "coverage": null,
+  "codeQuality": 100,
+  "structureScore": 100,
+  "simulationScore": 100,
+  "compileScore": 100,
+  "finalScore": 100,
+  "overallScore": 100,
+  "score": 100,
+  "passed": true,
+  "tier": "excellent",
+  "tierLabel": "excellent",
+  "weights": {
+    "static": 0.1,
+    "compilation": 0.15,
+    "functional": 0.55,
+    "coverage": 0.1,
+    "codeQuality": 0.1
+  },
+  "confidence": 1,
+  "findings": [
+    "Structured task validated offline against its curated golden reference."
+  ],
+  "errors": [],
+  "warnings": [],
+  "info": [
+    "Structured task validated offline against its curated golden reference."
+  ],
+  "simulationExecuted": true,
+  "simulationStatus": "Passed",
+  "simulationTranscript": "QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 12:25:19 on Oct 07,2026\r\nvlog -sv student_design.sv golden_reference.sv hidden_lockstep_tb.sv \r\n-- Compiling module mux_2x1\r\n-- Compiling module mux_2x1_ref\r\n-- Compiling module hidden_lockstep_tb\r\n\r\nTop level modules:\r\n\thidden_lockstep_tb\r\nEnd time: 12:25:19 on Oct 07,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_structured_rtl_mux_2x1_1791356113091\\transcript.log hidden_lockstep_tb -do \"run.do\" \r\n# Start time: 12:25:20 on Oct 07,2026\r\n# ** Note: (vsim-3812) Design is being optimized...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.hidden_lockstep_tb(fast)\r\n# Loading work.mux_2x1(fast)\r\n# Loading work.mux_2x1_ref(fast)\r\n# do run.do\r\n# 0\r\n# ::TEST_START:: {\"id\":0,\"name\":\"Reset and idle\",\"category\":\"basic\",\"requirement\":\"Idle behaviour from the post-reset initial state\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":1,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":2,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":3,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":4,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":5,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":6,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":7,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":8,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":9,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_PASS:: {\"id\":0,\"cycles\":9,\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_START:: {\"id\":1,\"name\":\"Back-to-back toggling\",\"category\":\"corner\",\"requirement\":\"Robustness under back-to-back input changes\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":10,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":11,\"stimulus\":\"arena_signal_a=4'h1, arena_signal_b=4'h3, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h1\",\"actual\":\"arena_signal_y=4'h1\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":12,\"stimulus\":\"arena_signal_a=4'h6, arena_signal_b=4'h8, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h6\",\"actual\":\"arena_signal_y=4'h6\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":13,\"stimulus\":\"arena_signal_a=4'ha, arena_signal_b=4'h4, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h4\",\"actual\":\"arena_signal_y=4'h4\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":14,\"stimulus\":\"arena_signal_a=4'h9, arena_signal_b=4'hc, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h9\",\"actual\":\"arena_signal_y=4'h9\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":15,\"stimulus\":\"arena_signal_a=4'h7, arena_signal_b=4'h8, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h8\",\"actual\":\"arena_signal_y=4'h8\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":16,\"stimulus\":\"arena_signal_a=4'h3, arena_signal_b=4'h3, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h3\",\"actual\":\"arena_signal_y=4'h3\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":17,\"stimulus\":\"arena_signal_a=4'h6, arena_signal_b=4'hc, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'hc\",\"actual\":\"arena_signal_y=4'hc\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":18,\"stimulus\":\"arena_signal_a=4'h9, arena_signal_b=4'h2, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h2\",\"actual\":\"arena_signal_y=4'h2\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":19,\"stimulus\":\"arena_signal_a=4'h7, arena_signal_b=4'h5, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h7\",\"actual\":\"arena_signal_y=4'h7\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":20,\"stimulus\":\"arena_signal_a=4'h6, arena_signal_b=4'hd, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h6\",\"actual\":\"arena_signal_y=4'h6\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":21,\"stimulus\":\"arena_signal_a=4'h6, arena_signal_b=4'h1, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h1\",\"actual\":\"arena_signal_y=4'h1\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":22,\"stimulus\":\"arena_signal_a=4'h2, arena_signal_b=4'hb, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h2\",\"actual\":\"arena_signal_y=4'h2\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":23,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h8, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h8\",\"actual\":\"arena_signal_y=4'h8\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":24,\"stimulus\":\"arena_signal_a=4'hd, arena_signal_b=4'hb, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'hb\",\"actual\":\"arena_signal_y=4'hb\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":25,\"stimulus\":\"arena_signal_a=4'h1, arena_signal_b=4'h1, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h1\",\"actual\":\"arena_signal_y=4'h1\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":26,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h1, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":27,\"stimulus\":\"arena_signal_a=4'h4, arena_signal_b=4'h6, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h4\",\"actual\":\"arena_signal_y=4'h4\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":28,\"stimulus\":\"arena_signal_a=4'h4, arena_signal_b=4'hc, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'hc\",\"actual\":\"arena_signal_y=4'hc\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":29,\"stimulus\":\"arena_signal_a=4'h4, arena_signal_b=4'h9, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h9\",\"actual\":\"arena_signal_y=4'h9\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":30,\"stimulus\":\"arena_signal_a=4'h8, arena_signal_b=4'hc, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'hc\",\"actual\":\"arena_signal_y=4'hc\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":31,\"stimulus\":\"arena_signal_a=4'hd, arena_signal_b=4'ha, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hd\",\"actual\":\"arena_signal_y=4'hd\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":32,\"stimulus\":\"arena_signal_a=4'h9, arena_signal_b=4'h3, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h9\",\"actual\":\"arena_signal_y=4'h9\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":33,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'hd, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h5\",\"actual\":\"arena_signal_y=4'h5\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":34,\"stimulus\":\"arena_signal_a=4'hc, arena_signal_b=4'hb, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hc\",\"actual\":\"arena_signal_y=4'hc\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_PASS:: {\"id\":1,\"cycles\":34,\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_START:: {\"id\":2,\"name\":\"Random stimulus batch 2\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":35,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":36,\"stimulus\":\"arena_signal_a=4'ha, arena_signal_b=4'h6, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h6\",\"actual\":\"arena_signal_y=4'h6\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":37,\"stimulus\":\"arena_signal_a=4'h7, arena_signal_b=4'h4, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h4\",\"actual\":\"arena_signal_y=4'h4\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":38,\"stimulus\":\"arena_signal_a=4'h8, arena_signal_b=4'h6, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h8\",\"actual\":\"arena_signal_y=4'h8\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":39,\"stimulus\":\"arena_signal_a=4'hc, arena_signal_b=4'hb, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'hb\",\"actual\":\"arena_signal_y=4'hb\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":40,\"stimulus\":\"arena_signal_a=4'h6, arena_signal_b=4'h1, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h1\",\"actual\":\"arena_signal_y=4'h1\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":41,\"stimulus\":\"arena_signal_a=4'h1, arena_signal_b=4'h8, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h1\",\"actual\":\"arena_signal_y=4'h1\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":42,\"stimulus\":\"arena_signal_a=4'h4, arena_signal_b=4'h9, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h4\",\"actual\":\"arena_signal_y=4'h4\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":43,\"stimulus\":\"arena_signal_a=4'h6, arena_signal_b=4'hb, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'hb\",\"actual\":\"arena_signal_y=4'hb\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":44,\"stimulus\":\"arena_signal_a=4'h3, arena_signal_b=4'ha, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h3\",\"actual\":\"arena_signal_y=4'h3\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":45,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'h1, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h5\",\"actual\":\"arena_signal_y=4'h5\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":46,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'h0, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":47,\"stimulus\":\"arena_signal_a=4'h9, arena_signal_b=4'h1, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h1\",\"actual\":\"arena_signal_y=4'h1\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":48,\"stimulus\":\"arena_signal_a=4'h4, arena_signal_b=4'h6, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h4\",\"actual\":\"arena_signal_y=4'h4\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":49,\"stimulus\":\"arena_signal_a=4'h9, arena_signal_b=4'h5, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h9\",\"actual\":\"arena_signal_y=4'h9\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":50,\"stimulus\":\"arena_signal_a=4'hc, arena_signal_b=4'hc, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hc\",\"actual\":\"arena_signal_y=4'hc\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":51,\"stimulus\":\"arena_signal_a=4'hf, arena_signal_b=4'ha, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'ha\",\"actual\":\"arena_signal_y=4'ha\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":52,\"stimulus\":\"arena_signal_a=4'he, arena_signal_b=4'h7, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h7\",\"actual\":\"arena_signal_y=4'h7\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":53,\"stimulus\":\"arena_signal_a=4'hb, arena_signal_b=4'h6, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h6\",\"actual\":\"arena_signal_y=4'h6\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":54,\"stimulus\":\"arena_signal_a=4'hc, arena_signal_b=4'h0, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":55,\"stimulus\":\"arena_signal_a=4'he, arena_signal_b=4'h3, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h3\",\"actual\":\"arena_signal_y=4'h3\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":56,\"stimulus\":\"arena_signal_a=4'h4, arena_signal_b=4'hb, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h4\",\"actual\":\"arena_signal_y=4'h4\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":57,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h6, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":58,\"stimulus\":\"arena_signal_a=4'he, arena_signal_b=4'h3, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'he\",\"actual\":\"arena_signal_y=4'he\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":59,\"stimulus\":\"arena_signal_a=4'hd, arena_signal_b=4'h8, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hd\",\"actual\":\"arena_signal_y=4'hd\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_PASS:: {\"id\":2,\"cycles\":59,\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_START:: {\"id\":3,\"name\":\"Random stimulus batch 3\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":60,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":61,\"stimulus\":\"arena_signal_a=4'h9, arena_signal_b=4'h4, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h4\",\"actual\":\"arena_signal_y=4'h4\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":62,\"stimulus\":\"arena_signal_a=4'hb, arena_signal_b=4'h7, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hb\",\"actual\":\"arena_signal_y=4'hb\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":63,\"stimulus\":\"arena_signal_a=4'h9, arena_signal_b=4'ha, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'ha\",\"actual\":\"arena_signal_y=4'ha\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":64,\"stimulus\":\"arena_signal_a=4'ha, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'ha\",\"actual\":\"arena_signal_y=4'ha\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":65,\"stimulus\":\"arena_signal_a=4'hf, arena_signal_b=4'h2, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h2\",\"actual\":\"arena_signal_y=4'h2\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":66,\"stimulus\":\"arena_signal_a=4'h4, arena_signal_b=4'hb, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h4\",\"actual\":\"arena_signal_y=4'h4\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":67,\"stimulus\":\"arena_signal_a=4'h1, arena_signal_b=4'h1, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h1\",\"actual\":\"arena_signal_y=4'h1\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":68,\"stimulus\":\"arena_signal_a=4'h6, arena_signal_b=4'h3, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h6\",\"actual\":\"arena_signal_y=4'h6\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":69,\"stimulus\":\"arena_signal_a=4'h8, arena_signal_b=4'h3, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h3\",\"actual\":\"arena_signal_y=4'h3\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":70,\"stimulus\":\"arena_signal_a=4'hd, arena_signal_b=4'hd, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'hd\",\"actual\":\"arena_signal_y=4'hd\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":71,\"stimulus\":\"arena_signal_a=4'he, arena_signal_b=4'h0, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":72,\"stimulus\":\"arena_signal_a=4'hf, arena_signal_b=4'h7, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h7\",\"actual\":\"arena_signal_y=4'h7\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":73,\"stimulus\":\"arena_signal_a=4'hd, arena_signal_b=4'h3, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hd\",\"actual\":\"arena_signal_y=4'hd\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":74,\"stimulus\":\"arena_signal_a=4'h7, arena_signal_b=4'h0, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":75,\"stimulus\":\"arena_signal_a=4'h9, arena_signal_b=4'he, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h9\",\"actual\":\"arena_signal_y=4'h9\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":76,\"stimulus\":\"arena_signal_a=4'he, arena_signal_b=4'h9, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h9\",\"actual\":\"arena_signal_y=4'h9\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":77,\"stimulus\":\"arena_signal_a=4'h3, arena_signal_b=4'he, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h3\",\"actual\":\"arena_signal_y=4'h3\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":78,\"stimulus\":\"arena_signal_a=4'hf, arena_signal_b=4'h4, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h4\",\"actual\":\"arena_signal_y=4'h4\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":79,\"stimulus\":\"arena_signal_a=4'hc, arena_signal_b=4'h3, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hc\",\"actual\":\"arena_signal_y=4'hc\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":80,\"stimulus\":\"arena_signal_a=4'he, arena_signal_b=4'h7, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'he\",\"actual\":\"arena_signal_y=4'he\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":81,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'h4, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h5\",\"actual\":\"arena_signal_y=4'h5\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":82,\"stimulus\":\"arena_signal_a=4'hc, arena_signal_b=4'h2, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h2\",\"actual\":\"arena_signal_y=4'h2\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":83,\"stimulus\":\"arena_signal_a=4'hb, arena_signal_b=4'h9, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hb\",\"actual\":\"arena_signal_y=4'hb\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":84,\"stimulus\":\"arena_signal_a=4'h6, arena_signal_b=4'h7, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h6\",\"actual\":\"arena_signal_y=4'h6\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_PASS:: {\"id\":3,\"cycles\":84,\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_START:: {\"id\":4,\"name\":\"Random stimulus batch 4\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":85,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":86,\"stimulus\":\"arena_signal_a=4'hd, arena_signal_b=4'hb, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hd\",\"actual\":\"arena_signal_y=4'hd\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":87,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'h6, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h5\",\"actual\":\"arena_signal_y=4'h5\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":88,\"stimulus\":\"arena_signal_a=4'hd, arena_signal_b=4'h6, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h6\",\"actual\":\"arena_signal_y=4'h6\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":89,\"stimulus\":\"arena_signal_a=4'h3, arena_signal_b=4'h5, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h3\",\"actual\":\"arena_signal_y=4'h3\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":90,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'hd, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h5\",\"actual\":\"arena_signal_y=4'h5\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":91,\"stimulus\":\"arena_signal_a=4'h7, arena_signal_b=4'h8, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h7\",\"actual\":\"arena_signal_y=4'h7\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":92,\"stimulus\":\"arena_signal_a=4'ha, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'ha\",\"actual\":\"arena_signal_y=4'ha\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":93,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'hd, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h5\",\"actual\":\"arena_signal_y=4'h5\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":94,\"stimulus\":\"arena_signal_a=4'h8, arena_signal_b=4'h0, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":95,\"stimulus\":\"arena_signal_a=4'hd, arena_signal_b=4'he, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hd\",\"actual\":\"arena_signal_y=4'hd\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":96,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'hc, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h5\",\"actual\":\"arena_signal_y=4'h5\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":97,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'hb, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'hb\",\"actual\":\"arena_signal_y=4'hb\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":98,\"stimulus\":\"arena_signal_a=4'hc, arena_signal_b=4'h5, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hc\",\"actual\":\"arena_signal_y=4'hc\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":99,\"stimulus\":\"arena_signal_a=4'h6, arena_signal_b=4'h1, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h1\",\"actual\":\"arena_signal_y=4'h1\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":100,\"stimulus\":\"arena_signal_a=4'h2, arena_signal_b=4'h5, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h2\",\"actual\":\"arena_signal_y=4'h2\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":101,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h6, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":102,\"stimulus\":\"arena_signal_a=4'h8, arena_signal_b=4'hd, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'hd\",\"actual\":\"arena_signal_y=4'hd\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":103,\"stimulus\":\"arena_signal_a=4'hb, arena_signal_b=4'h4, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hb\",\"actual\":\"arena_signal_y=4'hb\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":104,\"stimulus\":\"arena_signal_a=4'he, arena_signal_b=4'h0, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":105,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'h6, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h5\",\"actual\":\"arena_signal_y=4'h5\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":106,\"stimulus\":\"arena_signal_a=4'h2, arena_signal_b=4'h9, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h9\",\"actual\":\"arena_signal_y=4'h9\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":107,\"stimulus\":\"arena_signal_a=4'hc, arena_signal_b=4'ha, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hc\",\"actual\":\"arena_signal_y=4'hc\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":108,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'he, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":109,\"stimulus\":\"arena_signal_a=4'h8, arena_signal_b=4'hf, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h8\",\"actual\":\"arena_signal_y=4'h8\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_PASS:: {\"id\":4,\"cycles\":109,\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_START:: {\"id\":5,\"name\":\"Random stimulus batch 5\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":110,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":111,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'he, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'he\",\"actual\":\"arena_signal_y=4'he\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":112,\"stimulus\":\"arena_signal_a=4'ha, arena_signal_b=4'h6, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h6\",\"actual\":\"arena_signal_y=4'h6\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":113,\"stimulus\":\"arena_signal_a=4'h3, arena_signal_b=4'ha, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h3\",\"actual\":\"arena_signal_y=4'h3\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":114,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'h4, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h5\",\"actual\":\"arena_signal_y=4'h5\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":115,\"stimulus\":\"arena_signal_a=4'h3, arena_signal_b=4'hf, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'hf\",\"actual\":\"arena_signal_y=4'hf\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":116,\"stimulus\":\"arena_signal_a=4'h8, arena_signal_b=4'he, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h8\",\"actual\":\"arena_signal_y=4'h8\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":117,\"stimulus\":\"arena_signal_a=4'h3, arena_signal_b=4'h3, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h3\",\"actual\":\"arena_signal_y=4'h3\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":118,\"stimulus\":\"arena_signal_a=4'h2, arena_signal_b=4'h0, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":119,\"stimulus\":\"arena_signal_a=4'hd, arena_signal_b=4'h9, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'hd\",\"actual\":\"arena_signal_y=4'hd\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":120,\"stimulus\":\"arena_signal_a=4'h9, arena_signal_b=4'h4, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h4\",\"actual\":\"arena_signal_y=4'h4\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":121,\"stimulus\":\"arena_signal_a=4'h5, arena_signal_b=4'hb, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h5\",\"actual\":\"arena_signal_y=4'h5\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":122,\"stimulus\":\"arena_signal_a=4'h1, arena_signal_b=4'h0, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h1\",\"actual\":\"arena_signal_y=4'h1\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":123,\"stimulus\":\"arena_signal_a=4'hc, arena_signal_b=4'hf, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'hf\",\"actual\":\"arena_signal_y=4'hf\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":124,\"stimulus\":\"arena_signal_a=4'h7, arena_signal_b=4'h3, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h3\",\"actual\":\"arena_signal_y=4'h3\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":125,\"stimulus\":\"arena_signal_a=4'h3, arena_signal_b=4'ha, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'ha\",\"actual\":\"arena_signal_y=4'ha\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":126,\"stimulus\":\"arena_signal_a=4'hc, arena_signal_b=4'h9, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h9\",\"actual\":\"arena_signal_y=4'h9\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":127,\"stimulus\":\"arena_signal_a=4'h0, arena_signal_b=4'h7, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h0\",\"actual\":\"arena_signal_y=4'h0\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":128,\"stimulus\":\"arena_signal_a=4'hf, arena_signal_b=4'h7, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h7\",\"actual\":\"arena_signal_y=4'h7\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":129,\"stimulus\":\"arena_signal_a=4'h2, arena_signal_b=4'hd, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h2\",\"actual\":\"arena_signal_y=4'h2\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":130,\"stimulus\":\"arena_signal_a=4'ha, arena_signal_b=4'hd, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'ha\",\"actual\":\"arena_signal_y=4'ha\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":131,\"stimulus\":\"arena_signal_a=4'he, arena_signal_b=4'h6, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h6\",\"actual\":\"arena_signal_y=4'h6\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":132,\"stimulus\":\"arena_signal_a=4'h4, arena_signal_b=4'h8, arena_signal_sel=0\",\"expected\":\"arena_signal_y=4'h4\",\"actual\":\"arena_signal_y=4'h4\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":133,\"stimulus\":\"arena_signal_a=4'hb, arena_signal_b=4'h9, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h9\",\"actual\":\"arena_signal_y=4'h9\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":134,\"stimulus\":\"arena_signal_a=4'hb, arena_signal_b=4'h1, arena_signal_sel=1\",\"expected\":\"arena_signal_y=4'h1\",\"actual\":\"arena_signal_y=4'h1\",\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_PASS:: {\"id\":5,\"cycles\":134,\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::TEST_SUMMARY:: {\"total\":6,\"passed\":6,\"failed\":0,\"score\":100,\"nonce\":\"64cc976ea8b64f86\"}\r\n# ::JUDGE_DONE:: {\"cycles\":134,\"cases\":6,\"mismatches\":0,\"nonce\":\"64cc976ea8b64f86\"}\r\n# ** Note: $finish    : hidden_lockstep_tb.sv(263)\r\n#    Time: 1520 ns  Iteration: 0  Instance: /hidden_lockstep_tb\r\n# End time: 12:25:21 on Oct 07,2026, Elapsed time: 0:00:01\r\n# Errors: 0, Warnings: 1\r\n",
+  "simulator": "questa",
+  "passedCases": [
+    {
+      "id": 0,
+      "name": "Reset and idle",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 1,
+      "name": "Back-to-back toggling",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 2,
+      "name": "Random stimulus batch 2",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 3,
+      "name": "Random stimulus batch 3",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 4,
+      "name": "Random stimulus batch 4",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 5,
+      "name": "Random stimulus batch 5",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    }
+  ],
+  "failedCases": [],
+  "notRunCases": [],
+  "uncoveredCases": [],
+  "compileErrors": [],
+  "simulationErrors": [],
+  "coverageScore": 0,
+  "coverageMeasured": false,
+  "gateStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass"
+  },
+  "shortCircuit": null,
+  "reachedCompilation": true,
+  "reachedSimulation": true,
+  "stageStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "coverage": "not_run",
+    "assertions": "not_run"
+  },
+  "components": {
+    "static": 100,
+    "compilation": 100,
+    "functional": 100,
+    "coverage": 0,
+    "codeQuality": 100,
+    "simulation": 100
+  },
+  "durationMs": 2803,
+  "judge": {
+    "verdict": "AC",
+    "verdictLabel": "Accepted",
+    "passed": true,
+    "score": 100,
+    "gates": {
+      "environment": "pass",
+      "compile": "pass",
+      "execution": "pass",
+      "functional": "pass"
+    },
+    "shortCircuit": null,
+    "reachedCompilation": true,
+    "reachedSimulation": true,
+    "coverageMeasured": false,
+    "failureReasons": [],
+    "testCases": [
+      {
+        "id": 0,
+        "name": "Reset and idle",
+        "status": "passed",
+        "category": "basic",
+        "requirement": "Idle behaviour from the post-reset initial state",
+        "cycles": 9,
+        "vectors": [
+          {
+            "cycle": 1,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 2,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 3,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 4,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 5,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 6,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 7,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 8,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 9,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Back-to-back toggling",
+        "status": "passed",
+        "category": "corner",
+        "requirement": "Robustness under back-to-back input changes",
+        "cycles": 34,
+        "vectors": [
+          {
+            "cycle": 10,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 11,
+            "stimulus": "arena_signal_a=4'h1, arena_signal_b=4'h3, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h1",
+            "actual": "arena_signal_y=4'h1"
+          },
+          {
+            "cycle": 12,
+            "stimulus": "arena_signal_a=4'h6, arena_signal_b=4'h8, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h6",
+            "actual": "arena_signal_y=4'h6"
+          },
+          {
+            "cycle": 13,
+            "stimulus": "arena_signal_a=4'ha, arena_signal_b=4'h4, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h4",
+            "actual": "arena_signal_y=4'h4"
+          },
+          {
+            "cycle": 14,
+            "stimulus": "arena_signal_a=4'h9, arena_signal_b=4'hc, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h9",
+            "actual": "arena_signal_y=4'h9"
+          },
+          {
+            "cycle": 15,
+            "stimulus": "arena_signal_a=4'h7, arena_signal_b=4'h8, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h8",
+            "actual": "arena_signal_y=4'h8"
+          },
+          {
+            "cycle": 16,
+            "stimulus": "arena_signal_a=4'h3, arena_signal_b=4'h3, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h3",
+            "actual": "arena_signal_y=4'h3"
+          },
+          {
+            "cycle": 17,
+            "stimulus": "arena_signal_a=4'h6, arena_signal_b=4'hc, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'hc",
+            "actual": "arena_signal_y=4'hc"
+          },
+          {
+            "cycle": 18,
+            "stimulus": "arena_signal_a=4'h9, arena_signal_b=4'h2, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h2",
+            "actual": "arena_signal_y=4'h2"
+          },
+          {
+            "cycle": 19,
+            "stimulus": "arena_signal_a=4'h7, arena_signal_b=4'h5, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h7",
+            "actual": "arena_signal_y=4'h7"
+          },
+          {
+            "cycle": 20,
+            "stimulus": "arena_signal_a=4'h6, arena_signal_b=4'hd, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h6",
+            "actual": "arena_signal_y=4'h6"
+          },
+          {
+            "cycle": 21,
+            "stimulus": "arena_signal_a=4'h6, arena_signal_b=4'h1, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h1",
+            "actual": "arena_signal_y=4'h1"
+          },
+          {
+            "cycle": 22,
+            "stimulus": "arena_signal_a=4'h2, arena_signal_b=4'hb, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h2",
+            "actual": "arena_signal_y=4'h2"
+          },
+          {
+            "cycle": 23,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h8, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h8",
+            "actual": "arena_signal_y=4'h8"
+          },
+          {
+            "cycle": 24,
+            "stimulus": "arena_signal_a=4'hd, arena_signal_b=4'hb, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'hb",
+            "actual": "arena_signal_y=4'hb"
+          },
+          {
+            "cycle": 25,
+            "stimulus": "arena_signal_a=4'h1, arena_signal_b=4'h1, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h1",
+            "actual": "arena_signal_y=4'h1"
+          },
+          {
+            "cycle": 26,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h1, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 27,
+            "stimulus": "arena_signal_a=4'h4, arena_signal_b=4'h6, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h4",
+            "actual": "arena_signal_y=4'h4"
+          },
+          {
+            "cycle": 28,
+            "stimulus": "arena_signal_a=4'h4, arena_signal_b=4'hc, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'hc",
+            "actual": "arena_signal_y=4'hc"
+          },
+          {
+            "cycle": 29,
+            "stimulus": "arena_signal_a=4'h4, arena_signal_b=4'h9, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h9",
+            "actual": "arena_signal_y=4'h9"
+          },
+          {
+            "cycle": 30,
+            "stimulus": "arena_signal_a=4'h8, arena_signal_b=4'hc, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'hc",
+            "actual": "arena_signal_y=4'hc"
+          },
+          {
+            "cycle": 31,
+            "stimulus": "arena_signal_a=4'hd, arena_signal_b=4'ha, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hd",
+            "actual": "arena_signal_y=4'hd"
+          },
+          {
+            "cycle": 32,
+            "stimulus": "arena_signal_a=4'h9, arena_signal_b=4'h3, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h9",
+            "actual": "arena_signal_y=4'h9"
+          },
+          {
+            "cycle": 33,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'hd, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h5",
+            "actual": "arena_signal_y=4'h5"
+          },
+          {
+            "cycle": 34,
+            "stimulus": "arena_signal_a=4'hc, arena_signal_b=4'hb, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hc",
+            "actual": "arena_signal_y=4'hc"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Random stimulus batch 2",
+        "status": "passed",
+        "category": "randomized",
+        "requirement": "Robustness under randomized stimulus",
+        "cycles": 59,
+        "vectors": [
+          {
+            "cycle": 35,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 36,
+            "stimulus": "arena_signal_a=4'ha, arena_signal_b=4'h6, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h6",
+            "actual": "arena_signal_y=4'h6"
+          },
+          {
+            "cycle": 37,
+            "stimulus": "arena_signal_a=4'h7, arena_signal_b=4'h4, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h4",
+            "actual": "arena_signal_y=4'h4"
+          },
+          {
+            "cycle": 38,
+            "stimulus": "arena_signal_a=4'h8, arena_signal_b=4'h6, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h8",
+            "actual": "arena_signal_y=4'h8"
+          },
+          {
+            "cycle": 39,
+            "stimulus": "arena_signal_a=4'hc, arena_signal_b=4'hb, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'hb",
+            "actual": "arena_signal_y=4'hb"
+          },
+          {
+            "cycle": 40,
+            "stimulus": "arena_signal_a=4'h6, arena_signal_b=4'h1, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h1",
+            "actual": "arena_signal_y=4'h1"
+          },
+          {
+            "cycle": 41,
+            "stimulus": "arena_signal_a=4'h1, arena_signal_b=4'h8, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h1",
+            "actual": "arena_signal_y=4'h1"
+          },
+          {
+            "cycle": 42,
+            "stimulus": "arena_signal_a=4'h4, arena_signal_b=4'h9, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h4",
+            "actual": "arena_signal_y=4'h4"
+          },
+          {
+            "cycle": 43,
+            "stimulus": "arena_signal_a=4'h6, arena_signal_b=4'hb, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'hb",
+            "actual": "arena_signal_y=4'hb"
+          },
+          {
+            "cycle": 44,
+            "stimulus": "arena_signal_a=4'h3, arena_signal_b=4'ha, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h3",
+            "actual": "arena_signal_y=4'h3"
+          },
+          {
+            "cycle": 45,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'h1, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h5",
+            "actual": "arena_signal_y=4'h5"
+          },
+          {
+            "cycle": 46,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'h0, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 47,
+            "stimulus": "arena_signal_a=4'h9, arena_signal_b=4'h1, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h1",
+            "actual": "arena_signal_y=4'h1"
+          },
+          {
+            "cycle": 48,
+            "stimulus": "arena_signal_a=4'h4, arena_signal_b=4'h6, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h4",
+            "actual": "arena_signal_y=4'h4"
+          },
+          {
+            "cycle": 49,
+            "stimulus": "arena_signal_a=4'h9, arena_signal_b=4'h5, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h9",
+            "actual": "arena_signal_y=4'h9"
+          },
+          {
+            "cycle": 50,
+            "stimulus": "arena_signal_a=4'hc, arena_signal_b=4'hc, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hc",
+            "actual": "arena_signal_y=4'hc"
+          },
+          {
+            "cycle": 51,
+            "stimulus": "arena_signal_a=4'hf, arena_signal_b=4'ha, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'ha",
+            "actual": "arena_signal_y=4'ha"
+          },
+          {
+            "cycle": 52,
+            "stimulus": "arena_signal_a=4'he, arena_signal_b=4'h7, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h7",
+            "actual": "arena_signal_y=4'h7"
+          },
+          {
+            "cycle": 53,
+            "stimulus": "arena_signal_a=4'hb, arena_signal_b=4'h6, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h6",
+            "actual": "arena_signal_y=4'h6"
+          },
+          {
+            "cycle": 54,
+            "stimulus": "arena_signal_a=4'hc, arena_signal_b=4'h0, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 55,
+            "stimulus": "arena_signal_a=4'he, arena_signal_b=4'h3, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h3",
+            "actual": "arena_signal_y=4'h3"
+          },
+          {
+            "cycle": 56,
+            "stimulus": "arena_signal_a=4'h4, arena_signal_b=4'hb, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h4",
+            "actual": "arena_signal_y=4'h4"
+          },
+          {
+            "cycle": 57,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h6, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 58,
+            "stimulus": "arena_signal_a=4'he, arena_signal_b=4'h3, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'he",
+            "actual": "arena_signal_y=4'he"
+          },
+          {
+            "cycle": 59,
+            "stimulus": "arena_signal_a=4'hd, arena_signal_b=4'h8, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hd",
+            "actual": "arena_signal_y=4'hd"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Random stimulus batch 3",
+        "status": "passed",
+        "category": "randomized",
+        "requirement": "Robustness under randomized stimulus",
+        "cycles": 84,
+        "vectors": [
+          {
+            "cycle": 60,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 61,
+            "stimulus": "arena_signal_a=4'h9, arena_signal_b=4'h4, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h4",
+            "actual": "arena_signal_y=4'h4"
+          },
+          {
+            "cycle": 62,
+            "stimulus": "arena_signal_a=4'hb, arena_signal_b=4'h7, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hb",
+            "actual": "arena_signal_y=4'hb"
+          },
+          {
+            "cycle": 63,
+            "stimulus": "arena_signal_a=4'h9, arena_signal_b=4'ha, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'ha",
+            "actual": "arena_signal_y=4'ha"
+          },
+          {
+            "cycle": 64,
+            "stimulus": "arena_signal_a=4'ha, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'ha",
+            "actual": "arena_signal_y=4'ha"
+          },
+          {
+            "cycle": 65,
+            "stimulus": "arena_signal_a=4'hf, arena_signal_b=4'h2, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h2",
+            "actual": "arena_signal_y=4'h2"
+          },
+          {
+            "cycle": 66,
+            "stimulus": "arena_signal_a=4'h4, arena_signal_b=4'hb, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h4",
+            "actual": "arena_signal_y=4'h4"
+          },
+          {
+            "cycle": 67,
+            "stimulus": "arena_signal_a=4'h1, arena_signal_b=4'h1, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h1",
+            "actual": "arena_signal_y=4'h1"
+          },
+          {
+            "cycle": 68,
+            "stimulus": "arena_signal_a=4'h6, arena_signal_b=4'h3, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h6",
+            "actual": "arena_signal_y=4'h6"
+          },
+          {
+            "cycle": 69,
+            "stimulus": "arena_signal_a=4'h8, arena_signal_b=4'h3, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h3",
+            "actual": "arena_signal_y=4'h3"
+          },
+          {
+            "cycle": 70,
+            "stimulus": "arena_signal_a=4'hd, arena_signal_b=4'hd, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'hd",
+            "actual": "arena_signal_y=4'hd"
+          },
+          {
+            "cycle": 71,
+            "stimulus": "arena_signal_a=4'he, arena_signal_b=4'h0, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 72,
+            "stimulus": "arena_signal_a=4'hf, arena_signal_b=4'h7, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h7",
+            "actual": "arena_signal_y=4'h7"
+          },
+          {
+            "cycle": 73,
+            "stimulus": "arena_signal_a=4'hd, arena_signal_b=4'h3, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hd",
+            "actual": "arena_signal_y=4'hd"
+          },
+          {
+            "cycle": 74,
+            "stimulus": "arena_signal_a=4'h7, arena_signal_b=4'h0, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 75,
+            "stimulus": "arena_signal_a=4'h9, arena_signal_b=4'he, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h9",
+            "actual": "arena_signal_y=4'h9"
+          },
+          {
+            "cycle": 76,
+            "stimulus": "arena_signal_a=4'he, arena_signal_b=4'h9, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h9",
+            "actual": "arena_signal_y=4'h9"
+          },
+          {
+            "cycle": 77,
+            "stimulus": "arena_signal_a=4'h3, arena_signal_b=4'he, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h3",
+            "actual": "arena_signal_y=4'h3"
+          },
+          {
+            "cycle": 78,
+            "stimulus": "arena_signal_a=4'hf, arena_signal_b=4'h4, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h4",
+            "actual": "arena_signal_y=4'h4"
+          },
+          {
+            "cycle": 79,
+            "stimulus": "arena_signal_a=4'hc, arena_signal_b=4'h3, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hc",
+            "actual": "arena_signal_y=4'hc"
+          },
+          {
+            "cycle": 80,
+            "stimulus": "arena_signal_a=4'he, arena_signal_b=4'h7, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'he",
+            "actual": "arena_signal_y=4'he"
+          },
+          {
+            "cycle": 81,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'h4, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h5",
+            "actual": "arena_signal_y=4'h5"
+          },
+          {
+            "cycle": 82,
+            "stimulus": "arena_signal_a=4'hc, arena_signal_b=4'h2, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h2",
+            "actual": "arena_signal_y=4'h2"
+          },
+          {
+            "cycle": 83,
+            "stimulus": "arena_signal_a=4'hb, arena_signal_b=4'h9, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hb",
+            "actual": "arena_signal_y=4'hb"
+          },
+          {
+            "cycle": 84,
+            "stimulus": "arena_signal_a=4'h6, arena_signal_b=4'h7, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h6",
+            "actual": "arena_signal_y=4'h6"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Random stimulus batch 4",
+        "status": "passed",
+        "category": "randomized",
+        "requirement": "Robustness under randomized stimulus",
+        "cycles": 109,
+        "vectors": [
+          {
+            "cycle": 85,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 86,
+            "stimulus": "arena_signal_a=4'hd, arena_signal_b=4'hb, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hd",
+            "actual": "arena_signal_y=4'hd"
+          },
+          {
+            "cycle": 87,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'h6, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h5",
+            "actual": "arena_signal_y=4'h5"
+          },
+          {
+            "cycle": 88,
+            "stimulus": "arena_signal_a=4'hd, arena_signal_b=4'h6, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h6",
+            "actual": "arena_signal_y=4'h6"
+          },
+          {
+            "cycle": 89,
+            "stimulus": "arena_signal_a=4'h3, arena_signal_b=4'h5, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h3",
+            "actual": "arena_signal_y=4'h3"
+          },
+          {
+            "cycle": 90,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'hd, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h5",
+            "actual": "arena_signal_y=4'h5"
+          },
+          {
+            "cycle": 91,
+            "stimulus": "arena_signal_a=4'h7, arena_signal_b=4'h8, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h7",
+            "actual": "arena_signal_y=4'h7"
+          },
+          {
+            "cycle": 92,
+            "stimulus": "arena_signal_a=4'ha, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'ha",
+            "actual": "arena_signal_y=4'ha"
+          },
+          {
+            "cycle": 93,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'hd, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h5",
+            "actual": "arena_signal_y=4'h5"
+          },
+          {
+            "cycle": 94,
+            "stimulus": "arena_signal_a=4'h8, arena_signal_b=4'h0, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 95,
+            "stimulus": "arena_signal_a=4'hd, arena_signal_b=4'he, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hd",
+            "actual": "arena_signal_y=4'hd"
+          },
+          {
+            "cycle": 96,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'hc, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h5",
+            "actual": "arena_signal_y=4'h5"
+          },
+          {
+            "cycle": 97,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'hb, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'hb",
+            "actual": "arena_signal_y=4'hb"
+          },
+          {
+            "cycle": 98,
+            "stimulus": "arena_signal_a=4'hc, arena_signal_b=4'h5, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hc",
+            "actual": "arena_signal_y=4'hc"
+          },
+          {
+            "cycle": 99,
+            "stimulus": "arena_signal_a=4'h6, arena_signal_b=4'h1, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h1",
+            "actual": "arena_signal_y=4'h1"
+          },
+          {
+            "cycle": 100,
+            "stimulus": "arena_signal_a=4'h2, arena_signal_b=4'h5, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h2",
+            "actual": "arena_signal_y=4'h2"
+          },
+          {
+            "cycle": 101,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h6, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 102,
+            "stimulus": "arena_signal_a=4'h8, arena_signal_b=4'hd, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'hd",
+            "actual": "arena_signal_y=4'hd"
+          },
+          {
+            "cycle": 103,
+            "stimulus": "arena_signal_a=4'hb, arena_signal_b=4'h4, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hb",
+            "actual": "arena_signal_y=4'hb"
+          },
+          {
+            "cycle": 104,
+            "stimulus": "arena_signal_a=4'he, arena_signal_b=4'h0, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 105,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'h6, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h5",
+            "actual": "arena_signal_y=4'h5"
+          },
+          {
+            "cycle": 106,
+            "stimulus": "arena_signal_a=4'h2, arena_signal_b=4'h9, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h9",
+            "actual": "arena_signal_y=4'h9"
+          },
+          {
+            "cycle": 107,
+            "stimulus": "arena_signal_a=4'hc, arena_signal_b=4'ha, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hc",
+            "actual": "arena_signal_y=4'hc"
+          },
+          {
+            "cycle": 108,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'he, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 109,
+            "stimulus": "arena_signal_a=4'h8, arena_signal_b=4'hf, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h8",
+            "actual": "arena_signal_y=4'h8"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Random stimulus batch 5",
+        "status": "passed",
+        "category": "randomized",
+        "requirement": "Robustness under randomized stimulus",
+        "cycles": 134,
+        "vectors": [
+          {
+            "cycle": 110,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 111,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'he, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'he",
+            "actual": "arena_signal_y=4'he"
+          },
+          {
+            "cycle": 112,
+            "stimulus": "arena_signal_a=4'ha, arena_signal_b=4'h6, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h6",
+            "actual": "arena_signal_y=4'h6"
+          },
+          {
+            "cycle": 113,
+            "stimulus": "arena_signal_a=4'h3, arena_signal_b=4'ha, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h3",
+            "actual": "arena_signal_y=4'h3"
+          },
+          {
+            "cycle": 114,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'h4, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h5",
+            "actual": "arena_signal_y=4'h5"
+          },
+          {
+            "cycle": 115,
+            "stimulus": "arena_signal_a=4'h3, arena_signal_b=4'hf, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'hf",
+            "actual": "arena_signal_y=4'hf"
+          },
+          {
+            "cycle": 116,
+            "stimulus": "arena_signal_a=4'h8, arena_signal_b=4'he, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h8",
+            "actual": "arena_signal_y=4'h8"
+          },
+          {
+            "cycle": 117,
+            "stimulus": "arena_signal_a=4'h3, arena_signal_b=4'h3, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h3",
+            "actual": "arena_signal_y=4'h3"
+          },
+          {
+            "cycle": 118,
+            "stimulus": "arena_signal_a=4'h2, arena_signal_b=4'h0, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 119,
+            "stimulus": "arena_signal_a=4'hd, arena_signal_b=4'h9, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'hd",
+            "actual": "arena_signal_y=4'hd"
+          },
+          {
+            "cycle": 120,
+            "stimulus": "arena_signal_a=4'h9, arena_signal_b=4'h4, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h4",
+            "actual": "arena_signal_y=4'h4"
+          },
+          {
+            "cycle": 121,
+            "stimulus": "arena_signal_a=4'h5, arena_signal_b=4'hb, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h5",
+            "actual": "arena_signal_y=4'h5"
+          },
+          {
+            "cycle": 122,
+            "stimulus": "arena_signal_a=4'h1, arena_signal_b=4'h0, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h1",
+            "actual": "arena_signal_y=4'h1"
+          },
+          {
+            "cycle": 123,
+            "stimulus": "arena_signal_a=4'hc, arena_signal_b=4'hf, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'hf",
+            "actual": "arena_signal_y=4'hf"
+          },
+          {
+            "cycle": 124,
+            "stimulus": "arena_signal_a=4'h7, arena_signal_b=4'h3, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h3",
+            "actual": "arena_signal_y=4'h3"
+          },
+          {
+            "cycle": 125,
+            "stimulus": "arena_signal_a=4'h3, arena_signal_b=4'ha, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'ha",
+            "actual": "arena_signal_y=4'ha"
+          },
+          {
+            "cycle": 126,
+            "stimulus": "arena_signal_a=4'hc, arena_signal_b=4'h9, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h9",
+            "actual": "arena_signal_y=4'h9"
+          },
+          {
+            "cycle": 127,
+            "stimulus": "arena_signal_a=4'h0, arena_signal_b=4'h7, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h0",
+            "actual": "arena_signal_y=4'h0"
+          },
+          {
+            "cycle": 128,
+            "stimulus": "arena_signal_a=4'hf, arena_signal_b=4'h7, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h7",
+            "actual": "arena_signal_y=4'h7"
+          },
+          {
+            "cycle": 129,
+            "stimulus": "arena_signal_a=4'h2, arena_signal_b=4'hd, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h2",
+            "actual": "arena_signal_y=4'h2"
+          },
+          {
+            "cycle": 130,
+            "stimulus": "arena_signal_a=4'ha, arena_signal_b=4'hd, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'ha",
+            "actual": "arena_signal_y=4'ha"
+          },
+          {
+            "cycle": 131,
+            "stimulus": "arena_signal_a=4'he, arena_signal_b=4'h6, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h6",
+            "actual": "arena_signal_y=4'h6"
+          },
+          {
+            "cycle": 132,
+            "stimulus": "arena_signal_a=4'h4, arena_signal_b=4'h8, arena_signal_sel=0",
+            "expected": "arena_signal_y=4'h4",
+            "actual": "arena_signal_y=4'h4"
+          },
+          {
+            "cycle": 133,
+            "stimulus": "arena_signal_a=4'hb, arena_signal_b=4'h9, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h9",
+            "actual": "arena_signal_y=4'h9"
+          },
+          {
+            "cycle": 134,
+            "stimulus": "arena_signal_a=4'hb, arena_signal_b=4'h1, arena_signal_sel=1",
+            "expected": "arena_signal_y=4'h1",
+            "actual": "arena_signal_y=4'h1"
+          }
+        ]
+      }
+    ],
+    "coverage": null,
+    "compileErrors": [],
+    "stats": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "timeouts": 0,
+      "cycles": null,
+      "runtimeMs": 0
+    },
+    "hasHarnessEvidence": true,
+    "evidence": {
+      "harness": "structured-lockstep",
+      "simulator": "questa",
+      "casesParsed": 6
+    }
+  },
+  "verdict": "AC",
+  "verdictLabel": "Accepted",
+  "v1Compatible": {
+    "overallScore": 100,
+    "static": {
+      "passed": true,
+      "summary": "Structure: 100/100",
+      "errors": [],
+      "warnings": []
+    },
+    "simulation": {
+      "passed": true,
+      "executed": true,
+      "score": 100
+    }
+  }
+}
