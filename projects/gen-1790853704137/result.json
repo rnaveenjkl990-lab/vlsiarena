@@ -1,0 +1,334 @@
+{
+  "success": true,
+  "category": "assertion",
+  "static": 10,
+  "compilation": 100,
+  "functional": 100,
+  "coverage": null,
+  "codeQuality": 43,
+  "structureScore": 10,
+  "simulationScore": 100,
+  "compileScore": 100,
+  "finalScore": 100,
+  "overallScore": 100,
+  "score": 100,
+  "passed": true,
+  "tier": "excellent",
+  "tierLabel": "excellent",
+  "weights": {
+    "static": 0.1,
+    "compilation": 0.15,
+    "functional": 0.45,
+    "coverage": 0.2,
+    "codeQuality": 0.1
+  },
+  "confidence": 1,
+  "findings": [
+    "MISSING: Required constructs not found: \\bassert\\s+property\\",
+    "ASSERTIONS: Assertion output detected (counts unavailable)"
+  ],
+  "errors": [
+    "MISSING: Required constructs not found: \\bassert\\s+property\\"
+  ],
+  "warnings": [],
+  "info": [
+    "ASSERTIONS: Assertion output detected (counts unavailable)"
+  ],
+  "simulationExecuted": true,
+  "simulationStatus": "Passed",
+  "simulationTranscript": "QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 16:54:47 on Oct 01,2026\r\nvlog -sv dut.sv user_assertions.sv \r\n-- Compiling module frame_sync_packet_validator\r\n-- Compiling module frame_sync_packet_validator_ref\r\n-- Compiling interface frame_sync_packet_validator_if\r\n-- Compiling package user_assertions_sv_unit\r\n-- Compiling module frame_sync_packet_validator_assertions\r\n-- Compiling module tb_frame_sync_packet_validator\r\n\r\nTop level modules:\r\n\ttb_frame_sync_packet_validator\r\nEnd time: 16:54:47 on Oct 01,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1790853704137_1790853800853\\transcript.log tb_frame_sync_packet_validator -do \"run.do\" \r\n# Start time: 16:54:48 on Oct 01,2026\r\n# ** Note: (vsim-8009) Loading existing optimized design _opt\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.user_assertions_sv_unit(fast)\r\n# Loading work.tb_frame_sync_packet_validator(fast)\r\n# Loading work.frame_sync_packet_validator_if(fast__2)\r\n# Loading work.frame_sync_packet_validator(fast)\r\n# Loading work.frame_sync_packet_validator_ref(fast)\r\n# Loading work.frame_sync_packet_validator_assertions(fast)\r\n# Loading work.frame_sync_packet_validator_if(fast)\r\n# do run.do\r\n# 0\r\n# [GEN] rx_data=9f rx_valid=0 rx_sop=1 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [GEN] rx_data=ec rx_valid=0 rx_sop=0 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [GEN] rx_data=ee rx_valid=1 rx_sop=0 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [GEN] rx_data=7e rx_valid=0 rx_sop=1 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [GEN] rx_data=f8 rx_valid=1 rx_sop=0 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [GEN] rx_data=64 rx_valid=1 rx_sop=0 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [GEN] rx_data=cb rx_valid=1 rx_sop=1 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [GEN] rx_data=0 rx_valid=1 rx_sop=1 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [MON] rx_data=0 rx_valid=0 rx_sop=0 rx_eop=0 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0\r\n# [DRV] rx_data=9f rx_valid=0 rx_sop=1 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [SCB] checked #1: rx_data=0 rx_valid=0 rx_sop=0 rx_eop=0 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0\r\n# [DRV] rx_data=ec rx_valid=0 rx_sop=0 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [MON] rx_data=9f rx_valid=0 rx_sop=1 rx_eop=1 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0\r\n# [SCB] checked #2: rx_data=9f rx_valid=0 rx_sop=1 rx_eop=1 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0\r\n# [MON] rx_data=ec rx_valid=0 rx_sop=0 rx_eop=0 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0\r\n# [DRV] rx_data=ee rx_valid=1 rx_sop=0 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [SCB] checked #3: rx_data=ec rx_valid=0 rx_sop=0 rx_eop=0 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0\r\n# [DRV] rx_data=7e rx_valid=0 rx_sop=1 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [MON] rx_data=ee rx_valid=1 rx_sop=0 rx_eop=1 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0\r\n# [SCB] checked #4: rx_data=ee rx_valid=1 rx_sop=0 rx_eop=1 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0\r\n# [MON] rx_data=7e rx_valid=0 rx_sop=1 rx_eop=1 out_data=ee out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=1\r\n# [DRV] rx_data=f8 rx_valid=1 rx_sop=0 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [SCB] checked #5: rx_data=7e rx_valid=0 rx_sop=1 rx_eop=1 out_data=ee out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=1\r\n# [DRV] rx_data=64 rx_valid=1 rx_sop=0 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [MON] rx_data=f8 rx_valid=1 rx_sop=0 rx_eop=0 out_data=ee out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=1\r\n# [SCB] checked #6: rx_data=f8 rx_valid=1 rx_sop=0 rx_eop=0 out_data=ee out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=1\r\n# [MON] rx_data=64 rx_valid=1 rx_sop=0 rx_eop=1 out_data=f8 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=2\r\n# [DRV] rx_data=cb rx_valid=1 rx_sop=1 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [SCB] checked #7: rx_data=64 rx_valid=1 rx_sop=0 rx_eop=1 out_data=f8 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=2\r\n# [DRV] rx_data=0 rx_valid=1 rx_sop=1 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x\r\n# [MON] rx_data=cb rx_valid=1 rx_sop=1 rx_eop=0 out_data=64 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=3\r\n# [SCB] checked #8: rx_data=cb rx_valid=1 rx_sop=1 rx_eop=0 out_data=64 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=3\r\n# [SCB] TESTBENCH_CHECK_PASS: 8 transactions matched the reference model\r\n# === Blueprint verification testbench complete (all 8 transactions checked) ===\r\n# ** Note: $finish    : user_assertions.sv(569)\r\n#    Time: 95 ns  Iteration: 2  Instance: /tb_frame_sync_packet_validator\r\n# End time: 16:54:48 on Oct 01,2026, Elapsed time: 0:00:00\r\n# Errors: 0, Warnings: 0\r\n\n::TEST_START:: {\"id\":0,\"name\":\"Verification accepts the correct DUT\",\"nonce\":\"25ce9dff06d44672\"}\n::TEST_PASS:: {\"id\":0,\"nonce\":\"25ce9dff06d44672\"}\n::TEST_START:: {\"id\":1,\"name\":\"Verification detects contract-driven negative challenge\",\"nonce\":\"25ce9dff06d44672\"}\n::TEST_PASS:: {\"id\":1,\"nonce\":\"25ce9dff06d44672\"}\n::TEST_SUMMARY:: {\"total\":2,\"passed\":2,\"failed\":0,\"nonce\":\"25ce9dff06d44672\"}\n::JUDGE_DONE:: {\"cases\":2,\"nonce\":\"25ce9dff06d44672\"}",
+  "simulator": "questa",
+  "passedCases": [
+    {
+      "id": 0,
+      "name": "Verification accepts the correct DUT",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 1,
+      "name": "Verification detects contract-driven negative challenge",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    }
+  ],
+  "failedCases": [],
+  "notRunCases": [],
+  "uncoveredCases": [],
+  "compileErrors": [],
+  "simulationErrors": [],
+  "coverageScore": 0,
+  "coverageMeasured": false,
+  "gateStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "assertions": "not_run"
+  },
+  "shortCircuit": null,
+  "reachedCompilation": true,
+  "reachedSimulation": true,
+  "stageStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "coverage": "not_applicable",
+    "assertions": "not_run"
+  },
+  "profile": {
+    "environment": "required",
+    "compile": "required",
+    "execution": "required",
+    "functional": "required",
+    "coverage": "not_applicable",
+    "assertions": "required"
+  },
+  "components": {
+    "static": 10,
+    "compilation": 100,
+    "functional": 100,
+    "coverage": 0,
+    "codeQuality": 43,
+    "simulation": 100
+  },
+  "durationMs": 8050,
+  "judge": {
+    "verdict": "AC",
+    "verdictLabel": "Accepted",
+    "passed": true,
+    "score": 100,
+    "gates": {
+      "environment": "pass",
+      "compile": "pass",
+      "execution": "pass",
+      "functional": "pass",
+      "assertions": "not_run"
+    },
+    "shortCircuit": null,
+    "reachedCompilation": true,
+    "reachedSimulation": true,
+    "coverageMeasured": false,
+    "failureReasons": [],
+    "testCases": [
+      {
+        "id": 0,
+        "name": "Verification accepts the correct DUT",
+        "status": "passed"
+      },
+      {
+        "id": 1,
+        "name": "Verification detects contract-driven negative challenge",
+        "status": "passed"
+      }
+    ],
+    "coverage": null,
+    "compileErrors": [],
+    "summary": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "score": null
+    },
+    "stats": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "timeouts": 0,
+      "unresolved": 0,
+      "cycles": null,
+      "runtimeMs": 8049
+    },
+    "failurePhase": null,
+    "execution": null,
+    "validatorQuality": {
+      "ok": true,
+      "independent": true,
+      "challengePlan": {
+        "schemaVersion": 1,
+        "category": "assertion",
+        "source": "structured-specification",
+        "scenarios": [
+          {
+            "id": "scenario_1",
+            "description": "Drive 2 perfectly formatted packets from reset in HUNT mode and observe sync_locked asserting high on the cycle following the second packet's completion."
+          },
+          {
+            "id": "scenario_2",
+            "description": "In LOCKED mode, inject a single-bit error in the checksum byte of a 5-byte payload packet and verify that out_err asserts at out_eop, pkt_count does not increment, err_count increments by 1, and sync_locked remains 1."
+          },
+          {
+            "id": "scenario_3",
+            "description": "In LOCKED mode, drive two consecutive packets with length violations (>16 bytes) and verify that out_err asserts on each and sync_locked drops to 0 after the second frame."
+          },
+          {
+            "id": "scenario_4",
+            "description": "Drive back-to-back valid packets with 0 idle cycles between EOP and SOP while locked, verifying unbroken 1-cycle pipeline forwarding and accurate pkt_count increments."
+          },
+          {
+            "id": "scenario_5",
+            "description": "Assert synchronous rst_n mid-packet in LOCKED mode and verify that sync_locked drops to 0, out_valid immediately drops to 0, and internal counters reset to 0."
+          },
+          {
+            "id": "scenario_6",
+            "description": "Drive an alternating pattern of 1 valid packet followed by 1 corrupted packet repeatedly in LOCKED mode to verify that lock is maintained due to single-error hysteresis."
+          }
+        ],
+        "requirements": [
+          {
+            "id": "req_1",
+            "description": "A valid packet structure consists of 1 SOP byte (which serves as the length field N, where 1 <= N <= 16), followed by exactly N payload bytes, followed by 1 checksum byte marked with rx_eop."
+          },
+          {
+            "id": "req_2",
+            "description": "The checksum byte must equal the cumulative bitwise XOR of the SOP length byte and all N payload bytes."
+          },
+          {
+            "id": "req_3",
+            "description": "In HUNT mode (sync_locked=0), out_valid, out_sop, out_eop, and out_err must remain continuously 0."
+          },
+          {
+            "id": "req_4",
+            "description": "Transition from HUNT to LOCKED requires 2 consecutive valid error-free packets without any interleaving framing violations or checksum errors."
+          },
+          {
+            "id": "req_5",
+            "description": "While sync_locked=1, incoming bytes are registered and emitted on out_data, out_sop, out_eop, and out_valid exactly 1 clock cycle after arrival when rx_valid=1."
+          },
+          {
+            "id": "req_6",
+            "description": "If a frame error (payload length mismatch, unexpected SOP while in packet, missing EOP, or XOR checksum mismatch) occurs while sync_locked=1, out_err must assert high synchronously with out_eop."
+          },
+          {
+            "id": "req_7",
+            "description": "If 2 consecutive corrupted packets occur while sync_locked=1, sync_locked must deassert to 0 on the cycle following the second corrupted packet's EOP."
+          },
+          {
+            "id": "req_8",
+            "description": "pkt_count increments by 1 on each out_eop where out_err is 0, and err_count increments on every corrupted frame EOP (or abort cycle)."
+          },
+          {
+            "id": "req_9",
+            "description": "rx_sop and rx_eop are only sampled and acted upon when rx_valid is high."
+          },
+          {
+            "id": "req_10",
+            "description": "rx_sop must not assert when a packet is already in progress before rx_eop has arrived."
+          },
+          {
+            "id": "req_11",
+            "description": "rx_eop must not assert on the same cycle as rx_sop (minimum frame size is 3 bytes: SOP, 1 Payload, EOP)."
+          },
+          {
+            "id": "req_12",
+            "description": "When sync_locked is asserted, every asserted rx_valid creates an out_valid pulse exactly 1 cycle later."
+          },
+          {
+            "id": "req_13",
+            "description": "out_sop and out_eop must never assert when out_valid is low."
+          },
+          {
+            "id": "req_14",
+            "description": "out_err must never assert unless out_eop and out_valid are simultaneously high."
+          },
+          {
+            "id": "req_15",
+            "description": "All SystemVerilog assertions compile cleanly without syntax errors and bind correctly to frame_sync_packet_validator."
+          },
+          {
+            "id": "req_16",
+            "description": "Properties rigorously verify lock acquisition timing, loss of lock hysteresis, checksum correctness, pipeline latency, and error flag containment."
+          },
+          {
+            "id": "req_17",
+            "description": "Assertions check both positive valid packet forwarding and negative error-flag assertion without false positives during unaligned or hunting phases."
+          }
+        ],
+        "activity": null,
+        "negativeChallenge": null,
+        "assertionIntent": {
+          "requireAssertionActivity": true,
+          "requireLegalTraceAcceptance": true,
+          "requireIllegalTraceDetection": true,
+          "scenarios": [
+            {
+              "id": "scenario_1",
+              "description": "Drive 2 perfectly formatted packets from reset in HUNT mode and observe sync_locked asserting high on the cycle following the second packet's completion."
+            },
+            {
+              "id": "scenario_2",
+              "description": "In LOCKED mode, inject a single-bit error in the checksum byte of a 5-byte payload packet and verify that out_err asserts at out_eop, pkt_count does not increment, err_count increments by 1, and sync_locked remains 1."
+            },
+            {
+              "id": "scenario_3",
+              "description": "In LOCKED mode, drive two consecutive packets with length violations (>16 bytes) and verify that out_err asserts on each and sync_locked drops to 0 after the second frame."
+            },
+            {
+              "id": "scenario_4",
+              "description": "Drive back-to-back valid packets with 0 idle cycles between EOP and SOP while locked, verifying unbroken 1-cycle pipeline forwarding and accurate pkt_count increments."
+            },
+            {
+              "id": "scenario_5",
+              "description": "Assert synchronous rst_n mid-packet in LOCKED mode and verify that sync_locked drops to 0, out_valid immediately drops to 0, and internal counters reset to 0."
+            },
+            {
+              "id": "scenario_6",
+              "description": "Drive an alternating pattern of 1 valid packet followed by 1 corrupted packet repeatedly in LOCKED mode to verify that lock is maintained due to single-error hysteresis."
+            }
+          ]
+        },
+        "coverageIntent": null
+      },
+      "challengeId": "observable_output_perturbation",
+      "challengedOutput": "out_data",
+      "activationInputs": [
+        "clk",
+        "rst_n",
+        "rx_data",
+        "rx_valid",
+        "rx_sop",
+        "rx_eop"
+      ],
+      "reason": "Correct DUT accepted and one contract-driven observable fault was activated and detected."
+    },
+    "processEvidence": {
+      "compile": null,
+      "elaboration": null,
+      "execution": null,
+      "diagnostics": null
+    },
+    "hasHarnessEvidence": true,
+    "evidence": {
+      "harness": "lockstep",
+      "simulator": "questa",
+      "casesParsed": 2
+    }
+  },
+  "verdict": "AC",
+  "verdictLabel": "Accepted",
+  "v1Compatible": {
+    "overallScore": 100,
+    "static": {
+      "passed": false,
+      "summary": "Structure: 10/100",
+      "errors": [
+        "MISSING: Required constructs not found: \\bassert\\s+property\\"
+      ],
+      "warnings": []
+    },
+    "simulation": {
+      "passed": true,
+      "executed": true,
+      "score": 100
+    }
+  }
+}
