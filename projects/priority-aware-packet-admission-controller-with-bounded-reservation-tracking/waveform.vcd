@@ -1,0 +1,312 @@
+$date
+	Wed Oct  7 16:05:54 2026
+$end
+$version
+	QuestaSim Version 2024.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module tb_packet_admission_controller $end
+
+$scope module vif $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+$var reg 1 # req_valid $end
+$var reg 1 $ req_ready $end
+$var reg 4 % req_id [3:0] $end
+$var reg 2 & req_class [1:0] $end
+$var reg 1 ' resp_valid $end
+$var reg 1 ( resp_ready $end
+$var reg 4 ) resp_id [3:0] $end
+$var reg 1 * resp_accept $end
+$var reg 3 + queue_level [2:0] $end
+$var reg 1 , overflow $end
+$var reg 1 - req_ready_ref $end
+$var reg 1 . resp_valid_ref $end
+$var reg 4 / resp_id_ref [3:0] $end
+$var reg 1 0 resp_accept_ref $end
+$var reg 3 1 queue_level_ref [2:0] $end
+$var reg 1 2 overflow_ref $end
+$upscope $end
+
+$scope module dut $end
+$var parameter 32 3 MAX_ACTIVE $end
+$var wire 1 4 clk $end
+$var wire 1 5 rst_n $end
+$var wire 1 6 req_valid $end
+$var reg 1 7 req_ready $end
+$var wire 1 8 req_id [3] $end
+$var wire 1 9 req_id [2] $end
+$var wire 1 : req_id [1] $end
+$var wire 1 ; req_id [0] $end
+$var wire 1 < req_class [1] $end
+$var wire 1 = req_class [0] $end
+$var reg 1 > resp_valid $end
+$var wire 1 ? resp_ready $end
+$var reg 4 @ resp_id [3:0] $end
+$var reg 1 A resp_accept $end
+$var reg 3 B queue_level [2:0] $end
+$var reg 1 C overflow $end
+$var reg 3 D active_count [2:0] $end
+$var reg 4 E resp_id_reg [3:0] $end
+$var reg 1 F resp_accept_reg $end
+$var reg 1 G overflow_reg $end
+$var reg 1 H resp_valid_reg $end
+$upscope $end
+
+$scope module ref_model $end
+$var parameter 32 I MAX_ACTIVE $end
+$var wire 1 J clk $end
+$var wire 1 K rst_n $end
+$var wire 1 L req_valid $end
+$var reg 1 M req_ready $end
+$var wire 1 N req_id [3] $end
+$var wire 1 O req_id [2] $end
+$var wire 1 P req_id [1] $end
+$var wire 1 Q req_id [0] $end
+$var wire 1 R req_class [1] $end
+$var wire 1 S req_class [0] $end
+$var reg 1 T resp_valid $end
+$var wire 1 U resp_ready $end
+$var reg 4 V resp_id [3:0] $end
+$var reg 1 W resp_accept $end
+$var reg 3 X queue_level [2:0] $end
+$var reg 1 Y overflow $end
+$var reg 3 Z active_count [2:0] $end
+$var reg 4 [ resp_id_reg [3:0] $end
+$var reg 1 \ resp_accept_reg $end
+$var reg 1 ] overflow_reg $end
+$var reg 1 ^ resp_valid_reg $end
+$upscope $end
+
+$scope module dut $end
+$var wire 1 4 clk $end
+$var wire 1 5 rst_n $end
+$var wire 1 6 req_valid $end
+$var wire 1 8 req_id [3] $end
+$var wire 1 9 req_id [2] $end
+$var wire 1 : req_id [1] $end
+$var wire 1 ; req_id [0] $end
+$var wire 1 < req_class [1] $end
+$var wire 1 = req_class [0] $end
+$var wire 1 ? resp_ready $end
+$upscope $end
+
+$scope module ref_model $end
+$var wire 1 J clk $end
+$var wire 1 K rst_n $end
+$var wire 1 L req_valid $end
+$var wire 1 N req_id [3] $end
+$var wire 1 O req_id [2] $end
+$var wire 1 P req_id [1] $end
+$var wire 1 Q req_id [0] $end
+$var wire 1 R req_class [1] $end
+$var wire 1 S req_class [0] $end
+$var wire 1 U resp_ready $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+x#
+x$
+bx %
+bx &
+x'
+x(
+bx )
+x*
+bx +
+x,
+x-
+x.
+bx /
+x0
+bx 1
+x2
+x7
+x>
+bx @
+xA
+bx B
+xC
+bx D
+bx E
+xF
+xG
+xH
+xM
+xT
+bx V
+xW
+bx X
+xY
+bx Z
+bx [
+x\
+x]
+x^
+b100 3
+b100 I
+xU
+xS
+xR
+xQ
+xP
+xO
+xN
+xL
+0K
+0J
+x?
+x=
+x<
+x;
+x:
+x9
+x8
+x6
+05
+04
+$end
+#5000
+1!
+14
+1J
+b0 Z
+b0 [
+0\
+0]
+0^
+b0 D
+b0 E
+0F
+0G
+0H
+17
+0>
+0C
+0A
+b0 @
+b0 B
+1M
+0T
+0Y
+0W
+b0 V
+b0 X
+b0 1
+b0 /
+00
+02
+0.
+1-
+b0 +
+b0 )
+0*
+0,
+0'
+1$
+#10000
+0!
+04
+0J
+#15000
+1!
+14
+1J
+#20000
+1"
+0!
+15
+1K
+04
+0J
+0#
+b0 %
+b0 &
+0(
+06
+0L
+0S
+0R
+0=
+0<
+0Q
+0P
+0O
+0N
+0;
+0:
+09
+08
+0?
+0U
+#25000
+1!
+14
+1J
+1#
+b110 %
+1(
+16
+1L
+1P
+1O
+1:
+19
+1?
+1U
+#30000
+0!
+04
+0J
+#35000
+1!
+14
+1J
+b110 [
+1^
+1\
+b1 Z
+b110 E
+1H
+1F
+b1 D
+b111 %
+b10 &
+0(
+b1 B
+1A
+07
+1>
+b110 @
+b1 X
+1W
+0M
+1T
+b110 V
+1R
+1<
+1Q
+1;
+0?
+0U
+b110 /
+1.
+0-
+10
+b1 1
+b110 )
+1'
+0$
+1*
+b1 +
+#40000
+0!
+04
+0J
