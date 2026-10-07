@@ -1,0 +1,126 @@
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Start time: 16:05:52 on Oct 07,2026
+vlog -sv packet_admission_controller.sv tb_packet_admission_controller.sv 
+-- Compiling module packet_admission_controller
+-- Compiling module packet_admission_controller_ref
+-- Compiling interface packet_admission_controller_if
+-- Compiling package tb_packet_admission_controller_sv_unit
+-- Compiling module tb_packet_admission_controller
+
+Top level modules:
+	tb_packet_admission_controller
+End time: 16:05:52 on Oct 07,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+# vsim -c -voptargs="+acc" -l C:\Users\rnave\AppData\Roaming\vlsi-tracker\workspaces\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791369239614_1791369278352\transcript.log tb_packet_admission_controller -do "run.do" 
+# Start time: 16:05:53 on Oct 07,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_packet_admission_controller_sv_unit(fast)
+# Loading work.tb_packet_admission_controller(fast)
+# Loading work.packet_admission_controller_if(fast__2)
+# Loading work.packet_admission_controller(fast)
+# Loading work.packet_admission_controller_ref(fast)
+# Loading work.packet_admission_controller_if(fast)
+# do run.do
+# 0
+# 0
+# 0
+# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()
+# for multiple files.
+#    Time: 0 ps  Iteration: 0  Process: /tb_packet_admission_controller/#INITIAL#453(#ublk#256277906#453) File: tb_packet_admission_controller.sv Line: 455
+# Timeout hit - Ending test
+# ** Note: $finish    : tb_packet_admission_controller.sv(462)
+#    Time: 40100 ps  Iteration: 0  Instance: /tb_packet_admission_controller
+# End time: 16:05:54 on Oct 07,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+
+::TEST_START:: {"id":0,"name":"Verification accepts the correct DUT","nonce":"ee678ed5fc2b406e"}
+::TEST_PASS:: {"id":0,"nonce":"ee678ed5fc2b406e"}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Start time: 16:05:54 on Oct 07,2026
+vlog -sv packet_admission_controller.sv tb_packet_admission_controller.sv 
+-- Compiling module packet_admission_controller__challenge_reference
+-- Compiling module packet_admission_controller
+-- Compiling module packet_admission_controller_ref
+-- Compiling interface packet_admission_controller_if
+-- Compiling package tb_packet_admission_controller_sv_unit
+-- Compiling module tb_packet_admission_controller
+
+Top level modules:
+	tb_packet_admission_controller
+End time: 16:05:54 on Oct 07,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+# vsim -c -voptargs="+acc" -l C:\Users\rnave\AppData\Roaming\vlsi-tracker\workspaces\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791369239614_1791369278352-challenge\transcript.log tb_packet_admission_controller -do "run.do" 
+# Start time: 16:05:55 on Oct 07,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_packet_admission_controller_sv_unit(fast)
+# Loading work.tb_packet_admission_controller(fast)
+# Loading work.packet_admission_controller_if(fast__2)
+# Loading work.packet_admission_controller(fast)
+# Loading work.packet_admission_controller__challenge_reference(fast)
+# Loading work.packet_admission_controller_ref(fast)
+# Loading work.packet_admission_controller_if(fast)
+# do run.do
+# 0
+# 0
+# 0
+# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()
+# for multiple files.
+#    Time: 0 ps  Iteration: 0  Process: /tb_packet_admission_controller/#INITIAL#453(#ublk#256277906#453) File: tb_packet_admission_controller.sv Line: 455
+# ::VLSI_CHALLENGE_ACTIVATED::ee678ed5fc2b406e
+# ::VLSI_CHALLENGE_ACTIVATED::ee678ed5fc2b406e
+# ** Error: Scoreboard mismatch detected!
+#    Time: 25 ns  Scope: tb_packet_admission_controller_sv_unit.packet_admission_controller_scoreboard.run File: tb_packet_admission_controller.sv Line: 268
+# DUT Outputs: req_ready=0, resp_valid=0, resp_id=0, resp_accept=0, queue_level=0, overflow=0
+# REF Outputs: req_ready=1, resp_valid=0, resp_id=0, resp_accept=0, queue_level=0, overflow=0
+# ** Error: Scoreboard mismatch detected!
+#    Time: 35 ns  Scope: tb_packet_admission_controller_sv_unit.packet_admission_controller_scoreboard.run File: tb_packet_admission_controller.sv Line: 268
+# DUT Outputs: req_ready=0, resp_valid=0, resp_id=0, resp_accept=0, queue_level=0, overflow=0
+# REF Outputs: req_ready=1, resp_valid=0, resp_id=0, resp_accept=0, queue_level=0, overflow=0
+# Timeout hit - Ending test
+# ** Note: $finish    : tb_packet_admission_controller.sv(462)
+#    Time: 40100 ps  Iteration: 0  Instance: /tb_packet_admission_controller
+# End time: 16:05:57 on Oct 07,2026, Elapsed time: 0:00:02
+# Errors: 2, Warnings: 2
+
+::TEST_START:: {"id":1,"name":"Verification exercises the contract-driven challenge","category":"checker_effectiveness","requirement":"observable_output_perturbation","nonce":"ee678ed5fc2b406e"}
+::TEST_PASS:: {"id":1,"nonce":"ee678ed5fc2b406e"}
+::TEST_START:: {"id":2,"name":"Verification detects the activated DUT violation","category":"checker_effectiveness","requirement":"req_ready","nonce":"ee678ed5fc2b406e"}
+::TEST_PASS:: {"id":2,"nonce":"ee678ed5fc2b406e"}
+::TEST_SUMMARY:: {"total":3,"passed":3,"failed":0,"nonce":"ee678ed5fc2b406e"}
+::JUDGE_DONE:: {"cases":3,"nonce":"ee678ed5fc2b406e"}
