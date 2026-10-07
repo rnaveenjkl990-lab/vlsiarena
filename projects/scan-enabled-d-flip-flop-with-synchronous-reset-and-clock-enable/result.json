@@ -1,0 +1,602 @@
+{
+  "success": true,
+  "category": "rtl",
+  "static": 100,
+  "compilation": 100,
+  "functional": 80,
+  "coverage": null,
+  "codeQuality": 65,
+  "structureScore": 100,
+  "simulationScore": 80,
+  "compileScore": 100,
+  "finalScore": 100,
+  "overallScore": 100,
+  "score": 100,
+  "passed": true,
+  "tier": "excellent",
+  "tierLabel": "excellent",
+  "weights": {
+    "static": 0.1,
+    "compilation": 0.15,
+    "functional": 0.55,
+    "coverage": 0.1,
+    "codeQuality": 0.1
+  },
+  "confidence": 1,
+  "findings": [],
+  "errors": [],
+  "warnings": [],
+  "info": [],
+  "simulationExecuted": true,
+  "simulationStatus": "Passed",
+  "simulationTranscript": "QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 09:11:10 on Oct 01,2026\r\nvlog -sv scan_dff.sv golden_reference.sv hidden_lockstep_tb.sv \r\n-- Compiling module scan_dff\r\n-- Compiling module scan_dff_ref\r\n-- Compiling module hidden_worker_0\r\n-- Compiling module hidden_lockstep_tb\r\n\r\nTop level modules:\r\n\thidden_lockstep_tb\r\nEnd time: 09:11:10 on Oct 01,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1790825882449_1790825929125\\transcript.log hidden_lockstep_tb -do \"run.do\" \r\n# Start time: 09:11:12 on Oct 01,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.hidden_lockstep_tb(fast)\r\n# Loading work.hidden_worker_0(fast)\r\n# Loading work.scan_dff(fast)\r\n# Loading work.scan_dff_ref(fast)\r\n# do run.do\r\n# 0\r\n# ::TEST_START:: {\"id\":0,\"name\":\"REQ_RESET_OPERATION ()\",\"category\":\"reset\",\"requirement\":\"REQ_RESET_OPERATION: Synchronous active-low reset sets q to 0 regardless of other inputs.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":1,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":2,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":3,\"stimulus\":\"clk=1, rst_n=0, d=1, en=1, scan_en=1, scan_in=1\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":0,\"cycles\":3,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":1,\"name\":\"REQ_FUNCTIONAL_LOAD ()\",\"category\":\"directed\",\"requirement\":\"REQ_FUNCTIONAL_LOAD: When reset is inactive and scan_en is low, en high loads d into the register.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":4,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":5,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":6,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":1,\"cycles\":6,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":2,\"name\":\"REQ_FUNCTIONAL_HOLD ()\",\"category\":\"directed\",\"requirement\":\"REQ_FUNCTIONAL_HOLD: When reset is inactive, scan_en is low, and en is low, register holds state.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":7,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":8,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":9,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":10,\"stimulus\":\"clk=1, rst_n=1, d=1, en=0, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":2,\"cycles\":10,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":3,\"name\":\"REQ_SCAN_OPERATION ()\",\"category\":\"directed\",\"requirement\":\"REQ_SCAN_OPERATION: When reset is inactive and scan_en is high, scan_in is loaded overriding en and d.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":11,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":12,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":13,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":14,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":3,\"cycles\":14,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":4,\"name\":\"Randomized robustness ()\",\"category\":\"randomized\",\"requirement\":\"Supplemental randomized interactions\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":15,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":16,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":17,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":18,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":19,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":20,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":21,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":22,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":23,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":24,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":25,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":26,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":27,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":28,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":29,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":30,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":31,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":32,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":33,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":34,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":35,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":36,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":37,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":38,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":39,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":4,\"cycles\":39,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_SUMMARY:: {\"total\":5,\"passed\":5,\"failed\":0,\"score\":100,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::JUDGE_DONE:: {\"cycles\":39,\"cases\":5,\"mismatches\":0,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ** Note: $finish    : hidden_lockstep_tb.sv(403)\r\n#    Time: 546 ns  Iteration: 1  Instance: /hidden_lockstep_tb\r\n# End time: 09:11:14 on Oct 01,2026, Elapsed time: 0:00:02\r\n# Errors: 0, Warnings: 1\r\n",
+  "simulator": "questa",
+  "passedCases": [
+    {
+      "id": 0,
+      "name": "REQ_RESET_OPERATION ()",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 1,
+      "name": "REQ_FUNCTIONAL_LOAD ()",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 2,
+      "name": "REQ_FUNCTIONAL_HOLD ()",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 3,
+      "name": "REQ_SCAN_OPERATION ()",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 4,
+      "name": "Randomized robustness ()",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    }
+  ],
+  "failedCases": [],
+  "notRunCases": [],
+  "uncoveredCases": [],
+  "compileErrors": [],
+  "simulationErrors": [],
+  "coverageScore": 0,
+  "coverageMeasured": false,
+  "gateStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "elaboration": "pass"
+  },
+  "shortCircuit": null,
+  "reachedCompilation": true,
+  "reachedSimulation": true,
+  "stageStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "elaboration": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "coverage": "not_applicable",
+    "assertions": "not_applicable"
+  },
+  "profile": {
+    "environment": "required",
+    "compile": "required",
+    "execution": "required",
+    "functional": "required",
+    "coverage": "not_applicable",
+    "assertions": "not_applicable"
+  },
+  "components": {
+    "static": 100,
+    "compilation": 100,
+    "functional": 80,
+    "coverage": 0,
+    "codeQuality": 65,
+    "simulation": 80
+  },
+  "durationMs": 6380,
+  "judge": {
+    "verdict": "AC",
+    "verdictLabel": "Accepted",
+    "passed": true,
+    "score": 100,
+    "gates": {
+      "environment": "pass",
+      "compile": "pass",
+      "execution": "pass",
+      "functional": "pass",
+      "elaboration": "pass"
+    },
+    "shortCircuit": null,
+    "reachedCompilation": true,
+    "reachedSimulation": true,
+    "coverageMeasured": false,
+    "failureReasons": [],
+    "testCases": [
+      {
+        "id": 0,
+        "name": "REQ_RESET_OPERATION ()",
+        "status": "passed",
+        "category": "reset",
+        "requirement": "REQ_RESET_OPERATION: Synchronous active-low reset sets q to 0 regardless of other inputs.",
+        "cycles": 3,
+        "vectors": [
+          {
+            "cycle": 1,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 2,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 3,
+            "stimulus": "clk=1, rst_n=0, d=1, en=1, scan_en=1, scan_in=1",
+            "expected": "q=0",
+            "actual": "q=0"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "REQ_FUNCTIONAL_LOAD ()",
+        "status": "passed",
+        "category": "directed",
+        "requirement": "REQ_FUNCTIONAL_LOAD: When reset is inactive and scan_en is low, en high loads d into the register.",
+        "cycles": 6,
+        "vectors": [
+          {
+            "cycle": 4,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 5,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 6,
+            "stimulus": "clk=1, rst_n=1, d=0, en=1, scan_en=0, scan_in=1",
+            "expected": "q=0",
+            "actual": "q=0"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "REQ_FUNCTIONAL_HOLD ()",
+        "status": "passed",
+        "category": "directed",
+        "requirement": "REQ_FUNCTIONAL_HOLD: When reset is inactive, scan_en is low, and en is low, register holds state.",
+        "cycles": 10,
+        "vectors": [
+          {
+            "cycle": 7,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 8,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 9,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 10,
+            "stimulus": "clk=1, rst_n=1, d=1, en=0, scan_en=0, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "REQ_SCAN_OPERATION ()",
+        "status": "passed",
+        "category": "directed",
+        "requirement": "REQ_SCAN_OPERATION: When reset is inactive and scan_en is high, scan_in is loaded overriding en and d.",
+        "cycles": 14,
+        "vectors": [
+          {
+            "cycle": 11,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 12,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 13,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 14,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Randomized robustness ()",
+        "status": "passed",
+        "category": "randomized",
+        "requirement": "Supplemental randomized interactions",
+        "cycles": 39,
+        "vectors": [
+          {
+            "cycle": 15,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 16,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 17,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 18,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 19,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 20,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 21,
+            "stimulus": "clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 22,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 23,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 24,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 25,
+            "stimulus": "clk=1, rst_n=1, d=0, en=1, scan_en=0, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 26,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 27,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 28,
+            "stimulus": "clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 29,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 30,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 31,
+            "stimulus": "clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 32,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 33,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0",
+            "expected": "q=0",
+            "actual": "q=0"
+          },
+          {
+            "cycle": 34,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 35,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 36,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 37,
+            "stimulus": "clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 38,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          },
+          {
+            "cycle": 39,
+            "stimulus": "clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=1",
+            "expected": "q=1",
+            "actual": "q=1"
+          }
+        ]
+      }
+    ],
+    "coverage": null,
+    "compileErrors": [],
+    "summary": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "score": 100
+    },
+    "stats": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "timeouts": 0,
+      "unresolved": 0,
+      "cycles": 39,
+      "runtimeMs": 6379
+    },
+    "failurePhase": "complete",
+    "execution": {
+      "exitCode": 0,
+      "signal": null,
+      "pid": 25840,
+      "command": "vsim.exe",
+      "args": [
+        "-c",
+        "-voptargs=+acc",
+        "-l",
+        "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1790825882449_1790825929125\\transcript.log",
+        "hidden_lockstep_tb",
+        "-do",
+        "run.do"
+      ],
+      "cwd": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1790825882449_1790825929125",
+      "spawnError": null,
+      "stdout": "Reading pref.tcl\r\n\r\n# 2024.1\r\n\r\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1790825882449_1790825929125\\transcript.log hidden_lockstep_tb -do \"run.do\" \r\n# Start time: 09:11:12 on Oct 01,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.hidden_lockstep_tb(fast)\r\n# Loading work.hidden_worker_0(fast)\r\n# Loading work.scan_dff(fast)\r\n# Loading work.scan_dff_ref(fast)\r\n# do run.do\r\n# 0\r\n# ::TEST_START:: {\"id\":0,\"name\":\"REQ_RESET_OPERATION ()\",\"category\":\"reset\",\"requirement\":\"REQ_RESET_OPERATION: Synchronous active-low reset sets q to 0 regardless of other inputs.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":1,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":2,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":3,\"stimulus\":\"clk=1, rst_n=0, d=1, en=1, scan_en=1, scan_in=1\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":0,\"cycles\":3,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":1,\"name\":\"REQ_FUNCTIONAL_LOAD ()\",\"category\":\"directed\",\"requirement\":\"REQ_FUNCTIONAL_LOAD: When reset is inactive and scan_en is low, en high loads d into the register.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":4,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":5,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":6,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":1,\"cycles\":6,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":2,\"name\":\"REQ_FUNCTIONAL_HOLD ()\",\"category\":\"directed\",\"requirement\":\"REQ_FUNCTIONAL_HOLD: When reset is inactive, scan_en is low, and en is low, register holds state.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":7,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":8,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":9,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":10,\"stimulus\":\"clk=1, rst_n=1, d=1, en=0, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":2,\"cycles\":10,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":3,\"name\":\"REQ_SCAN_OPERATION ()\",\"category\":\"directed\",\"requirement\":\"REQ_SCAN_OPERATION: When reset is inactive and scan_en is high, scan_in is loaded overriding en and d.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":11,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":12,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":13,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":14,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":3,\"cycles\":14,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":4,\"name\":\"Randomized robustness ()\",\"category\":\"randomized\",\"requirement\":\"Supplemental randomized interactions\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":15,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":16,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":17,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":18,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":19,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":20,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":21,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":22,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":23,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":24,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":25,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":26,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":27,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":28,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":29,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":30,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":31,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":32,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":33,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":34,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":35,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":36,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":37,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":38,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":39,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":4,\"cycles\":39,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_SUMMARY:: {\"total\":5,\"passed\":5,\"failed\":0,\"score\":100,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::JUDGE_DONE:: {\"cycles\":39,\"cases\":5,\"mismatches\":0,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ** Note: $finish    : hidden_lockstep_tb.sv(403)\r\n#    Time: 546 ns  Iteration: 1  Instance: /hidden_lockstep_tb\r\n# End time: 09:11:14 on Oct 01,2026, Elapsed time: 0:00:02\r\n# Errors: 0, Warnings: 1\r\n",
+      "stderr": "",
+      "killed": false,
+      "success": true,
+      "started": true,
+      "completed": true
+    },
+    "validatorQuality": {
+      "ok": true,
+      "reason": "contract-directed checks passed; every semantic mutation rejected functionally",
+      "mutations": [
+        {
+          "id": "mutate_SCAN_DFF_UPDATE",
+          "kind": "inverted_condition",
+          "ruleId": "SCAN_DFF_UPDATE",
+          "stateName": null,
+          "witness": {
+            "requirementId": "REQ_RESET_OPERATION",
+            "parameters": {}
+          },
+          "verdict": "WA",
+          "functionallyRejected": true
+        },
+        {
+          "id": "mutate_OUTPUT_ASSIGN",
+          "kind": "altered_relation",
+          "ruleId": "OUTPUT_ASSIGN",
+          "stateName": null,
+          "witness": {
+            "requirementId": "REQ_RESET_OPERATION",
+            "parameters": {}
+          },
+          "verdict": "WA",
+          "functionallyRejected": true
+        },
+        {
+          "id": "reset_q_reg",
+          "kind": "wrong_reset",
+          "ruleId": null,
+          "stateName": "q_reg",
+          "witness": {
+            "requirementId": "REQ_RESET_OPERATION",
+            "parameters": {}
+          },
+          "verdict": "WA",
+          "functionallyRejected": true
+        }
+      ],
+      "oracleVerdict": "AC",
+      "independent": true,
+      "reused": true,
+      "artifactHash": "w4t2bn"
+    },
+    "processEvidence": {
+      "compile": {
+        "exitCode": 0,
+        "signal": null,
+        "pid": 23212,
+        "command": "vlog.exe",
+        "args": [
+          "-sv",
+          "scan_dff.sv",
+          "golden_reference.sv",
+          "hidden_lockstep_tb.sv"
+        ],
+        "cwd": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1790825882449_1790825929125",
+        "spawnError": null,
+        "stdout": "QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 09:11:10 on Oct 01,2026\r\nvlog -sv scan_dff.sv golden_reference.sv hidden_lockstep_tb.sv \r\n-- Compiling module scan_dff\r\n-- Compiling module scan_dff_ref\r\n-- Compiling module hidden_worker_0\r\n-- Compiling module hidden_lockstep_tb\r\n\r\nTop level modules:\r\n\thidden_lockstep_tb\r\nEnd time: 09:11:10 on Oct 01,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n",
+        "stderr": "",
+        "killed": false,
+        "success": true
+      },
+      "elaboration": {
+        "success": true
+      },
+      "execution": {
+        "exitCode": 0,
+        "signal": null,
+        "pid": 25840,
+        "command": "vsim.exe",
+        "args": [
+          "-c",
+          "-voptargs=+acc",
+          "-l",
+          "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1790825882449_1790825929125\\transcript.log",
+          "hidden_lockstep_tb",
+          "-do",
+          "run.do"
+        ],
+        "cwd": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1790825882449_1790825929125",
+        "spawnError": null,
+        "stdout": "Reading pref.tcl\r\n\r\n# 2024.1\r\n\r\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1790825882449_1790825929125\\transcript.log hidden_lockstep_tb -do \"run.do\" \r\n# Start time: 09:11:12 on Oct 01,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.hidden_lockstep_tb(fast)\r\n# Loading work.hidden_worker_0(fast)\r\n# Loading work.scan_dff(fast)\r\n# Loading work.scan_dff_ref(fast)\r\n# do run.do\r\n# 0\r\n# ::TEST_START:: {\"id\":0,\"name\":\"REQ_RESET_OPERATION ()\",\"category\":\"reset\",\"requirement\":\"REQ_RESET_OPERATION: Synchronous active-low reset sets q to 0 regardless of other inputs.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":1,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":2,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":3,\"stimulus\":\"clk=1, rst_n=0, d=1, en=1, scan_en=1, scan_in=1\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":0,\"cycles\":3,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":1,\"name\":\"REQ_FUNCTIONAL_LOAD ()\",\"category\":\"directed\",\"requirement\":\"REQ_FUNCTIONAL_LOAD: When reset is inactive and scan_en is low, en high loads d into the register.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":4,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":5,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":6,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":1,\"cycles\":6,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":2,\"name\":\"REQ_FUNCTIONAL_HOLD ()\",\"category\":\"directed\",\"requirement\":\"REQ_FUNCTIONAL_HOLD: When reset is inactive, scan_en is low, and en is low, register holds state.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":7,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":8,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":9,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":10,\"stimulus\":\"clk=1, rst_n=1, d=1, en=0, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":2,\"cycles\":10,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":3,\"name\":\"REQ_SCAN_OPERATION ()\",\"category\":\"directed\",\"requirement\":\"REQ_SCAN_OPERATION: When reset is inactive and scan_en is high, scan_in is loaded overriding en and d.\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":11,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":12,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":13,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":14,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":3,\"cycles\":14,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_START:: {\"id\":4,\"name\":\"Randomized robustness ()\",\"category\":\"randomized\",\"requirement\":\"Supplemental randomized interactions\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":15,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":16,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":17,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":18,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":19,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":20,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":21,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":22,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":23,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":24,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":25,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":26,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":27,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":28,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":29,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":30,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":31,\"stimulus\":\"clk=1, rst_n=1, d=0, en=1, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":32,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":33,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=0\",\"expected\":\"q=0\",\"actual\":\"q=0\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":34,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":35,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":36,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=0, scan_in=0\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":37,\"stimulus\":\"clk=1, rst_n=1, d=1, en=1, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":38,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=1, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":39,\"stimulus\":\"clk=1, rst_n=1, d=0, en=0, scan_en=0, scan_in=1\",\"expected\":\"q=1\",\"actual\":\"q=1\",\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_PASS:: {\"id\":4,\"cycles\":39,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::TEST_SUMMARY:: {\"total\":5,\"passed\":5,\"failed\":0,\"score\":100,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ::JUDGE_DONE:: {\"cycles\":39,\"cases\":5,\"mismatches\":0,\"nonce\":\"4f03d5564f1e4a6b\"}\r\n# ** Note: $finish    : hidden_lockstep_tb.sv(403)\r\n#    Time: 546 ns  Iteration: 1  Instance: /hidden_lockstep_tb\r\n# End time: 09:11:14 on Oct 01,2026, Elapsed time: 0:00:02\r\n# Errors: 0, Warnings: 1\r\n",
+        "stderr": "",
+        "killed": false,
+        "success": true,
+        "started": true,
+        "completed": true
+      },
+      "diagnostics": {
+        "errorLines": [],
+        "warningLines": [
+          "** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+        ],
+        "noteLines": [
+          "** Note: (vsim-3813) Design is being optimized due to module recompilation...",
+          "** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.",
+          "** Note: $finish    : hidden_lockstep_tb.sv(403)"
+        ],
+        "errorCount": 0,
+        "warningCount": 1,
+        "hasCompileOrElaborationFailure": false
+      }
+    },
+    "hasHarnessEvidence": true,
+    "evidence": {
+      "harness": "lockstep",
+      "simulator": "questa",
+      "casesParsed": 5
+    }
+  },
+  "verdict": "AC",
+  "verdictLabel": "Accepted",
+  "v1Compatible": {
+    "overallScore": 100,
+    "static": {
+      "passed": true,
+      "summary": "Structure: 100/100",
+      "errors": [],
+      "warnings": []
+    },
+    "simulation": {
+      "passed": true,
+      "executed": true,
+      "score": 80
+    }
+  }
+}
