@@ -1,0 +1,334 @@
+{
+  "success": true,
+  "category": "sv",
+  "static": 45,
+  "compilation": 100,
+  "functional": 20,
+  "coverage": null,
+  "codeQuality": 50,
+  "structureScore": 45,
+  "simulationScore": 20,
+  "compileScore": 100,
+  "finalScore": 100,
+  "overallScore": 100,
+  "score": 100,
+  "passed": true,
+  "tier": "excellent",
+  "tierLabel": "excellent",
+  "weights": {
+    "static": 0.1,
+    "compilation": 0.15,
+    "functional": 0.5,
+    "coverage": 0.15,
+    "codeQuality": 0.1
+  },
+  "confidence": 1,
+  "findings": [
+    "REJECT: SV task contains RTL or coverage constructs (forbidden pattern detected)",
+    "FAULT_INJECTION: Testbench detected issues in DUT",
+    "REJECT: Coverage constructs found in SV submission"
+  ],
+  "errors": [
+    "REJECT: SV task contains RTL or coverage constructs (forbidden pattern detected)",
+    "REJECT: Coverage constructs found in SV submission"
+  ],
+  "warnings": [],
+  "info": [
+    "FAULT_INJECTION: Testbench detected issues in DUT"
+  ],
+  "simulationExecuted": true,
+  "simulationStatus": "Failed",
+  "simulationTranscript": "QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 16:05:52 on Oct 07,2026\r\nvlog -sv packet_admission_controller.sv tb_packet_admission_controller.sv \r\n-- Compiling module packet_admission_controller\r\n-- Compiling module packet_admission_controller_ref\r\n-- Compiling interface packet_admission_controller_if\r\n-- Compiling package tb_packet_admission_controller_sv_unit\r\n-- Compiling module tb_packet_admission_controller\r\n\r\nTop level modules:\r\n\ttb_packet_admission_controller\r\nEnd time: 16:05:52 on Oct 07,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791369239614_1791369278352\\transcript.log tb_packet_admission_controller -do \"run.do\" \r\n# Start time: 16:05:53 on Oct 07,2026\r\n# ** Note: (vsim-8009) Loading existing optimized design _opt\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.tb_packet_admission_controller_sv_unit(fast)\r\n# Loading work.tb_packet_admission_controller(fast)\r\n# Loading work.packet_admission_controller_if(fast__2)\r\n# Loading work.packet_admission_controller(fast)\r\n# Loading work.packet_admission_controller_ref(fast)\r\n# Loading work.packet_admission_controller_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /tb_packet_admission_controller/#INITIAL#453(#ublk#256277906#453) File: tb_packet_admission_controller.sv Line: 455\r\n# Timeout hit - Ending test\r\n# ** Note: $finish    : tb_packet_admission_controller.sv(462)\r\n#    Time: 40100 ps  Iteration: 0  Instance: /tb_packet_admission_controller\r\n# End time: 16:05:54 on Oct 07,2026, Elapsed time: 0:00:01\r\n# Errors: 0, Warnings: 1\r\n\n::TEST_START:: {\"id\":0,\"name\":\"Verification accepts the correct DUT\",\"nonce\":\"ee678ed5fc2b406e\"}\n::TEST_PASS:: {\"id\":0,\"nonce\":\"ee678ed5fc2b406e\"}\nQuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 16:05:54 on Oct 07,2026\r\nvlog -sv packet_admission_controller.sv tb_packet_admission_controller.sv \r\n-- Compiling module packet_admission_controller__challenge_reference\r\n-- Compiling module packet_admission_controller\r\n-- Compiling module packet_admission_controller_ref\r\n-- Compiling interface packet_admission_controller_if\r\n-- Compiling package tb_packet_admission_controller_sv_unit\r\n-- Compiling module tb_packet_admission_controller\r\n\r\nTop level modules:\r\n\ttb_packet_admission_controller\r\nEnd time: 16:05:54 on Oct 07,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791369239614_1791369278352-challenge\\transcript.log tb_packet_admission_controller -do \"run.do\" \r\n# Start time: 16:05:55 on Oct 07,2026\r\n# ** Note: (vsim-3812) Design is being optimized...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.tb_packet_admission_controller_sv_unit(fast)\r\n# Loading work.tb_packet_admission_controller(fast)\r\n# Loading work.packet_admission_controller_if(fast__2)\r\n# Loading work.packet_admission_controller(fast)\r\n# Loading work.packet_admission_controller__challenge_reference(fast)\r\n# Loading work.packet_admission_controller_ref(fast)\r\n# Loading work.packet_admission_controller_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /tb_packet_admission_controller/#INITIAL#453(#ublk#256277906#453) File: tb_packet_admission_controller.sv Line: 455\r\n# ::VLSI_CHALLENGE_ACTIVATED::ee678ed5fc2b406e\r\n# ::VLSI_CHALLENGE_ACTIVATED::ee678ed5fc2b406e\r\n# ** Error: Scoreboard mismatch detected!\r\n#    Time: 25 ns  Scope: tb_packet_admission_controller_sv_unit.packet_admission_controller_scoreboard.run File: tb_packet_admission_controller.sv Line: 268\r\n# DUT Outputs: req_ready=0, resp_valid=0, resp_id=0, resp_accept=0, queue_level=0, overflow=0\r\n# REF Outputs: req_ready=1, resp_valid=0, resp_id=0, resp_accept=0, queue_level=0, overflow=0\r\n# ** Error: Scoreboard mismatch detected!\r\n#    Time: 35 ns  Scope: tb_packet_admission_controller_sv_unit.packet_admission_controller_scoreboard.run File: tb_packet_admission_controller.sv Line: 268\r\n# DUT Outputs: req_ready=0, resp_valid=0, resp_id=0, resp_accept=0, queue_level=0, overflow=0\r\n# REF Outputs: req_ready=1, resp_valid=0, resp_id=0, resp_accept=0, queue_level=0, overflow=0\r\n# Timeout hit - Ending test\r\n# ** Note: $finish    : tb_packet_admission_controller.sv(462)\r\n#    Time: 40100 ps  Iteration: 0  Instance: /tb_packet_admission_controller\r\n# End time: 16:05:57 on Oct 07,2026, Elapsed time: 0:00:02\r\n# Errors: 2, Warnings: 2\r\n\n::TEST_START:: {\"id\":1,\"name\":\"Verification exercises the contract-driven challenge\",\"category\":\"checker_effectiveness\",\"requirement\":\"observable_output_perturbation\",\"nonce\":\"ee678ed5fc2b406e\"}\n::TEST_PASS:: {\"id\":1,\"nonce\":\"ee678ed5fc2b406e\"}\n::TEST_START:: {\"id\":2,\"name\":\"Verification detects the activated DUT violation\",\"category\":\"checker_effectiveness\",\"requirement\":\"req_ready\",\"nonce\":\"ee678ed5fc2b406e\"}\n::TEST_PASS:: {\"id\":2,\"nonce\":\"ee678ed5fc2b406e\"}\n::TEST_SUMMARY:: {\"total\":3,\"passed\":3,\"failed\":0,\"nonce\":\"ee678ed5fc2b406e\"}\n::JUDGE_DONE:: {\"cases\":3,\"nonce\":\"ee678ed5fc2b406e\"}",
+  "waveformPath": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791369239614_1791369278352\\submission.vcd",
+  "waveformVcdText": "$date\r\n\tWed Oct  7 16:05:54 2026\r\n$end\r\n$version\r\n\tQuestaSim Version 2024.1\r\n$end\r\n$timescale\r\n\t1ps\r\n$end\r\n\r\n$scope module tb_packet_admission_controller $end\r\n\r\n$scope module vif $end\r\n$var reg 1 ! clk $end\r\n$var reg 1 \" rst_n $end\r\n$var reg 1 # req_valid $end\r\n$var reg 1 $ req_ready $end\r\n$var reg 4 % req_id [3:0] $end\r\n$var reg 2 & req_class [1:0] $end\r\n$var reg 1 ' resp_valid $end\r\n$var reg 1 ( resp_ready $end\r\n$var reg 4 ) resp_id [3:0] $end\r\n$var reg 1 * resp_accept $end\r\n$var reg 3 + queue_level [2:0] $end\r\n$var reg 1 , overflow $end\r\n$var reg 1 - req_ready_ref $end\r\n$var reg 1 . resp_valid_ref $end\r\n$var reg 4 / resp_id_ref [3:0] $end\r\n$var reg 1 0 resp_accept_ref $end\r\n$var reg 3 1 queue_level_ref [2:0] $end\r\n$var reg 1 2 overflow_ref $end\r\n$upscope $end\r\n\r\n$scope module dut $end\r\n$var parameter 32 3 MAX_ACTIVE $end\r\n$var wire 1 4 clk $end\r\n$var wire 1 5 rst_n $end\r\n$var wire 1 6 req_valid $end\r\n$var reg 1 7 req_ready $end\r\n$var wire 1 8 req_id [3] $end\r\n$var wire 1 9 req_id [2] $end\r\n$var wire 1 : req_id [1] $end\r\n$var wire 1 ; req_id [0] $end\r\n$var wire 1 < req_class [1] $end\r\n$var wire 1 = req_class [0] $end\r\n$var reg 1 > resp_valid $end\r\n$var wire 1 ? resp_ready $end\r\n$var reg 4 @ resp_id [3:0] $end\r\n$var reg 1 A resp_accept $end\r\n$var reg 3 B queue_level [2:0] $end\r\n$var reg 1 C overflow $end\r\n$var reg 3 D active_count [2:0] $end\r\n$var reg 4 E resp_id_reg [3:0] $end\r\n$var reg 1 F resp_accept_reg $end\r\n$var reg 1 G overflow_reg $end\r\n$var reg 1 H resp_valid_reg $end\r\n$upscope $end\r\n\r\n$scope module ref_model $end\r\n$var parameter 32 I MAX_ACTIVE $end\r\n$var wire 1 J clk $end\r\n$var wire 1 K rst_n $end\r\n$var wire 1 L req_valid $end\r\n$var reg 1 M req_ready $end\r\n$var wire 1 N req_id [3] $end\r\n$var wire 1 O req_id [2] $end\r\n$var wire 1 P req_id [1] $end\r\n$var wire 1 Q req_id [0] $end\r\n$var wire 1 R req_class [1] $end\r\n$var wire 1 S req_class [0] $end\r\n$var reg 1 T resp_valid $end\r\n$var wire 1 U resp_ready $end\r\n$var reg 4 V resp_id [3:0] $end\r\n$var reg 1 W resp_accept $end\r\n$var reg 3 X queue_level [2:0] $end\r\n$var reg 1 Y overflow $end\r\n$var reg 3 Z active_count [2:0] $end\r\n$var reg 4 [ resp_id_reg [3:0] $end\r\n$var reg 1 \\ resp_accept_reg $end\r\n$var reg 1 ] overflow_reg $end\r\n$var reg 1 ^ resp_valid_reg $end\r\n$upscope $end\r\n\r\n$scope module dut $end\r\n$var wire 1 4 clk $end\r\n$var wire 1 5 rst_n $end\r\n$var wire 1 6 req_valid $end\r\n$var wire 1 8 req_id [3] $end\r\n$var wire 1 9 req_id [2] $end\r\n$var wire 1 : req_id [1] $end\r\n$var wire 1 ; req_id [0] $end\r\n$var wire 1 < req_class [1] $end\r\n$var wire 1 = req_class [0] $end\r\n$var wire 1 ? resp_ready $end\r\n$upscope $end\r\n\r\n$scope module ref_model $end\r\n$var wire 1 J clk $end\r\n$var wire 1 K rst_n $end\r\n$var wire 1 L req_valid $end\r\n$var wire 1 N req_id [3] $end\r\n$var wire 1 O req_id [2] $end\r\n$var wire 1 P req_id [1] $end\r\n$var wire 1 Q req_id [0] $end\r\n$var wire 1 R req_class [1] $end\r\n$var wire 1 S req_class [0] $end\r\n$var wire 1 U resp_ready $end\r\n$upscope $end\r\n$upscope $end\r\n$enddefinitions $end\r\n#0\r\n$dumpvars\r\n0!\r\n0\"\r\nx#\r\nx$\r\nbx %\r\nbx &\r\nx'\r\nx(\r\nbx )\r\nx*\r\nbx +\r\nx,\r\nx-\r\nx.\r\nbx /\r\nx0\r\nbx 1\r\nx2\r\nx7\r\nx>\r\nbx @\r\nxA\r\nbx B\r\nxC\r\nbx D\r\nbx E\r\nxF\r\nxG\r\nxH\r\nxM\r\nxT\r\nbx V\r\nxW\r\nbx X\r\nxY\r\nbx Z\r\nbx [\r\nx\\\r\nx]\r\nx^\r\nb100 3\r\nb100 I\r\nxU\r\nxS\r\nxR\r\nxQ\r\nxP\r\nxO\r\nxN\r\nxL\r\n0K\r\n0J\r\nx?\r\nx=\r\nx<\r\nx;\r\nx:\r\nx9\r\nx8\r\nx6\r\n05\r\n04\r\n$end\r\n#5000\r\n1!\r\n14\r\n1J\r\nb0 Z\r\nb0 [\r\n0\\\r\n0]\r\n0^\r\nb0 D\r\nb0 E\r\n0F\r\n0G\r\n0H\r\n17\r\n0>\r\n0C\r\n0A\r\nb0 @\r\nb0 B\r\n1M\r\n0T\r\n0Y\r\n0W\r\nb0 V\r\nb0 X\r\nb0 1\r\nb0 /\r\n00\r\n02\r\n0.\r\n1-\r\nb0 +\r\nb0 )\r\n0*\r\n0,\r\n0'\r\n1$\r\n#10000\r\n0!\r\n04\r\n0J\r\n#15000\r\n1!\r\n14\r\n1J\r\n#20000\r\n1\"\r\n0!\r\n15\r\n1K\r\n04\r\n0J\r\n0#\r\nb0 %\r\nb0 &\r\n0(\r\n06\r\n0L\r\n0S\r\n0R\r\n0=\r\n0<\r\n0Q\r\n0P\r\n0O\r\n0N\r\n0;\r\n0:\r\n09\r\n08\r\n0?\r\n0U\r\n#25000\r\n1!\r\n14\r\n1J\r\n1#\r\nb110 %\r\n1(\r\n16\r\n1L\r\n1P\r\n1O\r\n1:\r\n19\r\n1?\r\n1U\r\n#30000\r\n0!\r\n04\r\n0J\r\n#35000\r\n1!\r\n14\r\n1J\r\nb110 [\r\n1^\r\n1\\\r\nb1 Z\r\nb110 E\r\n1H\r\n1F\r\nb1 D\r\nb111 %\r\nb10 &\r\n0(\r\nb1 B\r\n1A\r\n07\r\n1>\r\nb110 @\r\nb1 X\r\n1W\r\n0M\r\n1T\r\nb110 V\r\n1R\r\n1<\r\n1Q\r\n1;\r\n0?\r\n0U\r\nb110 /\r\n1.\r\n0-\r\n10\r\nb1 1\r\nb110 )\r\n1'\r\n0$\r\n1*\r\nb1 +\r\n#40000\r\n0!\r\n04\r\n0J\r\n",
+  "simulator": "questa",
+  "passedCases": [
+    {
+      "id": 0,
+      "name": "Verification accepts the correct DUT",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 1,
+      "name": "Verification exercises the contract-driven challenge",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 2,
+      "name": "Verification detects the activated DUT violation",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    }
+  ],
+  "failedCases": [],
+  "notRunCases": [],
+  "uncoveredCases": [],
+  "compileErrors": [],
+  "simulationErrors": [],
+  "coverageScore": 0,
+  "coverageMeasured": false,
+  "gateStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "assertions": "not_run"
+  },
+  "shortCircuit": null,
+  "reachedCompilation": true,
+  "reachedSimulation": true,
+  "stageStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "coverage": "not_applicable",
+    "assertions": "not_run"
+  },
+  "profile": {
+    "environment": "required",
+    "compile": "required",
+    "execution": "required",
+    "functional": "required",
+    "coverage": "not_applicable",
+    "assertions": "optional"
+  },
+  "components": {
+    "static": 45,
+    "compilation": 100,
+    "functional": 20,
+    "coverage": 0,
+    "codeQuality": 50,
+    "simulation": 20
+  },
+  "durationMs": 7822,
+  "judge": {
+    "verdict": "AC",
+    "verdictLabel": "Accepted",
+    "passed": true,
+    "score": 100,
+    "gates": {
+      "environment": "pass",
+      "compile": "pass",
+      "execution": "pass",
+      "functional": "pass",
+      "assertions": "not_run"
+    },
+    "shortCircuit": null,
+    "reachedCompilation": true,
+    "reachedSimulation": true,
+    "coverageMeasured": false,
+    "failureReasons": [],
+    "testCases": [
+      {
+        "id": 0,
+        "name": "Verification accepts the correct DUT",
+        "status": "passed"
+      },
+      {
+        "id": 1,
+        "name": "Verification exercises the contract-driven challenge",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "observable_output_perturbation"
+      },
+      {
+        "id": 2,
+        "name": "Verification detects the activated DUT violation",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "req_ready"
+      }
+    ],
+    "coverage": null,
+    "compileErrors": [],
+    "summary": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "score": null
+    },
+    "stats": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "timeouts": 0,
+      "unresolved": 0,
+      "cycles": null,
+      "runtimeMs": 7821
+    },
+    "failurePhase": null,
+    "execution": null,
+    "validatorQuality": {
+      "ok": true,
+      "independent": true,
+      "challengePlan": {
+        "schemaVersion": 1,
+        "category": "sv",
+        "source": "structured-specification",
+        "scenarios": [
+          {
+            "id": "scenario_1",
+            "description": "Drive a sequence of requests while capacity is available to expose normal admission flow and verify accepted responses preserve each request identifier."
+          },
+          {
+            "id": "scenario_2",
+            "description": "Fill all tracking resources, then issue another request to expose capacity rejection behavior and verify overflow signaling."
+          },
+          {
+            "id": "scenario_3",
+            "description": "Generate a valid response while keeping resp_ready low for several cycles to expose response holding behavior under backpressure."
+          },
+          {
+            "id": "scenario_4",
+            "description": "Assert synchronous reset during an outstanding response and verify that the controller returns to an empty state without emitting the old response."
+          },
+          {
+            "id": "scenario_5",
+            "description": "Issue repeated requests on consecutive cycles around the transition from full capacity to available capacity to expose resource accounting correctness."
+          }
+        ],
+        "requirements": [
+          {
+            "id": "req_1",
+            "description": "A request is accepted only on a cycle where req_valid and req_ready are both high."
+          },
+          {
+            "id": "req_2",
+            "description": "The controller must never allow queue_level to exceed MAX_ACTIVE."
+          },
+          {
+            "id": "req_3",
+            "description": "An accepted request must eventually produce exactly one response containing the same req_id."
+          },
+          {
+            "id": "req_4",
+            "description": "A rejected request caused by exhausted capacity must assert resp_accept low and set overflow high for that response."
+          },
+          {
+            "id": "req_5",
+            "description": "The response identifier must remain stable while resp_valid is high and resp_ready is low."
+          },
+          {
+            "id": "req_6",
+            "description": "The controller must support requests with all four req_class values and preserve the supplied req_id in the response."
+          },
+          {
+            "id": "req_7",
+            "description": "queue_level must represent the number of accepted packets that have not completed their response handshake."
+          },
+          {
+            "id": "req_8",
+            "description": "A request transfer occurs only when req_valid and req_ready are both high on the same rising clock edge."
+          },
+          {
+            "id": "req_9",
+            "description": "req_id and req_class must be sampled only on a request transfer cycle; values outside a transfer cycle have no effect."
+          },
+          {
+            "id": "req_10",
+            "description": "resp_valid may assert after a request transfer, and once asserted it must remain asserted until a cycle where resp_ready is high."
+          },
+          {
+            "id": "req_11",
+            "description": "A response transfer occurs only when resp_valid and resp_ready are both high on the same rising clock edge."
+          },
+          {
+            "id": "req_12",
+            "description": "resp_id and resp_accept must remain unchanged while resp_valid is high and resp_ready is low."
+          },
+          {
+            "id": "req_13",
+            "description": "The controller must not accept a new request while it cannot preserve a pending response result."
+          },
+          {
+            "id": "req_14",
+            "description": "The verification environment can demonstrate correct request and response handshake behavior."
+          },
+          {
+            "id": "req_15",
+            "description": "The verification environment can demonstrate correct behavior at zero occupancy and maximum occupancy boundaries."
+          },
+          {
+            "id": "req_16",
+            "description": "The verification environment can demonstrate that accepted requests are matched to exactly one response."
+          },
+          {
+            "id": "req_17",
+            "description": "The verification environment can demonstrate that overflow reporting only occurs for capacity exhaustion."
+          },
+          {
+            "id": "req_18",
+            "description": "The verification environment can demonstrate reset recovery from active transaction states."
+          }
+        ],
+        "activity": {
+          "requireExecution": true,
+          "requireGoldenAcceptance": true,
+          "requireNegativeChallenge": true
+        },
+        "negativeChallenge": {
+          "mode": "contract_output_perturbation",
+          "maxRuns": 1,
+          "requireActivation": true,
+          "requireDetection": true
+        },
+        "assertionIntent": null,
+        "coverageIntent": null
+      },
+      "challengeId": "observable_output_perturbation",
+      "challengedOutput": "req_ready",
+      "activationInputs": [
+        "clk",
+        "rst_n",
+        "req_valid",
+        "req_id",
+        "req_class",
+        "resp_ready"
+      ],
+      "reason": "Correct DUT accepted; the contract-driven fault was exercised and detected."
+    },
+    "processEvidence": {
+      "compile": null,
+      "elaboration": null,
+      "execution": null,
+      "diagnostics": null
+    },
+    "hasHarnessEvidence": true,
+    "evidence": {
+      "harness": "lockstep",
+      "simulator": "questa",
+      "casesParsed": 3
+    }
+  },
+  "verdict": "AC",
+  "verdictLabel": "Accepted",
+  "v1Compatible": {
+    "overallScore": 100,
+    "static": {
+      "passed": false,
+      "summary": "Structure: 45/100",
+      "errors": [],
+      "warnings": []
+    },
+    "simulation": {
+      "passed": false,
+      "executed": true,
+      "score": 20
+    }
+  }
+}
