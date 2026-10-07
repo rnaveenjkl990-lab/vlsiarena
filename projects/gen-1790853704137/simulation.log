@@ -1,0 +1,87 @@
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Start time: 16:54:47 on Oct 01,2026
+vlog -sv dut.sv user_assertions.sv 
+-- Compiling module frame_sync_packet_validator
+-- Compiling module frame_sync_packet_validator_ref
+-- Compiling interface frame_sync_packet_validator_if
+-- Compiling package user_assertions_sv_unit
+-- Compiling module frame_sync_packet_validator_assertions
+-- Compiling module tb_frame_sync_packet_validator
+
+Top level modules:
+	tb_frame_sync_packet_validator
+End time: 16:54:47 on Oct 01,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+# vsim -c -voptargs="+acc" -l C:\Users\rnave\AppData\Roaming\vlsi-tracker\workspaces\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1790853704137_1790853800853\transcript.log tb_frame_sync_packet_validator -do "run.do" 
+# Start time: 16:54:48 on Oct 01,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.user_assertions_sv_unit(fast)
+# Loading work.tb_frame_sync_packet_validator(fast)
+# Loading work.frame_sync_packet_validator_if(fast__2)
+# Loading work.frame_sync_packet_validator(fast)
+# Loading work.frame_sync_packet_validator_ref(fast)
+# Loading work.frame_sync_packet_validator_assertions(fast)
+# Loading work.frame_sync_packet_validator_if(fast)
+# do run.do
+# 0
+# [GEN] rx_data=9f rx_valid=0 rx_sop=1 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [GEN] rx_data=ec rx_valid=0 rx_sop=0 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [GEN] rx_data=ee rx_valid=1 rx_sop=0 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [GEN] rx_data=7e rx_valid=0 rx_sop=1 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [GEN] rx_data=f8 rx_valid=1 rx_sop=0 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [GEN] rx_data=64 rx_valid=1 rx_sop=0 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [GEN] rx_data=cb rx_valid=1 rx_sop=1 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [GEN] rx_data=0 rx_valid=1 rx_sop=1 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [MON] rx_data=0 rx_valid=0 rx_sop=0 rx_eop=0 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0
+# [DRV] rx_data=9f rx_valid=0 rx_sop=1 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [SCB] checked #1: rx_data=0 rx_valid=0 rx_sop=0 rx_eop=0 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0
+# [DRV] rx_data=ec rx_valid=0 rx_sop=0 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [MON] rx_data=9f rx_valid=0 rx_sop=1 rx_eop=1 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0
+# [SCB] checked #2: rx_data=9f rx_valid=0 rx_sop=1 rx_eop=1 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0
+# [MON] rx_data=ec rx_valid=0 rx_sop=0 rx_eop=0 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0
+# [DRV] rx_data=ee rx_valid=1 rx_sop=0 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [SCB] checked #3: rx_data=ec rx_valid=0 rx_sop=0 rx_eop=0 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0
+# [DRV] rx_data=7e rx_valid=0 rx_sop=1 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [MON] rx_data=ee rx_valid=1 rx_sop=0 rx_eop=1 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0
+# [SCB] checked #4: rx_data=ee rx_valid=1 rx_sop=0 rx_eop=1 out_data=0 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=0
+# [MON] rx_data=7e rx_valid=0 rx_sop=1 rx_eop=1 out_data=ee out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=1
+# [DRV] rx_data=f8 rx_valid=1 rx_sop=0 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [SCB] checked #5: rx_data=7e rx_valid=0 rx_sop=1 rx_eop=1 out_data=ee out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=1
+# [DRV] rx_data=64 rx_valid=1 rx_sop=0 rx_eop=1 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [MON] rx_data=f8 rx_valid=1 rx_sop=0 rx_eop=0 out_data=ee out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=1
+# [SCB] checked #6: rx_data=f8 rx_valid=1 rx_sop=0 rx_eop=0 out_data=ee out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=1
+# [MON] rx_data=64 rx_valid=1 rx_sop=0 rx_eop=1 out_data=f8 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=2
+# [DRV] rx_data=cb rx_valid=1 rx_sop=1 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [SCB] checked #7: rx_data=64 rx_valid=1 rx_sop=0 rx_eop=1 out_data=f8 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=2
+# [DRV] rx_data=0 rx_valid=1 rx_sop=1 rx_eop=0 out_data=x out_valid=x out_sop=x out_eop=x out_err=x sync_locked=x pkt_count=x err_count=x
+# [MON] rx_data=cb rx_valid=1 rx_sop=1 rx_eop=0 out_data=64 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=3
+# [SCB] checked #8: rx_data=cb rx_valid=1 rx_sop=1 rx_eop=0 out_data=64 out_valid=0 out_sop=0 out_eop=0 out_err=0 sync_locked=0 pkt_count=0 err_count=3
+# [SCB] TESTBENCH_CHECK_PASS: 8 transactions matched the reference model
+# === Blueprint verification testbench complete (all 8 transactions checked) ===
+# ** Note: $finish    : user_assertions.sv(569)
+#    Time: 95 ns  Iteration: 2  Instance: /tb_frame_sync_packet_validator
+# End time: 16:54:48 on Oct 01,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+::TEST_START:: {"id":0,"name":"Verification accepts the correct DUT","nonce":"25ce9dff06d44672"}
+::TEST_PASS:: {"id":0,"nonce":"25ce9dff06d44672"}
+::TEST_START:: {"id":1,"name":"Verification detects contract-driven negative challenge","nonce":"25ce9dff06d44672"}
+::TEST_PASS:: {"id":1,"nonce":"25ce9dff06d44672"}
+::TEST_SUMMARY:: {"total":2,"passed":2,"failed":0,"nonce":"25ce9dff06d44672"}
+::JUDGE_DONE:: {"cases":2,"nonce":"25ce9dff06d44672"}
