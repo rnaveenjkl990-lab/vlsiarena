@@ -1,0 +1,675 @@
+{
+  "success": true,
+  "category": "rtl",
+  "static": 100,
+  "compilation": 100,
+  "functional": 80,
+  "coverage": null,
+  "codeQuality": 51,
+  "structureScore": 100,
+  "simulationScore": 80,
+  "compileScore": 100,
+  "finalScore": 100,
+  "overallScore": 100,
+  "score": 100,
+  "passed": true,
+  "tier": "excellent",
+  "tierLabel": "excellent",
+  "weights": {
+    "static": 0.1,
+    "compilation": 0.15,
+    "functional": 0.55,
+    "coverage": 0.1,
+    "codeQuality": 0.1
+  },
+  "confidence": 1,
+  "findings": [],
+  "errors": [],
+  "warnings": [],
+  "info": [],
+  "simulationExecuted": true,
+  "simulationStatus": "Passed",
+  "simulationTranscript": "QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 10:19:39 on Oct 08,2026\r\nvlog -sv rr_arbiter_locked.sv golden_reference.sv hidden_lockstep_tb.sv \r\n-- Compiling module rr_arbiter_locked\r\n-- Compiling module rr_arbiter_locked_ref\r\n-- Compiling module hidden_lockstep_tb\r\n\r\nTop level modules:\r\n\thidden_lockstep_tb\r\nEnd time: 10:19:39 on Oct 08,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791434412904_1791434440927\\transcript.log hidden_lockstep_tb -do \"run.do\" \r\n# Start time: 10:19:40 on Oct 08,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.hidden_lockstep_tb(fast)\r\n# Loading work.rr_arbiter_locked(fast)\r\n# Loading work.rr_arbiter_locked_ref(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /hidden_lockstep_tb/#INITIAL#253 File: hidden_lockstep_tb.sv Line: 256\r\n# ::TEST_START:: {\"id\":0,\"name\":\"Reset and idle\",\"category\":\"reset\",\"requirement\":\"Deterministic reset then idle behaviour on every output\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":1,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":2,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":3,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":4,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":5,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":6,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":7,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":8,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":9,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":0,\"cycles\":9,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":1,\"name\":\"Back-to-back toggling\",\"category\":\"corner\",\"requirement\":\"Robustness under back-to-back input changes\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":10,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":11,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":12,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":13,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":14,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":15,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":16,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":17,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":18,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":1,\"cycles\":18,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":2,\"name\":\"Random stimulus batch 2\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":19,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":20,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":21,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":22,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h8, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":23,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hc, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":24,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":25,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":26,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h4, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":27,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":2,\"cycles\":27,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":3,\"name\":\"Random stimulus batch 3\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":28,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":29,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":30,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hb, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":31,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":32,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":33,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hf, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":34,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h4, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":35,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":36,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":3,\"cycles\":36,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":4,\"name\":\"Random stimulus batch 4\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":37,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":38,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hd, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":39,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":40,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hd, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":41,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":42,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":43,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":44,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":45,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":4,\"cycles\":45,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":5,\"name\":\"Random stimulus batch 5\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":46,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":47,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":48,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":49,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":50,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":51,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":52,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h8, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":53,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":54,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h2, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":5,\"cycles\":54,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_SUMMARY:: {\"total\":6,\"passed\":6,\"failed\":0,\"score\":100,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::JUDGE_DONE:: {\"cycles\":54,\"cases\":6,\"mismatches\":0,\"nonce\":\"ac3c620026054ae1\"}\r\n# ** Note: $finish    : hidden_lockstep_tb.sv(294)\r\n#    Time: 726 ns  Iteration: 0  Instance: /hidden_lockstep_tb\r\n# End time: 10:19:42 on Oct 08,2026, Elapsed time: 0:00:02\r\n# Errors: 0, Warnings: 2\r\n",
+  "waveformPath": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791434412904_1791434440927\\submission.vcd",
+  "waveformVcdText": "$date\r\n\tThu Oct  8 10:19:42 2026\r\n$end\r\n$version\r\n\tQuestaSim Version 2024.1\r\n$end\r\n$timescale\r\n\t1ps\r\n$end\r\n\r\n$scope module hidden_lockstep_tb $end\r\n$var reg 1 ! arena_signal_clk $end\r\n$var reg 1 \" arena_signal_rst_n $end\r\n$var reg 4 # arena_signal_req [3:0] $end\r\n$var reg 1 $ arena_signal_lock $end\r\n$var reg 1 % arena_signal_grant_ack $end\r\n$var wire 1 & dut__arena_signal_grant [3] $end\r\n$var wire 1 ' dut__arena_signal_grant [2] $end\r\n$var wire 1 ( dut__arena_signal_grant [1] $end\r\n$var wire 1 ) dut__arena_signal_grant [0] $end\r\n$var wire 1 * ref__arena_signal_grant [3] $end\r\n$var wire 1 + ref__arena_signal_grant [2] $end\r\n$var wire 1 , ref__arena_signal_grant [1] $end\r\n$var wire 1 - ref__arena_signal_grant [0] $end\r\n$var wire 1 . dut__arena_signal_grant_valid $end\r\n$var wire 1 / ref__arena_signal_grant_valid $end\r\n$var wire 1 0 dut__arena_signal_grant_id [1] $end\r\n$var wire 1 1 dut__arena_signal_grant_id [0] $end\r\n$var wire 1 2 ref__arena_signal_grant_id [1] $end\r\n$var wire 1 3 ref__arena_signal_grant_id [0] $end\r\n$var integer 32 4 cycle_count $end\r\n$var integer 32 5 mismatch_count $end\r\n$var integer 32 6 case_id $end\r\n$var integer 32 7 case_failed $end\r\n$var integer 32 8 fail_case_count $end\r\n$var integer 32 9 rng_dummy $end\r\n$var integer 32 : rng_seed $end\r\n\r\n$scope module dut $end\r\n$var wire 1 ; clk $end\r\n$var wire 1 < rst_n $end\r\n$var wire 1 = req [3] $end\r\n$var wire 1 > req [2] $end\r\n$var wire 1 ? req [1] $end\r\n$var wire 1 @ req [0] $end\r\n$var wire 1 A lock $end\r\n$var wire 1 B grant_ack $end\r\n$var reg 4 C grant [3:0] $end\r\n$var reg 1 D grant_valid $end\r\n$var reg 2 E grant_id [1:0] $end\r\n$var reg 2 F ptr [1:0] $end\r\n$var reg 2 G next_ptr [1:0] $end\r\n$var reg 4 H mask [3:0] $end\r\n$var reg 4 I masked_req [3:0] $end\r\n$var reg 4 J next_grant [3:0] $end\r\n$var reg 1 K next_grant_valid $end\r\n$var reg 2 L next_grant_id [1:0] $end\r\n$var reg 4 M masked_grant [3:0] $end\r\n$var reg 4 N unmasked_grant [3:0] $end\r\n$var reg 4 O arb_grant [3:0] $end\r\n$var reg 1 P arb_valid $end\r\n$var reg 2 Q arb_id [1:0] $end\r\n$upscope $end\r\n\r\n$scope module dut_ref $end\r\n$var wire 1 R clk $end\r\n$var wire 1 S rst_n $end\r\n$var wire 1 T req [3] $end\r\n$var wire 1 U req [2] $end\r\n$var wire 1 V req [1] $end\r\n$var wire 1 W req [0] $end\r\n$var wire 1 X lock $end\r\n$var wire 1 Y grant_ack $end\r\n$var reg 4 Z grant [3:0] $end\r\n$var reg 1 [ grant_valid $end\r\n$var reg 2 \\ grant_id [1:0] $end\r\n$var reg 2 ] ptr [1:0] $end\r\n$var reg 4 ^ next_grant [3:0] $end\r\n$var reg 1 _ next_grant_valid $end\r\n$var reg 2 ` next_grant_id [1:0] $end\r\n$var reg 2 a next_ptr [1:0] $end\r\n$var reg 4 b mask [3:0] $end\r\n$var reg 4 c masked_req [3:0] $end\r\n$var reg 4 d unmasked_grant [3:0] $end\r\n$var reg 4 e masked_grant [3:0] $end\r\n$var reg 4 f arb_grant [3:0] $end\r\n$upscope $end\r\n$var wire 1 & dut__arena_signal_grant [3] $end\r\n$var wire 1 ' dut__arena_signal_grant [2] $end\r\n$var wire 1 ( dut__arena_signal_grant [1] $end\r\n$var wire 1 ) dut__arena_signal_grant [0] $end\r\n$var wire 1 * ref__arena_signal_grant [3] $end\r\n$var wire 1 + ref__arena_signal_grant [2] $end\r\n$var wire 1 , ref__arena_signal_grant [1] $end\r\n$var wire 1 - ref__arena_signal_grant [0] $end\r\n$var wire 1 . dut__arena_signal_grant_valid $end\r\n$var wire 1 / ref__arena_signal_grant_valid $end\r\n$var wire 1 0 dut__arena_signal_grant_id [1] $end\r\n$var wire 1 1 dut__arena_signal_grant_id [0] $end\r\n$var wire 1 2 ref__arena_signal_grant_id [1] $end\r\n$var wire 1 3 ref__arena_signal_grant_id [0] $end\r\n\r\n$scope function case_name $end\r\n$upscope $end\r\n\r\n$scope function case_category $end\r\n$upscope $end\r\n\r\n$scope function case_requirement $end\r\n$upscope $end\r\n\r\n$scope task capture_vectors $end\r\n$upscope $end\r\n\r\n$scope function mismatch_msg $end\r\n$upscope $end\r\n\r\n$scope function x_msg $end\r\n$upscope $end\r\n\r\n$scope task check_now $end\r\n$upscope $end\r\n\r\n$scope task reset_preamble $end\r\n$upscope $end\r\n\r\n$scope task run_reset_idle $end\r\n$upscope $end\r\n\r\n$scope task run_random $end\r\n$upscope $end\r\n\r\n$scope task run_hold $end\r\n$upscope $end\r\n\r\n$scope task run_alternate $end\r\n$upscope $end\r\n\r\n$scope module dut $end\r\n$var wire 1 ; clk $end\r\n$var wire 1 < rst_n $end\r\n$var wire 1 = req [3] $end\r\n$var wire 1 > req [2] $end\r\n$var wire 1 ? req [1] $end\r\n$var wire 1 @ req [0] $end\r\n$var wire 1 A lock $end\r\n$var wire 1 B grant_ack $end\r\n$upscope $end\r\n\r\n$scope module dut_ref $end\r\n$var wire 1 R clk $end\r\n$var wire 1 S rst_n $end\r\n$var wire 1 T req [3] $end\r\n$var wire 1 U req [2] $end\r\n$var wire 1 V req [1] $end\r\n$var wire 1 W req [0] $end\r\n$var wire 1 X lock $end\r\n$var wire 1 Y grant_ack $end\r\n$upscope $end\r\n$upscope $end\r\n$enddefinitions $end\r\n#0\r\n$dumpvars\r\n0!\r\n0\"\r\nb0 #\r\n0$\r\n0%\r\nbx C\r\nxD\r\nbx E\r\nbx F\r\nbx G\r\nb1110 H\r\nb0 I\r\nb0 J\r\n0K\r\nb0 L\r\nb0 M\r\nb0 N\r\nb0 O\r\n0P\r\nb0 Q\r\nbx Z\r\nx[\r\nbx \\\r\nbx ]\r\nb0 ^\r\n0_\r\nb0 `\r\nbx a\r\nb1110 b\r\nb0 c\r\nb0 d\r\nb0 e\r\nb0 f\r\nb0 4\r\nb0 5\r\nb0 6\r\nb0 7\r\nb0 8\r\nb0 9\r\nb0 :\r\nx)\r\nx(\r\nx'\r\nx&\r\nx-\r\nx,\r\nx+\r\nx*\r\nx.\r\nx/\r\nx1\r\nx0\r\nx3\r\nx2\r\n0Y\r\n0X\r\n0W\r\n0V\r\n0U\r\n0T\r\n0S\r\n0R\r\n0B\r\n0A\r\n0@\r\n0?\r\n0>\r\n0=\r\n0<\r\n0;\r\n$end\r\n#5000\r\n1!\r\n1;\r\n1R\r\nb0 Z\r\n0[\r\nb0 \\\r\nb0 ]\r\nb0 F\r\nb0 C\r\n0D\r\nb0 E\r\n0/\r\n0.\r\n01\r\n00\r\n0)\r\n0(\r\n0'\r\n0&\r\n03\r\n02\r\n0-\r\n0,\r\n0+\r\n0*\r\nb0 G\r\nb0 a\r\n#10000\r\n0!\r\n0;\r\n0R\r\n#15000\r\n1!\r\n1;\r\n1R\r\n#20000\r\n0!\r\n0;\r\n0R\r\n#25000\r\n1!\r\n1;\r\n1R\r\n#30000\r\n0!\r\n0;\r\n0R\r\n#35000\r\n1!\r\n1;\r\n1R\r\n#36000\r\n1\"\r\n1<\r\n1S\r\n#40000\r\n0!\r\n0;\r\n0R\r\n#45000\r\n1!\r\n1;\r\n1R\r\n#46000\r\nb1 4\r\n#50000\r\n0!\r\n0;\r\n0R\r\n#55000\r\n1!\r\n1;\r\n1R\r\n#56000\r\nb10 4\r\n#60000\r\n0!\r\n0;\r\n0R\r\n#65000\r\n1!\r\n1;\r\n1R\r\n#66000\r\nb11 4\r\n#70000\r\n0!\r\n0;\r\n0R\r\n#75000\r\n1!\r\n1;\r\n1R\r\n#76000\r\nb100 4\r\n#80000\r\n0!\r\n0;\r\n0R\r\n#85000\r\n1!\r\n1;\r\n1R\r\n#86000\r\nb101 4\r\n#90000\r\n0!\r\n0;\r\n0R\r\n#95000\r\n1!\r\n1;\r\n1R\r\n#96000\r\nb110 4\r\n#100000\r\n0!\r\n0;\r\n0R\r\n#105000\r\n1!\r\n1;\r\n1R\r\n#106000\r\nb111 4\r\n#110000\r\n0!\r\n0;\r\n0R\r\n#115000\r\n1!\r\n1;\r\n1R\r\n#116000\r\nb1000 4\r\n#120000\r\n0!\r\n0;\r\n0R\r\n#125000\r\n1!\r\n1;\r\n1R\r\n#126000\r\nb1001 4\r\nb1 6\r\n0\"\r\n0<\r\n0S\r\n#130000\r\n0!\r\n0;\r\n0R\r\n#135000\r\n1!\r\n1;\r\n1R\r\n#140000\r\n0!\r\n0;\r\n0R\r\n#145000\r\n1!\r\n1;\r\n1R\r\n#150000\r\n0!\r\n0;\r\n0R\r\n#155000\r\n1!\r\n1;\r\n1R\r\n#156000\r\n1\"\r\n1<\r\n1S\r\n#160000\r\n0!\r\n0;\r\n0R\r\n#165000\r\n1!\r\n1;\r\n1R\r\n#166000\r\nb1010 4\r\nb10010001101000111010101100111 :\r\nb10100011111000100110011000111100 9\r\n#170000\r\n0!\r\n0;\r\n0R\r\nb1 #\r\n1$\r\n1W\r\n1@\r\n1A\r\n1X\r\nb1 d\r\nb1 f\r\nb1 N\r\nb1 O\r\n1P\r\nb1 ^\r\n1_\r\nb1 J\r\n1K\r\n#175000\r\n1!\r\n1;\r\n1R\r\nb1 Z\r\n1[\r\nb1 C\r\n1D\r\n1/\r\n1)\r\n1-\r\n1.\r\n#176000\r\nb1011 4\r\n#180000\r\n0!\r\n0;\r\n0R\r\nb110 #\r\n0$\r\n0W\r\n1V\r\n1U\r\n0@\r\n1?\r\n1>\r\n0A\r\n0X\r\nb110 c\r\nb110 I\r\nb10 e\r\nb10 d\r\nb10 f\r\nb10 M\r\nb0 N\r\nb10 N\r\nb10 O\r\nb1 Q\r\nb10 ^\r\nb1 `\r\nb10 J\r\nb1 L\r\n#185000\r\n1!\r\n1;\r\n1R\r\nb10 Z\r\nb1 \\\r\nb10 C\r\nb1 E\r\n11\r\n0)\r\n1(\r\n13\r\n0-\r\n1,\r\n#186000\r\nb1100 4\r\n#190000\r\n0!\r\n0;\r\n0R\r\nb1010 #\r\n1%\r\n0U\r\n1T\r\n0>\r\n1=\r\n1B\r\n1Y\r\nb1010 c\r\nb1010 I\r\nb0 M\r\nb10 M\r\nb0 N\r\nb10 N\r\nb1 a\r\nb1 G\r\n#195000\r\n1!\r\n1;\r\n1R\r\nb1 ]\r\nb1 F\r\nb1100 H\r\nb1100 b\r\nb1000 c\r\nb1000 I\r\nb0 M\r\nb1000 M\r\nb0 N\r\nb10 N\r\nb1000 O\r\nb11 Q\r\nb1000 e\r\nb1000 f\r\nb1000 ^\r\nb11 `\r\nb1000 J\r\nb11 L\r\n#196000\r\nb1101 4\r\n#200000\r\n0!\r\n0;\r\n0R\r\nb1001 #\r\n0%\r\n1W\r\n0V\r\n1@\r\n0?\r\n0B\r\n0Y\r\nb1 d\r\nb0 M\r\nb1000 M\r\nb0 N\r\nb1 N\r\n#205000\r\n1!\r\n1;\r\n1R\r\nb1000 Z\r\nb11 \\\r\nb1000 C\r\nb11 E\r\n10\r\n0(\r\n1&\r\n12\r\n0,\r\n1*\r\n#206000\r\nb1110 4\r\n#210000\r\n0!\r\n0;\r\n0R\r\nb111 #\r\n1%\r\n1V\r\n1U\r\n0T\r\n1?\r\n1>\r\n0=\r\n1B\r\n1Y\r\nb100 c\r\nb100 I\r\nb100 e\r\nb100 f\r\nb0 M\r\nb100 M\r\nb0 N\r\nb1 N\r\nb100 O\r\nb10 Q\r\nb100 ^\r\nb10 `\r\nb11 a\r\nb11 G\r\nb100 J\r\nb10 L\r\n#215000\r\n1!\r\n1;\r\n1R\r\nb100 Z\r\nb10 \\\r\nb11 ]\r\nb11 F\r\nb100 C\r\nb10 E\r\n01\r\n1'\r\n0&\r\n03\r\n1+\r\n0*\r\nb0 H\r\nb10 G\r\nb0 b\r\nb10 a\r\nb0 c\r\nb0 I\r\nb0 M\r\nb0 N\r\nb1 N\r\nb1 O\r\nb0 Q\r\nb0 e\r\nb1 f\r\nb1 ^\r\nb0 `\r\nb1 J\r\nb0 L\r\n#216000\r\nb1111 4\r\n#220000\r\n0!\r\n0;\r\n0R\r\nb11 #\r\n1$\r\n0%\r\n0U\r\n0>\r\n1A\r\n1X\r\n0B\r\n0Y\r\nb0 N\r\nb1 N\r\nb11 a\r\nb11 G\r\n#225000\r\n1!\r\n1;\r\n1R\r\nb1 Z\r\nb0 \\\r\nb1 C\r\nb0 E\r\n00\r\n1)\r\n0'\r\n02\r\n1-\r\n0+\r\n#226000\r\nb10000 4\r\n#230000\r\n0!\r\n0;\r\n0R\r\nb110 #\r\n0$\r\n1%\r\n0W\r\n1U\r\n0@\r\n1>\r\n0A\r\n0X\r\n1B\r\n1Y\r\nb10 d\r\nb10 f\r\nb0 N\r\nb10 N\r\nb10 O\r\nb1 Q\r\nb10 ^\r\nb1 `\r\nb0 a\r\nb10 J\r\nb1 L\r\nb0 G\r\n#235000\r\n1!\r\n1;\r\n1R\r\nb10 Z\r\nb1 \\\r\nb0 ]\r\nb0 F\r\nb10 C\r\nb1 E\r\n11\r\n0)\r\n1(\r\n13\r\n0-\r\n1,\r\nb1110 H\r\nb1 G\r\nb1110 b\r\nb1 a\r\nb110 c\r\nb110 I\r\nb10 M\r\nb0 N\r\nb10 N\r\nb10 e\r\n#236000\r\nb10001 4\r\n#240000\r\n0!\r\n0;\r\n0R\r\nb1001 #\r\n1W\r\n0V\r\n0U\r\n1T\r\n1@\r\n0?\r\n0>\r\n1=\r\nb1000 c\r\nb1000 I\r\nb1000 e\r\nb1 d\r\nb1000 f\r\nb0 M\r\nb1000 M\r\nb0 N\r\nb1 N\r\nb1000 O\r\nb11 Q\r\nb1000 J\r\nb11 L\r\nb1000 ^\r\nb11 `\r\n#245000\r\n1!\r\n1;\r\n1R\r\nb1000 Z\r\nb11 \\\r\nb1 ]\r\nb1 F\r\nb1000 C\r\nb11 E\r\n10\r\n0(\r\n1&\r\n12\r\n0,\r\n1*\r\nb1100 H\r\nb11 G\r\nb1100 b\r\nb11 a\r\n#246000\r\nb10010 4\r\nb10 6\r\n0\"\r\nb0 #\r\n0%\r\n0<\r\n0S\r\n0W\r\n0T\r\n0@\r\n0=\r\n0B\r\n0Y\r\nb0 c\r\nb0 I\r\nb0 e\r\nb0 d\r\nb0 f\r\nb0 M\r\nb0 N\r\nb0 O\r\n0P\r\nb0 Q\r\nb0 ^\r\n0_\r\nb0 `\r\nb1 a\r\nb1 G\r\nb0 J\r\n0K\r\nb0 L\r\n#250000\r\n0!\r\n0;\r\n0R\r\n#255000\r\n1!\r\n1;\r\n1R\r\nb0 Z\r\n0[\r\nb0 \\\r\nb0 ]\r\nb0 F\r\nb0 C\r\n0D\r\nb0 E\r\n0/\r\n0.\r\n01\r\n00\r\n0&\r\n03\r\n02\r\n0*\r\nb1110 H\r\nb0 G\r\nb1110 b\r\nb0 a\r\n#260000\r\n0!\r\n0;\r\n0R\r\n#265000\r\n1!\r\n1;\r\n1R\r\n#270000\r\n0!\r\n0;\r\n0R\r\n#275000\r\n1!\r\n1;\r\n1R\r\n#276000\r\n1\"\r\n1<\r\n1S\r\n#280000\r\n0!\r\n0;\r\n0R\r\n#285000\r\n1!\r\n1;\r\n1R\r\n#286000\r\nb10011 4\r\nb10010001101001001010001010110 :\r\nb1111101011001101010100110010110 9\r\n#290000\r\n0!\r\n0;\r\n0R\r\nb1010 #\r\n1%\r\n1V\r\n1T\r\n1?\r\n1=\r\n1B\r\n1Y\r\nb1010 c\r\nb1010 I\r\nb10 e\r\nb10 d\r\nb10 f\r\nb10 M\r\nb10 N\r\nb10 O\r\n1P\r\nb1 Q\r\nb10 ^\r\n1_\r\nb1 `\r\nb10 J\r\n1K\r\nb1 L\r\n#295000\r\n1!\r\n1;\r\n1R\r\nb10 Z\r\n1[\r\nb1 \\\r\nb10 C\r\n1D\r\nb1 E\r\n1/\r\n1.\r\n11\r\n1(\r\n13\r\n1,\r\nb1 G\r\nb1 a\r\n#296000\r\nb10100 4\r\n#300000\r\n0!\r\n0;\r\n0R\r\nb111 #\r\n1W\r\n1U\r\n0T\r\n1@\r\n1>\r\n0=\r\nb110 c\r\nb110 I\r\nb1 d\r\nb0 M\r\nb10 M\r\nb0 N\r\nb1 N\r\n#305000\r\n1!\r\n1;\r\n1R\r\nb1 ]\r\nb1 F\r\nb1100 H\r\nb1100 b\r\nb100 c\r\nb100 I\r\nb0 M\r\nb100 M\r\nb0 N\r\nb1 N\r\nb100 O\r\nb10 Q\r\nb100 e\r\nb100 f\r\nb100 ^\r\nb10 `\r\nb100 J\r\nb10 L\r\n#306000\r\nb10101 4\r\n#310000\r\n0!\r\n0;\r\n0R\r\nb1000 #\r\n0%\r\n0W\r\n0V\r\n0U\r\n1T\r\n0@\r\n0?\r\n0>\r\n1=\r\n0B\r\n0Y\r\nb1000 c\r\nb1000 I\r\nb1000 e\r\nb1000 d\r\nb1000 f\r\nb0 M\r\nb1000 M\r\nb0 N\r\nb1000 N\r\nb1000 O\r\nb11 Q\r\nb1000 ^\r\nb11 `\r\nb1000 J\r\nb11 L\r\n#315000\r\n1!\r\n1;\r\n1R\r\nb1000 Z\r\nb11 \\\r\nb1000 C\r\nb11 E\r\n10\r\n0(\r\n1&\r\n12\r\n0,\r\n1*\r\n#316000\r\nb10110 4\r\n#320000\r\n0!\r\n0;\r\n0R\r\nb1100 #\r\n1$\r\n1%\r\n1U\r\n1>\r\n1A\r\n1X\r\n1B\r\n1Y\r\nb1100 c\r\nb1100 I\r\nb100 e\r\nb100 d\r\nb100 f\r\nb0 M\r\nb100 M\r\nb0 N\r\nb100 N\r\nb100 O\r\nb10 Q\r\n#325000\r\n1!\r\n1;\r\n1R\r\n#326000\r\nb10111 4\r\n#330000\r\n0!\r\n0;\r\n0R\r\nb110 #\r\n1V\r\n0T\r\n1?\r\n0=\r\nb100 c\r\nb100 I\r\nb100 ^\r\nb10 `\r\nb11 a\r\nb10 d\r\nb100 J\r\nb10 L\r\nb0 M\r\nb100 M\r\nb0 N\r\nb10 N\r\n#335000\r\n1!\r\n1;\r\n1R\r\nb100 Z\r\nb10 \\\r\nb11 ]\r\nb100 C\r\nb10 E\r\n01\r\n1'\r\n0&\r\n03\r\n1+\r\n0*\r\nb0 b\r\nb0 c\r\nb0 e\r\nb10 f\r\n#336000\r\nb11000 4\r\n#340000\r\n0!\r\n0;\r\n0R\r\nb1 #\r\n0$\r\n0%\r\n1W\r\n0V\r\n0U\r\n1@\r\n0?\r\n0>\r\n0A\r\n0X\r\n0B\r\n0Y\r\nb0 I\r\nb1 d\r\nb1 f\r\nb0 M\r\nb0 N\r\nb1 N\r\nb1 O\r\nb0 Q\r\nb1 ^\r\nb0 `\r\nb1 J\r\nb0 L\r\n#345000\r\n1!\r\n1;\r\n1R\r\nb1 Z\r\nb0 \\\r\nb1 C\r\nb0 E\r\n00\r\n1)\r\n0'\r\n02\r\n1-\r\n0+\r\n#346000\r\nb11001 4\r\n#350000\r\n0!\r\n0;\r\n0R\r\nb100 #\r\n1$\r\n0W\r\n1U\r\n0@\r\n1>\r\n1A\r\n1X\r\nb100 I\r\nb100 d\r\nb100 f\r\nb100 M\r\nb0 N\r\nb100 N\r\nb100 O\r\nb10 Q\r\nb100 ^\r\nb10 `\r\nb100 J\r\nb10 L\r\n#355000\r\n1!\r\n1;\r\n1R\r\nb100 Z\r\nb10 \\\r\nb100 C\r\nb10 E\r\n10\r\n0)\r\n1'\r\n12\r\n0-\r\n1+\r\n#356000\r\nb11010 4\r\n#360000\r\n0!\r\n0;\r\n0R\r\nb110 #\r\n1%\r\n1V\r\n1?\r\n1B\r\n1Y\r\nb10 d\r\nb10 f\r\nb0 M\r\nb100 M\r\nb0 N\r\nb10 N\r\n#365000\r\n1!\r\n1;\r\n1R\r\n#366000\r\nb11011 4\r\nb11 6\r\n0\"\r\nb0 #\r\n0$\r\n0%\r\n0<\r\n0S\r\n0V\r\n0U\r\n0?\r\n0>\r\n0A\r\n0X\r\n0B\r\n0Y\r\nb0 I\r\nb0 d\r\nb0 f\r\nb0 M\r\nb0 N\r\nb0 O\r\n0P\r\nb0 Q\r\nb0 ^\r\n0_\r\nb0 `\r\nb0 J\r\n0K\r\nb0 L\r\n#370000\r\n0!\r\n0;\r\n0R\r\n#375000\r\n1!\r\n1;\r\n1R\r\nb0 Z\r\n0[\r\nb0 \\\r\nb0 ]\r\nb0 F\r\nb0 C\r\n0D\r\nb0 E\r\n0/\r\n0.\r\n00\r\n0'\r\n02\r\n0+\r\nb1110 H\r\nb0 G\r\nb1110 b\r\nb0 a\r\n#380000\r\n0!\r\n0;\r\n0R\r\n#385000\r\n1!\r\n1;\r\n1R\r\n#390000\r\n0!\r\n0;\r\n0R\r\n#395000\r\n1!\r\n1;\r\n1R\r\n#396000\r\n1\"\r\n1<\r\n1S\r\n#400000\r\n0!\r\n0;\r\n0R\r\n#405000\r\n1!\r\n1;\r\n1R\r\n#406000\r\nb11100 4\r\nb10010001101001011001101000101 :\r\nb11110011000010011011101110000110 9\r\n#410000\r\n0!\r\n0;\r\n0R\r\nb1001 #\r\n1%\r\n1W\r\n1T\r\n1@\r\n1=\r\n1B\r\n1Y\r\nb1000 c\r\nb1000 I\r\nb1000 e\r\nb1 d\r\nb1000 f\r\nb1000 M\r\nb1 N\r\nb1000 O\r\n1P\r\nb11 Q\r\nb1000 ^\r\n1_\r\nb11 `\r\nb1000 J\r\n1K\r\nb11 L\r\n#415000\r\n1!\r\n1;\r\n1R\r\nb1000 Z\r\n1[\r\nb11 \\\r\nb1000 C\r\n1D\r\nb11 E\r\n1/\r\n1.\r\n11\r\n10\r\n1&\r\n13\r\n12\r\n1*\r\nb11 G\r\nb11 a\r\n#416000\r\nb11101 4\r\n#420000\r\n0!\r\n0;\r\n0R\r\nb1011 #\r\n1$\r\n0%\r\n1V\r\n1?\r\n1A\r\n1X\r\n0B\r\n0Y\r\nb1010 c\r\nb1010 I\r\nb10 e\r\nb10 f\r\nb0 M\r\nb10 M\r\nb0 N\r\nb1 N\r\nb10 O\r\nb1 Q\r\nb0 a\r\nb0 G\r\n#425000\r\n1!\r\n1;\r\n1R\r\n#426000\r\nb11110 4\r\n#430000\r\n0!\r\n0;\r\n0R\r\nb1001 #\r\n0$\r\n1%\r\n0V\r\n0?\r\n0A\r\n0X\r\n1B\r\n1Y\r\nb1000 c\r\nb1000 I\r\nb1000 e\r\nb1000 f\r\nb0 M\r\nb1000 M\r\nb0 N\r\nb1 N\r\nb1000 O\r\nb11 Q\r\nb11 a\r\nb11 G\r\n#435000\r\n1!\r\n1;\r\n1R\r\nb11 ]\r\nb11 F\r\nb0 H\r\nb0 b\r\nb0 c\r\nb0 I\r\nb0 M\r\nb0 N\r\nb1 N\r\nb1 O\r\nb0 Q\r\nb0 e\r\nb1 f\r\nb1 ^\r\nb0 `\r\nb1 J\r\nb0 L\r\n#436000\r\nb11111 4\r\n#440000\r\n0!\r\n0;\r\n0R\r\nb1010 #\r\n0%\r\n0W\r\n1V\r\n0@\r\n1?\r\n0B\r\n0Y\r\nb10 d\r\nb10 f\r\nb0 N\r\nb10 N\r\nb10 O\r\nb1 Q\r\nb10 ^\r\nb1 `\r\nb10 J\r\nb1 L\r\n#445000\r\n1!\r\n1;\r\n1R\r\nb10 Z\r\nb1 \\\r\nb10 C\r\nb1 E\r\n00\r\n1(\r\n0&\r\n02\r\n1,\r\n0*\r\n#446000\r\nb100000 4\r\n#450000\r\n0!\r\n0;\r\n0R\r\nb1111 #\r\n1%\r\n1W\r\n1U\r\n1@\r\n1>\r\n1B\r\n1Y\r\nb1 d\r\nb1 f\r\nb0 N\r\nb1 N\r\nb1 O\r\nb0 Q\r\nb1 ^\r\nb0 `\r\nb1 a\r\nb1 G\r\nb1 J\r\nb0 L\r\n#455000\r\n1!\r\n1;\r\n1R\r\nb1 Z\r\nb0 \\\r\nb1 ]\r\nb1 F\r\nb1 C\r\nb0 E\r\n01\r\n1)\r\n0(\r\n03\r\n1-\r\n0,\r\nb1100 H\r\nb0 G\r\nb1100 b\r\nb0 a\r\nb1100 c\r\nb1100 I\r\nb100 M\r\nb0 N\r\nb1 N\r\nb100 O\r\nb10 Q\r\nb100 e\r\nb100 f\r\nb100 ^\r\nb10 `\r\nb100 J\r\nb10 L\r\n#456000\r\nb100001 4\r\n#460000\r\n0!\r\n0;\r\n0R\r\nb100 #\r\n1$\r\n0%\r\n0W\r\n0V\r\n0T\r\n0@\r\n0?\r\n0=\r\n1A\r\n1X\r\n0B\r\n0Y\r\nb100 c\r\nb100 I\r\nb100 d\r\nb0 M\r\nb100 M\r\nb0 N\r\nb100 N\r\nb1 a\r\nb1 G\r\n#465000\r\n1!\r\n1;\r\n1R\r\nb100 Z\r\nb10 \\\r\nb100 C\r\nb10 E\r\n10\r\n0)\r\n1'\r\n12\r\n0-\r\n1+\r\n#466000\r\nb100010 4\r\n#470000\r\n0!\r\n0;\r\n0R\r\nb1 #\r\n1W\r\n0U\r\n1@\r\n0>\r\nb0 c\r\nb0 I\r\nb0 e\r\nb1 d\r\nb1 f\r\nb0 M\r\nb0 N\r\nb1 N\r\nb1 O\r\nb0 Q\r\nb1 J\r\nb0 L\r\nb1 ^\r\nb0 `\r\n#475000\r\n1!\r\n1;\r\n1R\r\nb1 Z\r\nb0 \\\r\nb1 C\r\nb0 E\r\n00\r\n1)\r\n0'\r\n02\r\n1-\r\n0+\r\n#476000\r\nb100011 4\r\n#480000\r\n0!\r\n0;\r\n0R\r\nb110 #\r\n0W\r\n1V\r\n1U\r\n0@\r\n1?\r\n1>\r\nb100 c\r\nb100 I\r\nb100 e\r\nb10 d\r\nb100 f\r\nb100 M\r\nb0 N\r\nb10 N\r\nb100 O\r\nb10 Q\r\nb100 J\r\nb10 L\r\nb100 ^\r\nb10 `\r\n#485000\r\n1!\r\n1;\r\n1R\r\nb100 Z\r\nb10 \\\r\nb100 C\r\nb10 E\r\n10\r\n0)\r\n1'\r\n12\r\n0-\r\n1+\r\n#486000\r\nb100100 4\r\nb100 6\r\n0\"\r\nb0 #\r\n0$\r\n0<\r\n0S\r\n0V\r\n0U\r\n0?\r\n0>\r\n0A\r\n0X\r\nb0 c\r\nb0 I\r\nb0 e\r\nb0 d\r\nb0 f\r\nb0 M\r\nb0 N\r\nb0 O\r\n0P\r\nb0 Q\r\nb0 ^\r\n0_\r\nb0 `\r\nb0 J\r\n0K\r\nb0 L\r\n#490000\r\n0!\r\n0;\r\n0R\r\n#495000\r\n1!\r\n1;\r\n1R\r\nb0 Z\r\n0[\r\nb0 \\\r\nb0 ]\r\nb0 F\r\nb0 C\r\n0D\r\nb0 E\r\n0/\r\n0.\r\n00\r\n0'\r\n02\r\n0+\r\nb1110 H\r\nb0 G\r\nb1110 b\r\nb0 a\r\n#500000\r\n0!\r\n0;\r\n0R\r\n#505000\r\n1!\r\n1;\r\n1R\r\n#510000\r\n0!\r\n0;\r\n0R\r\n#515000\r\n1!\r\n1;\r\n1R\r\n#516000\r\n1\"\r\n1<\r\n1S\r\n#520000\r\n0!\r\n0;\r\n0R\r\n#525000\r\n1!\r\n1;\r\n1R\r\n#526000\r\nb100101 4\r\nb10010001101001101001000110100 :\r\nb1011100010001100110110000100101 9\r\n#530000\r\n0!\r\n0;\r\n0R\r\nb1101 #\r\n1$\r\n1W\r\n1U\r\n1T\r\n1@\r\n1>\r\n1=\r\n1A\r\n1X\r\nb1100 c\r\nb1100 I\r\nb100 e\r\nb1 d\r\nb100 f\r\nb100 M\r\nb1 N\r\nb100 O\r\n1P\r\nb10 Q\r\nb100 ^\r\n1_\r\nb10 `\r\nb100 J\r\n1K\r\nb10 L\r\n#535000\r\n1!\r\n1;\r\n1R\r\nb100 Z\r\n1[\r\nb10 \\\r\nb100 C\r\n1D\r\nb10 E\r\n1/\r\n1.\r\n10\r\n1'\r\n12\r\n1+\r\n#536000\r\nb100110 4\r\n#540000\r\n0!\r\n0;\r\n0R\r\nb101 #\r\n0$\r\n0T\r\n0=\r\n0A\r\n0X\r\nb100 c\r\nb100 I\r\nb0 M\r\nb100 M\r\nb0 N\r\nb1 N\r\n#545000\r\n1!\r\n1;\r\n1R\r\n#546000\r\nb100111 4\r\n#550000\r\n0!\r\n0;\r\n0R\r\nb1101 #\r\n1%\r\n1T\r\n1=\r\n1B\r\n1Y\r\nb1100 c\r\nb1100 I\r\nb0 M\r\nb100 M\r\nb0 N\r\nb1 N\r\nb10 a\r\nb10 G\r\n#555000\r\n1!\r\n1;\r\n1R\r\nb10 ]\r\nb10 F\r\nb1000 H\r\nb1000 b\r\nb1000 c\r\nb1000 I\r\nb0 M\r\nb1000 M\r\nb0 N\r\nb1 N\r\nb1000 O\r\nb11 Q\r\nb1000 e\r\nb1000 f\r\nb1000 ^\r\nb11 `\r\nb1000 J\r\nb11 L\r\n#556000\r\nb101000 4\r\n#560000\r\n0!\r\n0;\r\n0R\r\nb11 #\r\n1$\r\n0%\r\n1V\r\n0U\r\n0T\r\n1?\r\n0>\r\n0=\r\n1A\r\n1X\r\n0B\r\n0Y\r\nb0 c\r\nb0 I\r\nb0 e\r\nb1 f\r\nb0 M\r\nb0 N\r\nb1 N\r\nb1 O\r\nb0 Q\r\nb1 ^\r\nb0 `\r\nb1 J\r\nb0 L\r\n#565000\r\n1!\r\n1;\r\n1R\r\nb1 Z\r\nb0 \\\r\nb1 C\r\nb0 E\r\n00\r\n1)\r\n0'\r\n02\r\n1-\r\n0+\r\n#566000\r\nb101001 4\r\n#570000\r\n0!\r\n0;\r\n0R\r\nb101 #\r\n0V\r\n1U\r\n0?\r\n1>\r\nb0 N\r\nb1 N\r\n#575000\r\n1!\r\n1;\r\n1R\r\n#576000\r\nb101010 4\r\n#580000\r\n0!\r\n0;\r\n0R\r\nb111 #\r\n0$\r\n1V\r\n1?\r\n0A\r\n0X\r\nb0 N\r\nb1 N\r\n#585000\r\n1!\r\n1;\r\n1R\r\n#586000\r\nb101011 4\r\n#590000\r\n0!\r\n0;\r\n0R\r\nb1010 #\r\n0W\r\n0U\r\n1T\r\n0@\r\n0>\r\n1=\r\nb1000 c\r\nb1000 I\r\nb1000 e\r\nb10 d\r\nb1000 f\r\nb1000 M\r\nb0 N\r\nb10 N\r\nb1000 O\r\nb11 Q\r\nb1000 J\r\nb11 L\r\nb1000 ^\r\nb11 `\r\n#595000\r\n1!\r\n1;\r\n1R\r\nb1000 Z\r\nb11 \\\r\nb1000 C\r\nb11 E\r\n11\r\n10\r\n0)\r\n1&\r\n13\r\n12\r\n0-\r\n1*\r\n#596000\r\nb101100 4\r\n#600000\r\n0!\r\n0;\r\n0R\r\nb101 #\r\n1$\r\n1W\r\n0V\r\n1U\r\n0T\r\n1@\r\n0?\r\n1>\r\n0=\r\n1A\r\n1X\r\nb0 c\r\nb0 I\r\nb0 e\r\nb1 d\r\nb1 f\r\nb0 M\r\nb0 N\r\nb1 N\r\nb1 O\r\nb0 Q\r\nb1 ^\r\nb0 `\r\nb1 J\r\nb0 L\r\n#605000\r\n1!\r\n1;\r\n1R\r\nb1 Z\r\nb0 \\\r\nb1 C\r\nb0 E\r\n01\r\n00\r\n1)\r\n0&\r\n03\r\n02\r\n1-\r\n0*\r\n#606000\r\nb101101 4\r\nb101 6\r\n0\"\r\nb0 #\r\n0$\r\n0<\r\n0S\r\n0W\r\n0U\r\n0@\r\n0>\r\n0A\r\n0X\r\nb0 d\r\nb0 f\r\nb0 N\r\nb0 O\r\n0P\r\nb0 ^\r\n0_\r\nb0 J\r\n0K\r\n#610000\r\n0!\r\n0;\r\n0R\r\n#615000\r\n1!\r\n1;\r\n1R\r\nb0 Z\r\n0[\r\nb0 ]\r\nb0 F\r\nb0 C\r\n0D\r\n0/\r\n0)\r\n0-\r\n0.\r\nb1110 H\r\nb0 G\r\nb1110 b\r\nb0 a\r\n#620000\r\n0!\r\n0;\r\n0R\r\n#625000\r\n1!\r\n1;\r\n1R\r\n#630000\r\n0!\r\n0;\r\n0R\r\n#635000\r\n1!\r\n1;\r\n1R\r\n#636000\r\n1\"\r\n1<\r\n1S\r\n#640000\r\n0!\r\n0;\r\n0R\r\n#645000\r\n1!\r\n1;\r\n1R\r\n#646000\r\nb101110 4\r\nb10010001101001111000100100011 :\r\nb1011100001111011100100010011000 9\r\n#650000\r\n0!\r\n0;\r\n0R\r\nb101 #\r\n1%\r\n1W\r\n1U\r\n1@\r\n1>\r\n1B\r\n1Y\r\nb100 c\r\nb100 I\r\nb100 e\r\nb1 d\r\nb100 f\r\nb100 M\r\nb1 N\r\nb100 O\r\n1P\r\nb10 Q\r\nb100 ^\r\n1_\r\nb10 `\r\nb100 J\r\n1K\r\nb10 L\r\n#655000\r\n1!\r\n1;\r\n1R\r\nb100 Z\r\n1[\r\nb10 \\\r\nb100 C\r\n1D\r\nb10 E\r\n1/\r\n1.\r\n10\r\n1'\r\n12\r\n1+\r\nb10 G\r\nb10 a\r\n#656000\r\nb101111 4\r\n#660000\r\n0!\r\n0;\r\n0R\r\nb1010 #\r\n0W\r\n1V\r\n0U\r\n1T\r\n0@\r\n1?\r\n0>\r\n1=\r\nb1010 c\r\nb1010 I\r\nb10 e\r\nb10 d\r\nb10 f\r\nb0 M\r\nb10 M\r\nb0 N\r\nb10 N\r\nb10 O\r\nb1 Q\r\nb10 J\r\nb1 L\r\nb10 ^\r\nb1 `\r\n#665000\r\n1!\r\n1;\r\n1R\r\nb10 Z\r\nb1 \\\r\nb10 ]\r\nb10 F\r\nb10 C\r\nb1 E\r\n11\r\n00\r\n1(\r\n0'\r\n13\r\n02\r\n1,\r\n0+\r\nb1000 H\r\nb1 G\r\nb1000 b\r\nb1 a\r\nb1000 c\r\nb1000 I\r\nb0 M\r\nb1000 M\r\nb0 N\r\nb10 N\r\nb1000 O\r\nb11 Q\r\nb1000 e\r\nb1000 f\r\nb1000 ^\r\nb11 `\r\nb1000 J\r\nb11 L\r\n#666000\r\nb110000 4\r\n#670000\r\n0!\r\n0;\r\n0R\r\nb11 #\r\n0%\r\n1W\r\n0T\r\n1@\r\n0=\r\n0B\r\n0Y\r\nb0 c\r\nb0 I\r\nb0 e\r\nb1 d\r\nb1 f\r\nb0 M\r\nb0 N\r\nb1 N\r\nb1 O\r\nb0 Q\r\nb1 ^\r\nb0 `\r\nb10 a\r\nb10 G\r\nb1 J\r\nb0 L\r\n#675000\r\n1!\r\n1;\r\n1R\r\nb1 Z\r\nb0 \\\r\nb1 C\r\nb0 E\r\n01\r\n1)\r\n0(\r\n03\r\n1-\r\n0,\r\n#676000\r\nb110001 4\r\n#680000\r\n0!\r\n0;\r\n0R\r\nb101 #\r\n0V\r\n1U\r\n0?\r\n1>\r\nb0 N\r\nb1 N\r\n#685000\r\n1!\r\n1;\r\n1R\r\n#686000\r\nb110010 4\r\n#690000\r\n0!\r\n0;\r\n0R\r\nb11 #\r\n1$\r\n1%\r\n1V\r\n0U\r\n1?\r\n0>\r\n1A\r\n1X\r\n1B\r\n1Y\r\nb0 N\r\nb1 N\r\n#695000\r\n1!\r\n1;\r\n1R\r\n#696000\r\nb110011 4\r\n#700000\r\n0!\r\n0;\r\n0R\r\nb1000 #\r\n0$\r\n0%\r\n0W\r\n0V\r\n1T\r\n0@\r\n0?\r\n1=\r\n0A\r\n0X\r\n0B\r\n0Y\r\nb1000 c\r\nb1000 I\r\nb1000 e\r\nb1000 d\r\nb1000 f\r\nb1000 M\r\nb0 N\r\nb1000 N\r\nb1000 O\r\nb11 Q\r\nb1000 ^\r\nb11 `\r\nb1000 J\r\nb11 L\r\n#705000\r\n1!\r\n1;\r\n1R\r\nb1000 Z\r\nb11 \\\r\nb1000 C\r\nb11 E\r\n11\r\n10\r\n0)\r\n1&\r\n13\r\n12\r\n0-\r\n1*\r\n#706000\r\nb110100 4\r\n#710000\r\n0!\r\n0;\r\n0R\r\nb11 #\r\n1$\r\n1W\r\n1V\r\n0T\r\n1@\r\n1?\r\n0=\r\n1A\r\n1X\r\nb0 c\r\nb0 I\r\nb0 e\r\nb1 d\r\nb1 f\r\nb0 M\r\nb0 N\r\nb1 N\r\nb1 O\r\nb0 Q\r\nb1 ^\r\nb0 `\r\nb1 J\r\nb0 L\r\n#715000\r\n1!\r\n1;\r\n1R\r\nb1 Z\r\nb0 \\\r\nb1 C\r\nb0 E\r\n01\r\n00\r\n1)\r\n0&\r\n03\r\n02\r\n1-\r\n0*\r\n#716000\r\nb110101 4\r\n#720000\r\n0!\r\n0;\r\n0R\r\nb10 #\r\n0$\r\n1%\r\n0W\r\n0@\r\n0A\r\n0X\r\n1B\r\n1Y\r\nb10 d\r\nb10 f\r\nb0 N\r\nb10 N\r\nb10 O\r\nb1 Q\r\nb10 ^\r\nb1 `\r\nb0 a\r\nb10 J\r\nb1 L\r\nb0 G\r\n#725000\r\n1!\r\n1;\r\n1R\r\nb10 Z\r\nb1 \\\r\nb0 ]\r\nb0 F\r\nb10 C\r\nb1 E\r\n11\r\n0)\r\n1(\r\n13\r\n0-\r\n1,\r\nb1110 H\r\nb1 G\r\nb1110 b\r\nb1 a\r\nb10 c\r\nb10 I\r\nb10 M\r\nb0 N\r\nb10 N\r\nb10 e\r\n#726000\r\nb110110 4\r\nb110 6\r\n",
+  "simulator": "questa",
+  "passedCases": [
+    {
+      "id": 0,
+      "name": "Reset and idle",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 1,
+      "name": "Back-to-back toggling",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 2,
+      "name": "Random stimulus batch 2",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 3,
+      "name": "Random stimulus batch 3",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 4,
+      "name": "Random stimulus batch 4",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 5,
+      "name": "Random stimulus batch 5",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    }
+  ],
+  "failedCases": [],
+  "notRunCases": [],
+  "uncoveredCases": [],
+  "compileErrors": [],
+  "simulationErrors": [],
+  "coverageScore": 0,
+  "coverageMeasured": false,
+  "gateStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "elaboration": "pass"
+  },
+  "shortCircuit": null,
+  "reachedCompilation": true,
+  "reachedSimulation": true,
+  "stageStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "elaboration": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "coverage": "not_applicable",
+    "assertions": "not_applicable"
+  },
+  "profile": {
+    "environment": "required",
+    "compile": "required",
+    "execution": "required",
+    "functional": "required",
+    "coverage": "not_applicable",
+    "assertions": "not_applicable"
+  },
+  "components": {
+    "static": 100,
+    "compilation": 100,
+    "functional": 80,
+    "coverage": 0,
+    "codeQuality": 51,
+    "simulation": 80
+  },
+  "durationMs": 5681,
+  "judge": {
+    "verdict": "AC",
+    "verdictLabel": "Accepted",
+    "passed": true,
+    "score": 100,
+    "gates": {
+      "environment": "pass",
+      "compile": "pass",
+      "execution": "pass",
+      "functional": "pass",
+      "elaboration": "pass"
+    },
+    "shortCircuit": null,
+    "reachedCompilation": true,
+    "reachedSimulation": true,
+    "coverageMeasured": false,
+    "failureReasons": [],
+    "testCases": [
+      {
+        "id": 0,
+        "name": "Reset and idle",
+        "status": "passed",
+        "category": "reset",
+        "requirement": "Deterministic reset then idle behaviour on every output",
+        "cycles": 9,
+        "vectors": [
+          {
+            "cycle": 1,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 2,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 3,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 4,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 5,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 6,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 7,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 8,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Back-to-back toggling",
+        "status": "passed",
+        "category": "corner",
+        "requirement": "Robustness under back-to-back input changes",
+        "cycles": 18,
+        "vectors": [
+          {
+            "cycle": 10,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 11,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=1, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 12,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1",
+            "actual": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1"
+          },
+          {
+            "cycle": 13,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1",
+            "actual": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1"
+          },
+          {
+            "cycle": 14,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3",
+            "actual": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3"
+          },
+          {
+            "cycle": 15,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2",
+            "actual": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2"
+          },
+          {
+            "cycle": 16,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 17,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=0, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1",
+            "actual": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Random stimulus batch 2",
+        "status": "passed",
+        "category": "randomized",
+        "requirement": "Robustness under randomized stimulus",
+        "cycles": 27,
+        "vectors": [
+          {
+            "cycle": 19,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 20,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1",
+            "actual": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1"
+          },
+          {
+            "cycle": 21,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1",
+            "actual": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1"
+          },
+          {
+            "cycle": 22,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h8, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3",
+            "actual": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3"
+          },
+          {
+            "cycle": 23,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'hc, arena_signal_lock=1, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3",
+            "actual": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3"
+          },
+          {
+            "cycle": 24,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=1, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2",
+            "actual": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2"
+          },
+          {
+            "cycle": 25,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 26,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h4, arena_signal_lock=1, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2",
+            "actual": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Random stimulus batch 3",
+        "status": "passed",
+        "category": "randomized",
+        "requirement": "Robustness under randomized stimulus",
+        "cycles": 36,
+        "vectors": [
+          {
+            "cycle": 28,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 29,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3",
+            "actual": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3"
+          },
+          {
+            "cycle": 30,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'hb, arena_signal_lock=1, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3",
+            "actual": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3"
+          },
+          {
+            "cycle": 31,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3",
+            "actual": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3"
+          },
+          {
+            "cycle": 32,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1",
+            "actual": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1"
+          },
+          {
+            "cycle": 33,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'hf, arena_signal_lock=0, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 34,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h4, arena_signal_lock=1, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2",
+            "actual": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2"
+          },
+          {
+            "cycle": 35,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=1, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Random stimulus batch 4",
+        "status": "passed",
+        "category": "randomized",
+        "requirement": "Robustness under randomized stimulus",
+        "cycles": 45,
+        "vectors": [
+          {
+            "cycle": 37,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 38,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'hd, arena_signal_lock=1, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2",
+            "actual": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2"
+          },
+          {
+            "cycle": 39,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2",
+            "actual": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2"
+          },
+          {
+            "cycle": 40,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'hd, arena_signal_lock=0, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2",
+            "actual": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2"
+          },
+          {
+            "cycle": 41,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 42,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=1, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 43,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 44,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3",
+            "actual": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Random stimulus batch 5",
+        "status": "passed",
+        "category": "randomized",
+        "requirement": "Robustness under randomized stimulus",
+        "cycles": 54,
+        "vectors": [
+          {
+            "cycle": 46,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 47,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2",
+            "actual": "arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2"
+          },
+          {
+            "cycle": 48,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1",
+            "actual": "arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1"
+          },
+          {
+            "cycle": 49,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 50,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 51,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=1",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          },
+          {
+            "cycle": 52,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h8, arena_signal_lock=0, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3",
+            "actual": "arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3"
+          },
+          {
+            "cycle": 53,
+            "stimulus": "clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0",
+            "expected": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0",
+            "actual": "arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0"
+          }
+        ]
+      }
+    ],
+    "coverage": null,
+    "compileErrors": [],
+    "summary": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "score": 100
+    },
+    "stats": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "timeouts": 0,
+      "unresolved": 0,
+      "cycles": 54,
+      "runtimeMs": 5681
+    },
+    "failurePhase": "complete",
+    "execution": {
+      "exitCode": 0,
+      "signal": null,
+      "pid": 19036,
+      "command": "vsim.exe",
+      "args": [
+        "-c",
+        "-voptargs=+acc",
+        "-l",
+        "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791434412904_1791434440927\\transcript.log",
+        "hidden_lockstep_tb",
+        "-do",
+        "run.do"
+      ],
+      "cwd": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791434412904_1791434440927",
+      "spawnError": null,
+      "stdout": "Reading pref.tcl\r\n\r\n# 2024.1\r\n\r\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791434412904_1791434440927\\transcript.log hidden_lockstep_tb -do \"run.do\" \r\n# Start time: 10:19:40 on Oct 08,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.hidden_lockstep_tb(fast)\r\n# Loading work.rr_arbiter_locked(fast)\r\n# Loading work.rr_arbiter_locked_ref(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /hidden_lockstep_tb/#INITIAL#253 File: hidden_lockstep_tb.sv Line: 256\r\n# ::TEST_START:: {\"id\":0,\"name\":\"Reset and idle\",\"category\":\"reset\",\"requirement\":\"Deterministic reset then idle behaviour on every output\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":1,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":2,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":3,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":4,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":5,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":6,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":7,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":8,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":9,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":0,\"cycles\":9,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":1,\"name\":\"Back-to-back toggling\",\"category\":\"corner\",\"requirement\":\"Robustness under back-to-back input changes\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":10,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":11,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":12,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":13,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":14,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":15,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":16,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":17,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":18,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":1,\"cycles\":18,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":2,\"name\":\"Random stimulus batch 2\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":19,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":20,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":21,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":22,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h8, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":23,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hc, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":24,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":25,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":26,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h4, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":27,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":2,\"cycles\":27,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":3,\"name\":\"Random stimulus batch 3\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":28,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":29,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":30,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hb, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":31,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":32,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":33,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hf, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":34,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h4, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":35,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":36,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":3,\"cycles\":36,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":4,\"name\":\"Random stimulus batch 4\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":37,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":38,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hd, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":39,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":40,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hd, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":41,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":42,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":43,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":44,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":45,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":4,\"cycles\":45,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":5,\"name\":\"Random stimulus batch 5\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":46,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":47,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":48,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":49,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":50,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":51,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":52,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h8, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":53,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":54,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h2, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":5,\"cycles\":54,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_SUMMARY:: {\"total\":6,\"passed\":6,\"failed\":0,\"score\":100,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::JUDGE_DONE:: {\"cycles\":54,\"cases\":6,\"mismatches\":0,\"nonce\":\"ac3c620026054ae1\"}\r\n# ** Note: $finish    : hidden_lockstep_tb.sv(294)\r\n#    Time: 726 ns  Iteration: 0  Instance: /hidden_lockstep_tb\r\n# End time: 10:19:42 on Oct 08,2026, Elapsed time: 0:00:02\r\n# Errors: 0, Warnings: 2\r\n",
+      "stderr": "",
+      "killed": false,
+      "success": true,
+      "started": true,
+      "completed": true
+    },
+    "validatorQuality": {
+      "ok": true,
+      "backend": "native-reference-v1",
+      "independent": false,
+      "oracleVerdict": "AC",
+      "structural": {
+        "valid": true,
+        "reason": "",
+        "checks": {
+          "hasReset": true,
+          "hasBoundary": false,
+          "hasStateTransition": false,
+          "distinctCategories": 3,
+          "everyCaseNamed": true
+        },
+        "categories": [
+          "reset",
+          "corner",
+          "randomized"
+        ]
+      },
+      "mutations": [
+        {
+          "id": "reset_polarity",
+          "description": "inverted the reset polarity",
+          "verdict": "WA",
+          "functionallyRejected": true,
+          "inconclusive": false,
+          "elapsedMs": 3092.4000000953674
+        }
+      ],
+      "mutationCounts": {
+        "selected": 1,
+        "killed": 1,
+        "survived": 0,
+        "inconclusive": 0
+      },
+      "warnings": [],
+      "reason": "Native reference compiled and passed lockstep self-check; 1/1 bounded source mutation(s) were functionally rejected.",
+      "reused": true,
+      "artifactHash": "s58k92"
+    },
+    "processEvidence": {
+      "compile": {
+        "exitCode": 0,
+        "signal": null,
+        "pid": 19680,
+        "command": "vlog.exe",
+        "args": [
+          "-sv",
+          "rr_arbiter_locked.sv",
+          "golden_reference.sv",
+          "hidden_lockstep_tb.sv"
+        ],
+        "cwd": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791434412904_1791434440927",
+        "spawnError": null,
+        "stdout": "QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 10:19:39 on Oct 08,2026\r\nvlog -sv rr_arbiter_locked.sv golden_reference.sv hidden_lockstep_tb.sv \r\n-- Compiling module rr_arbiter_locked\r\n-- Compiling module rr_arbiter_locked_ref\r\n-- Compiling module hidden_lockstep_tb\r\n\r\nTop level modules:\r\n\thidden_lockstep_tb\r\nEnd time: 10:19:39 on Oct 08,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n",
+        "stderr": "",
+        "killed": false,
+        "success": true
+      },
+      "elaboration": {
+        "success": true
+      },
+      "execution": {
+        "exitCode": 0,
+        "signal": null,
+        "pid": 19036,
+        "command": "vsim.exe",
+        "args": [
+          "-c",
+          "-voptargs=+acc",
+          "-l",
+          "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791434412904_1791434440927\\transcript.log",
+          "hidden_lockstep_tb",
+          "-do",
+          "run.do"
+        ],
+        "cwd": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791434412904_1791434440927",
+        "spawnError": null,
+        "stdout": "Reading pref.tcl\r\n\r\n# 2024.1\r\n\r\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791434412904_1791434440927\\transcript.log hidden_lockstep_tb -do \"run.do\" \r\n# Start time: 10:19:40 on Oct 08,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.hidden_lockstep_tb(fast)\r\n# Loading work.rr_arbiter_locked(fast)\r\n# Loading work.rr_arbiter_locked_ref(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /hidden_lockstep_tb/#INITIAL#253 File: hidden_lockstep_tb.sv Line: 256\r\n# ::TEST_START:: {\"id\":0,\"name\":\"Reset and idle\",\"category\":\"reset\",\"requirement\":\"Deterministic reset then idle behaviour on every output\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":1,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":2,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":3,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":4,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":5,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":6,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":7,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":8,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":0,\"cycle\":9,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":0,\"cycles\":9,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":1,\"name\":\"Back-to-back toggling\",\"category\":\"corner\",\"requirement\":\"Robustness under back-to-back input changes\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":10,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":11,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":12,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":13,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":14,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":15,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":16,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":17,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":1,\"cycle\":18,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":1,\"cycles\":18,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":2,\"name\":\"Random stimulus batch 2\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":19,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":20,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":21,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":22,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h8, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":23,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hc, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":24,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":25,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":26,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h4, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":2,\"cycle\":27,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":2,\"cycles\":27,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":3,\"name\":\"Random stimulus batch 3\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":28,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":29,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":30,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hb, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":31,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h9, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":32,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":33,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hf, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":34,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h4, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":35,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h1, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":3,\"cycle\":36,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h6, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":3,\"cycles\":36,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":4,\"name\":\"Random stimulus batch 4\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":37,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":38,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hd, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":39,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":40,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'hd, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":41,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":42,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":43,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h7, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":44,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":4,\"cycle\":45,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":4,\"cycles\":45,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_START:: {\"id\":5,\"name\":\"Random stimulus batch 5\",\"category\":\"randomized\",\"requirement\":\"Robustness under randomized stimulus\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":46,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h0, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h0, arena_signal_grant_valid=0, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":47,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"actual\":\"arena_signal_grant=4'h4, arena_signal_grant_valid=1, arena_signal_grant_id=2'h2\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":48,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'ha, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":49,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":50,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h5, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":51,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":52,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h8, arena_signal_lock=0, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"actual\":\"arena_signal_grant=4'h8, arena_signal_grant_valid=1, arena_signal_grant_id=2'h3\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":53,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h3, arena_signal_lock=1, arena_signal_grant_ack=0\",\"expected\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"actual\":\"arena_signal_grant=4'h1, arena_signal_grant_valid=1, arena_signal_grant_id=2'h0\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::VECTOR_PASS:: {\"id\":5,\"cycle\":54,\"stimulus\":\"clk=1, arena_signal_rst_n=1, arena_signal_req=4'h2, arena_signal_lock=0, arena_signal_grant_ack=1\",\"expected\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"actual\":\"arena_signal_grant=4'h2, arena_signal_grant_valid=1, arena_signal_grant_id=2'h1\",\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_PASS:: {\"id\":5,\"cycles\":54,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::TEST_SUMMARY:: {\"total\":6,\"passed\":6,\"failed\":0,\"score\":100,\"nonce\":\"ac3c620026054ae1\"}\r\n# ::JUDGE_DONE:: {\"cycles\":54,\"cases\":6,\"mismatches\":0,\"nonce\":\"ac3c620026054ae1\"}\r\n# ** Note: $finish    : hidden_lockstep_tb.sv(294)\r\n#    Time: 726 ns  Iteration: 0  Instance: /hidden_lockstep_tb\r\n# End time: 10:19:42 on Oct 08,2026, Elapsed time: 0:00:02\r\n# Errors: 0, Warnings: 2\r\n",
+        "stderr": "",
+        "killed": false,
+        "success": true,
+        "started": true,
+        "completed": true
+      },
+      "diagnostics": {
+        "errorLines": [],
+        "warningLines": [
+          "** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.",
+          "** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()"
+        ],
+        "noteLines": [
+          "** Note: (vsim-3813) Design is being optimized due to module recompilation...",
+          "** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.",
+          "** Note: $finish    : hidden_lockstep_tb.sv(294)"
+        ],
+        "errorCount": 0,
+        "warningCount": 2,
+        "hasCompileOrElaborationFailure": false
+      }
+    },
+    "hasHarnessEvidence": true,
+    "evidence": {
+      "harness": "lockstep",
+      "simulator": "questa",
+      "casesParsed": 6
+    }
+  },
+  "verdict": "AC",
+  "verdictLabel": "Accepted",
+  "v1Compatible": {
+    "overallScore": 100,
+    "static": {
+      "passed": true,
+      "summary": "Structure: 100/100",
+      "errors": [],
+      "warnings": []
+    },
+    "simulation": {
+      "passed": true,
+      "executed": true,
+      "score": 80
+    }
+  }
+}
