@@ -1,0 +1,399 @@
+{
+  "success": true,
+  "category": "coverage",
+  "static": 90,
+  "compilation": 100,
+  "functional": 80,
+  "coverage": {
+    "score": 100,
+    "target": 95,
+    "missingBins": [],
+    "hitBins": null,
+    "totalBins": null,
+    "status": null
+  },
+  "codeQuality": 43,
+  "structureScore": 90,
+  "simulationScore": 80,
+  "compileScore": 100,
+  "finalScore": 100,
+  "overallScore": 100,
+  "score": 100,
+  "passed": true,
+  "tier": "excellent",
+  "tierLabel": "excellent",
+  "weights": {
+    "static": 0.1,
+    "compilation": 0.15,
+    "functional": 0.3,
+    "coverage": 0.35,
+    "codeQuality": 0.1
+  },
+  "confidence": 1,
+  "findings": [
+    "REAL COVERAGE: 100% from simulation output",
+    "EXCELLENT: Coverage above 80% threshold"
+  ],
+  "errors": [],
+  "warnings": [],
+  "info": [
+    "REAL COVERAGE: 100% from simulation output",
+    "EXCELLENT: Coverage above 80% threshold"
+  ],
+  "simulationExecuted": true,
+  "simulationStatus": "Passed",
+  "simulationTranscript": "QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 11:23:54 on Oct 08,2026\r\nvlog -sv nested_vic.sv verification_if.sv coverage_submission.sv \r\n-- Compiling module nested_vic\r\n-- Compiling interface nested_vic_if\r\n-- Compiling package coverage_submission_sv_unit\r\n-- Compiling module __vlsi_coverage_challenge_top\r\n\r\nTop level modules:\r\n\t__vlsi_coverage_challenge_top\r\nEnd time: 11:23:54 on Oct 08,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791438467997_1791438495538\\transcript.log __vlsi_coverage_challenge_top -do \"run.do\" \r\n# Start time: 11:23:55 on Oct 08,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.coverage_submission_sv_unit(fast)\r\n# Loading work.__vlsi_coverage_challenge_top(fast)\r\n# Loading work.nested_vic_if(fast__2)\r\n# Loading work.nested_vic(fast)\r\n# Loading work.nested_vic_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# COVERAGE_BASELINE: 41.67%\r\n# COVERAGE: 100.00%\r\n# ** Note: $finish    : coverage_submission.sv(182)\r\n#    Time: 170 ns  Iteration: 0  Instance: /__vlsi_coverage_challenge_top\r\n# End time: 11:23:58 on Oct 08,2026, Elapsed time: 0:00:03\r\n# Errors: 0, Warnings: 1\r\n\n::TEST_START:: {\"id\":0,\"name\":\"Coverage artifact produces meaningful sampled coverage\",\"nonce\":\"3f3a4901a18342ef\"}\n::TEST_PASS:: {\"id\":0,\"nonce\":\"3f3a4901a18342ef\"}\n::TEST_SUMMARY:: {\"total\":1,\"passed\":1,\"failed\":0,\"nonce\":\"3f3a4901a18342ef\"}\n::JUDGE_DONE:: {\"cases\":1,\"nonce\":\"3f3a4901a18342ef\"}",
+  "waveformPath": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791438467997_1791438495538\\submission.vcd",
+  "waveformVcdText": "$date\r\n\tThu Oct  8 11:23:58 2026\r\n$end\r\n$version\r\n\tQuestaSim Version 2024.1\r\n$end\r\n$timescale\r\n\t1ns\r\n$end\r\n\r\n$scope module __vlsi_coverage_challenge_top $end\r\n\r\n$scope module vif $end\r\n$var reg 1 ! clk $end\r\n$var reg 1 \" rst_n $end\r\n$var reg 4 # reg_addr [3:0] $end\r\n$var reg 8 $ reg_wdata [7:0] $end\r\n$var reg 1 % reg_we $end\r\n$var reg 8 & reg_rdata [7:0] $end\r\n$var reg 8 ' irq_src [7:0] $end\r\n$var reg 1 ( cpu_ack $end\r\n$var reg 1 ) cpu_eoi $end\r\n$var reg 1 * cpu_irq $end\r\n$var reg 8 + cpu_vector [7:0] $end\r\n$var reg 4 , nest_level [3:0] $end\r\n$var reg 8 - reg_rdata_ref [7:0] $end\r\n$var reg 1 . cpu_irq_ref $end\r\n$var reg 8 / cpu_vector_ref [7:0] $end\r\n$var reg 4 0 nest_level_ref [3:0] $end\r\n$upscope $end\r\n\r\n$scope module dut $end\r\n$var parameter 32 1 NUM_CHANNELS $end\r\n$var wire 1 2 clk $end\r\n$var wire 1 3 rst_n $end\r\n$var wire 1 4 reg_addr [3] $end\r\n$var wire 1 5 reg_addr [2] $end\r\n$var wire 1 6 reg_addr [1] $end\r\n$var wire 1 7 reg_addr [0] $end\r\n$var wire 1 8 reg_wdata [7] $end\r\n$var wire 1 9 reg_wdata [6] $end\r\n$var wire 1 : reg_wdata [5] $end\r\n$var wire 1 ; reg_wdata [4] $end\r\n$var wire 1 < reg_wdata [3] $end\r\n$var wire 1 = reg_wdata [2] $end\r\n$var wire 1 > reg_wdata [1] $end\r\n$var wire 1 ? reg_wdata [0] $end\r\n$var wire 1 @ reg_we $end\r\n$var reg 8 A reg_rdata [7:0] $end\r\n$var wire 1 B irq_src [7] $end\r\n$var wire 1 C irq_src [6] $end\r\n$var wire 1 D irq_src [5] $end\r\n$var wire 1 E irq_src [4] $end\r\n$var wire 1 F irq_src [3] $end\r\n$var wire 1 G irq_src [2] $end\r\n$var wire 1 H irq_src [1] $end\r\n$var wire 1 I irq_src [0] $end\r\n$var wire 1 J cpu_ack $end\r\n$var wire 1 K cpu_eoi $end\r\n$var reg 1 L cpu_irq $end\r\n$var reg 8 M cpu_vector [7:0] $end\r\n$var reg 4 N nest_level [3:0] $end\r\n$var reg 8 O reg_mask [7:0] $end\r\n$var reg 8 P reg_trg_mode [7:0] $end\r\n$var reg 8 Q edge_pend [7:0] $end\r\n$var reg 8 R vect_base [7:0] $end\r\n$var reg 8 S irq_src_d1 [7:0] $end\r\n$var reg 4 T stack_ptr [3:0] $end\r\n$var reg 1 U stack_full $end\r\n$var reg 8 V eff_pend [7:0] $end\r\n$var reg 8 W unmasked_pend [7:0] $end\r\n$var reg 1 X best_valid $end\r\n$var reg 3 Y best_channel [2:0] $end\r\n$var reg 3 Z best_prio [2:0] $end\r\n$var reg 8 [ best_vector [7:0] $end\r\n$var reg 1 \\ can_preempt $end\r\n\r\n$scope begin gen_eff_pend[7] $end\r\n$var parameter 32 ] c $end\r\n$upscope $end\r\n\r\n$scope begin gen_eff_pend[6] $end\r\n$var parameter 32 ^ c $end\r\n$upscope $end\r\n\r\n$scope begin gen_eff_pend[5] $end\r\n$var parameter 32 _ c $end\r\n$upscope $end\r\n\r\n$scope begin gen_eff_pend[4] $end\r\n$var parameter 32 ` c $end\r\n$upscope $end\r\n\r\n$scope begin gen_eff_pend[3] $end\r\n$var parameter 32 a c $end\r\n$upscope $end\r\n\r\n$scope begin gen_eff_pend[2] $end\r\n$var parameter 32 b c $end\r\n$upscope $end\r\n\r\n$scope begin gen_eff_pend[1] $end\r\n$var parameter 32 c c $end\r\n$upscope $end\r\n\r\n$scope begin gen_eff_pend[0] $end\r\n$var parameter 32 d c $end\r\n$upscope $end\r\n$upscope $end\r\n$upscope $end\r\n$enddefinitions $end\r\n#0\r\n$dumpvars\r\n0!\r\n0\"\r\nb0 #\r\nb0 $\r\n0%\r\nb11111111 &\r\nb0 '\r\n0(\r\n0)\r\n0*\r\nb0 +\r\nb0 ,\r\nbx -\r\nx.\r\nbx /\r\nbx 0\r\nb11111111 A\r\n0L\r\nb0 M\r\nb0 N\r\nb11111111 O\r\nb0 P\r\nb0 Q\r\nb0 R\r\nb0 S\r\nb0 T\r\n0U\r\nb0 V\r\nb0 W\r\n0X\r\nb0 Y\r\nb111 Z\r\nb0 [\r\n0\\\r\nb1000 1\r\nb0 d\r\nb1 c\r\nb10 b\r\nb11 a\r\nb100 `\r\nb101 _\r\nb110 ^\r\nb111 ]\r\n0K\r\n0J\r\n0I\r\n0H\r\n0G\r\n0F\r\n0E\r\n0D\r\n0C\r\n0B\r\n0@\r\n0?\r\n0>\r\n0=\r\n0<\r\n0;\r\n0:\r\n09\r\n08\r\n07\r\n06\r\n05\r\n04\r\n03\r\n02\r\n$end\r\n#40\r\n1!\r\n12\r\n#50\r\n0!\r\n1\"\r\n02\r\n13\r\n#60\r\n0\"\r\nb1111 #\r\n03\r\n17\r\n16\r\n15\r\n14\r\nb0 A\r\nb0 &\r\n#70\r\nb0 #\r\n1!\r\n1\"\r\nb1111 #\r\nb11111111 $\r\n1%\r\nb11111111 '\r\n1(\r\n1)\r\n1@\r\n1I\r\n1H\r\n1G\r\n1F\r\n1E\r\n1D\r\n1C\r\n1B\r\n1?\r\n1>\r\n1=\r\n1<\r\n1;\r\n1:\r\n19\r\n18\r\n1J\r\n1K\r\nb10000000 V\r\nb11000000 V\r\nb11100000 V\r\nb11110000 V\r\nb11111000 V\r\nb11111100 V\r\nb11111110 V\r\nb11111111 V\r\n12\r\n13\r\nb11111111 S\r\n#80\r\n0!\r\n0\"\r\nb0 #\r\nb0 $\r\n0%\r\nb0 '\r\n0(\r\n0)\r\nb11111111 $\r\n0@\r\n0I\r\n0H\r\n0G\r\n0F\r\n0E\r\n0D\r\n0C\r\n0B\r\n0J\r\n0K\r\nb1111111 V\r\nb111111 V\r\nb11111 V\r\nb1111 V\r\nb111 V\r\nb11 V\r\nb1 V\r\nb0 V\r\n02\r\n03\r\n07\r\n06\r\n05\r\n04\r\nb11111111 A\r\nb11111111 &\r\nb0 S\r\n#90\r\nb0 $\r\n1%\r\n0?\r\n0>\r\n0=\r\n0<\r\n0;\r\n0:\r\n09\r\n08\r\n1@\r\n#100\r\n0%\r\nb11111111 '\r\n0@\r\n1I\r\n1H\r\n1G\r\n1F\r\n1E\r\n1D\r\n1C\r\n1B\r\nb10000000 V\r\nb11000000 V\r\nb11100000 V\r\nb11110000 V\r\nb11111000 V\r\nb11111100 V\r\nb11111110 V\r\nb11111111 V\r\nb0 A\r\nb11111111 A\r\n#110\r\nb0 '\r\n1!\r\n1\"\r\nb1111 #\r\nb11111111 $\r\n1%\r\nb11111111 '\r\n1(\r\n1)\r\n1?\r\n1>\r\n1=\r\n1<\r\n1;\r\n1:\r\n19\r\n18\r\n1@\r\n1J\r\n1K\r\n12\r\n13\r\n17\r\n16\r\n15\r\n14\r\nb0 A\r\nb0 &\r\nb11111111 S\r\n#120\r\n0!\r\n0\"\r\nb0 #\r\nb0 $\r\n0%\r\nb0 '\r\n0(\r\n0)\r\n1(\r\n0@\r\n0I\r\n0H\r\n0G\r\n0F\r\n0E\r\n0D\r\n0C\r\n0B\r\n0?\r\n0>\r\n0=\r\n0<\r\n0;\r\n0:\r\n09\r\n08\r\n0K\r\nb1111111 V\r\nb111111 V\r\nb11111 V\r\nb1111 V\r\nb111 V\r\nb11 V\r\nb1 V\r\nb0 V\r\n02\r\n03\r\n07\r\n06\r\n05\r\n04\r\nb11111111 A\r\nb11111111 &\r\nb0 S\r\n#130\r\n0(\r\n1)\r\n0J\r\n1K\r\n#140\r\n0)\r\n1!\r\n0K\r\n12\r\n#150\r\n0!\r\n1!\r\n1\"\r\nb1111 #\r\nb11111111 $\r\n1%\r\nb11111111 '\r\n1(\r\n1)\r\n1@\r\n1I\r\n1H\r\n1G\r\n1F\r\n1E\r\n1D\r\n1C\r\n1B\r\n1?\r\n1>\r\n1=\r\n1<\r\n1;\r\n1:\r\n19\r\n18\r\n1J\r\n1K\r\nb10000000 V\r\nb11000000 V\r\nb11100000 V\r\nb11110000 V\r\nb11111000 V\r\nb11111100 V\r\nb11111110 V\r\nb11111111 V\r\n13\r\n17\r\n16\r\n15\r\n14\r\nb0 A\r\nb0 &\r\n#160\r\n0!\r\n0\"\r\nb0 #\r\nb0 $\r\n0%\r\nb0 '\r\n0(\r\n0)\r\n1\"\r\n0@\r\n0I\r\n0H\r\n0G\r\n0F\r\n0E\r\n0D\r\n0C\r\n0B\r\n0?\r\n0>\r\n0=\r\n0<\r\n0;\r\n0:\r\n09\r\n08\r\n0J\r\n0K\r\nb1111111 V\r\nb111111 V\r\nb11111 V\r\nb1111 V\r\nb111 V\r\nb11 V\r\nb1 V\r\nb0 V\r\n02\r\n07\r\n06\r\n05\r\n04\r\nb11111111 A\r\nb11111111 &\r\n#170\r\n0\"\r\n",
+  "simulator": "questa",
+  "passedCases": [
+    {
+      "id": 0,
+      "name": "Coverage artifact produces meaningful sampled coverage",
+      "status": "passed",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    }
+  ],
+  "failedCases": [],
+  "notRunCases": [],
+  "uncoveredCases": [],
+  "compileErrors": [],
+  "simulationErrors": [],
+  "coverageScore": 100,
+  "coverageMeasured": true,
+  "gateStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "coverage": "pass",
+    "elaboration": "pass"
+  },
+  "shortCircuit": null,
+  "reachedCompilation": true,
+  "reachedSimulation": true,
+  "stageStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "elaboration": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "coverage": "pass",
+    "assertions": "not_applicable"
+  },
+  "profile": {
+    "environment": "required",
+    "compile": "required",
+    "execution": "required",
+    "functional": "required",
+    "coverage": "required",
+    "assertions": "not_applicable"
+  },
+  "components": {
+    "static": 90,
+    "compilation": 100,
+    "functional": 80,
+    "coverage": 100,
+    "codeQuality": 43,
+    "simulation": 80
+  },
+  "durationMs": 4128,
+  "judge": {
+    "verdict": "AC",
+    "verdictLabel": "Accepted",
+    "passed": true,
+    "score": 100,
+    "gates": {
+      "environment": "pass",
+      "compile": "pass",
+      "execution": "pass",
+      "functional": "pass",
+      "coverage": "pass",
+      "elaboration": "pass"
+    },
+    "shortCircuit": null,
+    "reachedCompilation": true,
+    "reachedSimulation": true,
+    "coverageMeasured": true,
+    "failureReasons": [],
+    "testCases": [
+      {
+        "id": 0,
+        "name": "Coverage artifact produces meaningful sampled coverage",
+        "status": "passed"
+      }
+    ],
+    "coverage": {
+      "score": 100,
+      "target": 95,
+      "missingBins": [],
+      "hitBins": null,
+      "totalBins": null,
+      "status": null
+    },
+    "compileErrors": [],
+    "summary": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "score": null
+    },
+    "stats": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "timeouts": 0,
+      "unresolved": 0,
+      "cycles": null,
+      "runtimeMs": 4127
+    },
+    "failurePhase": "complete",
+    "execution": {
+      "exitCode": 0,
+      "signal": null,
+      "pid": 4944,
+      "command": "vsim.exe",
+      "args": [
+        "-c",
+        "-voptargs=+acc",
+        "-l",
+        "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791438467997_1791438495538\\transcript.log",
+        "__vlsi_coverage_challenge_top",
+        "-do",
+        "run.do"
+      ],
+      "cwd": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791438467997_1791438495538",
+      "spawnError": null,
+      "stdout": "Reading pref.tcl\r\n\r\n# 2024.1\r\n\r\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791438467997_1791438495538\\transcript.log __vlsi_coverage_challenge_top -do \"run.do\" \r\n# Start time: 11:23:55 on Oct 08,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.coverage_submission_sv_unit(fast)\r\n# Loading work.__vlsi_coverage_challenge_top(fast)\r\n# Loading work.nested_vic_if(fast__2)\r\n# Loading work.nested_vic(fast)\r\n# Loading work.nested_vic_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# COVERAGE_BASELINE: 41.67%\r\n# COVERAGE: 100.00%\r\n# ** Note: $finish    : coverage_submission.sv(182)\r\n#    Time: 170 ns  Iteration: 0  Instance: /__vlsi_coverage_challenge_top\r\n# End time: 11:23:58 on Oct 08,2026, Elapsed time: 0:00:03\r\n# Errors: 0, Warnings: 1\r\n",
+      "stderr": "",
+      "killed": false,
+      "success": true,
+      "started": true,
+      "completed": true
+    },
+    "validatorQuality": {
+      "ok": true,
+      "independent": true,
+      "challengePlan": {
+        "schemaVersion": 1,
+        "category": "coverage",
+        "source": "structured-specification",
+        "scenarios": [
+          {
+            "id": "scenario_1",
+            "description": "Full nesting stack traversal: sequence 8 successive interrupts with strictly increasing priorities (7 down to 0), pulsing `cpu_ack` for each, verifying `nest_level` reaches 8, followed by 8 successive `cpu_eoi` pulses returning `nest_level` to 0."
+          },
+          {
+            "id": "scenario_2",
+            "description": "Equal priority tie-breaking: configure channels 2, 4, and 7 to priority level 2, assert all three simultaneously, and verify that acknowledge dispatches IRQ2 first, IRQ4 second, and IRQ7 third."
+          },
+          {
+            "id": "scenario_3",
+            "description": "Edge vs Level trigger qualification: configure IRQ0 as edge-triggered and IRQ1 as level-triggered; pulse IRQ0 and hold IRQ1 high across CPU ACK and EOI cycles, verifying IRQ0 clears on ACK while IRQ1 remains pending until deasserted externally."
+          },
+          {
+            "id": "scenario_4",
+            "description": "Masking and dynamic priority demotion while IRQ asserted: assert IRQ3 with priority 2 to raise `cpu_irq`, then write MASK[3]=1 or change PRIO_2_3 to priority 6 while an active nesting priority 4 is running, verifying immediate deassertion of `cpu_irq`."
+          }
+        ],
+        "requirements": [
+          {
+            "id": "req_1",
+            "description": "Priority values range from 0 (highest urgency) to 7 (lowest urgency); if two enabled pending interrupts share identical priority values, the lower channel ID (e.g. IRQ0 over IRQ1) takes precedence."
+          },
+          {
+            "id": "req_2",
+            "description": "An interrupt request is only dispatched (`cpu_irq` asserted) if its priority is strictly higher (numerically lower) than the current priority level on top of the nesting stack (or if nest_level == 0)."
+          },
+          {
+            "id": "req_3",
+            "description": "Pulsing `cpu_ack` for 1 clock cycle while `cpu_irq` is asserted clears the corresponding PEND bit for edge-triggered channels (or keeps it cleared until next edge), pushes the servicing interrupt's priority onto the nesting stack, increments `nest_level`, and deasserts `cpu_irq` if no higher-priority interrupt is pending."
+          },
+          {
+            "id": "req_4",
+            "description": "For level-triggered channels, PEND remains asserted as long as the external `irq_src` bit remains high, but re-arbitration only occurs if its priority exceeds the current nesting threshold."
+          },
+          {
+            "id": "req_5",
+            "description": "Pulsing `cpu_eoi` for 1 clock cycle pops the nesting stack, decrements `nest_level`, and restores the previous active execution priority threshold."
+          },
+          {
+            "id": "req_6",
+            "description": "Register writes take effect immediately on the next rising clock edge and trigger re-evaluation of arbitration and `cpu_irq` state."
+          },
+          {
+            "id": "req_7",
+            "description": "When `nest_level` equals 8, no further interrupts may preempt; `cpu_irq` remains deasserted until at least one `cpu_eoi` is received."
+          },
+          {
+            "id": "req_8",
+            "description": "`cpu_ack` must only be asserted when `cpu_irq` is 1; asserting `cpu_ack` when `cpu_irq` is 0 is ignored without modifying nesting stack."
+          },
+          {
+            "id": "req_9",
+            "description": "`cpu_eoi` should only be asserted when `nest_level` > 0; asserting `cpu_eoi` when `nest_level` == 0 has no effect on stack or level."
+          },
+          {
+            "id": "req_10",
+            "description": "Register writes to address space 0x0 to 0x9 occur on clock cycles where `reg_we` is 1; read data `reg_rdata` is output combinational or 1-cycle registered matching register address `reg_addr`."
+          },
+          {
+            "id": "req_11",
+            "description": "Simultaneous assertion of `cpu_ack` and `cpu_eoi` on the same cycle: the `cpu_eoi` pops first followed by `cpu_ack` push (effective replace of top of stack), net `nest_level` change is 0."
+          },
+          {
+            "id": "req_12",
+            "description": "`cpu_vector` updates in the same cycle `cpu_irq` asserts and remains stable as long as `cpu_irq` remains asserted unless a higher priority interrupt preempts it before acknowledge."
+          }
+        ],
+        "activity": null,
+        "negativeChallenge": null,
+        "assertionIntent": null,
+        "coverageIntent": {
+          "target": 95,
+          "goals": [
+            {
+              "metric": "overall",
+              "target": 95,
+              "rationale": "Overall functional coverage across all interrupt modes, arbitration states, and stack depths."
+            },
+            {
+              "metric": "cross",
+              "target": 90,
+              "rationale": "Cross of channel ID (0-7) x priority level (0-7) x trigger mode (edge vs level) during successful dispatch."
+            },
+            {
+              "metric": "cross",
+              "target": 85,
+              "rationale": "Cross of nest_level (0 to 8) x CPU handshake events (cpu_ack, cpu_eoi, simultaneous ack+eoi)."
+            }
+          ],
+          "scenarios": [
+            {
+              "id": "scenario_1",
+              "description": "Full nesting stack traversal: sequence 8 successive interrupts with strictly increasing priorities (7 down to 0), pulsing `cpu_ack` for each, verifying `nest_level` reaches 8, followed by 8 successive `cpu_eoi` pulses returning `nest_level` to 0."
+            },
+            {
+              "id": "scenario_2",
+              "description": "Equal priority tie-breaking: configure channels 2, 4, and 7 to priority level 2, assert all three simultaneously, and verify that acknowledge dispatches IRQ2 first, IRQ4 second, and IRQ7 third."
+            },
+            {
+              "id": "scenario_3",
+              "description": "Edge vs Level trigger qualification: configure IRQ0 as edge-triggered and IRQ1 as level-triggered; pulse IRQ0 and hold IRQ1 high across CPU ACK and EOI cycles, verifying IRQ0 clears on ACK while IRQ1 remains pending until deasserted externally."
+            },
+            {
+              "id": "scenario_4",
+              "description": "Masking and dynamic priority demotion while IRQ asserted: assert IRQ3 with priority 2 to raise `cpu_irq`, then write MASK[3]=1 or change PRIO_2_3 to priority 6 while an active nesting priority 4 is running, verifying immediate deassertion of `cpu_irq`."
+            }
+          ]
+        }
+      },
+      "artifactIntegrity": {
+        "ok": true,
+        "reasons": [],
+        "coverpointCount": 4,
+        "distinctSignalCount": 4,
+        "coverpointSignals": [
+          "reg_we",
+          "reg_addr",
+          "irq_src",
+          "cpu_ack"
+        ],
+        "crossCount": 2,
+        "hasSampling": true,
+        "requiresCross": true
+      },
+      "baselineCoverage": 41.67,
+      "measuredCoverage": 100,
+      "coverageDelta": 58.33,
+      "progressed": true,
+      "reason": "Submitted coverage model gained measurable coverage under the hidden scenario corpus."
+    },
+    "processEvidence": {
+      "compile": {
+        "exitCode": 0,
+        "signal": null,
+        "pid": 17344,
+        "command": "vlog.exe",
+        "args": [
+          "-sv",
+          "nested_vic.sv",
+          "verification_if.sv",
+          "coverage_submission.sv"
+        ],
+        "cwd": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791438467997_1791438495538",
+        "spawnError": null,
+        "stdout": "QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 11:23:54 on Oct 08,2026\r\nvlog -sv nested_vic.sv verification_if.sv coverage_submission.sv \r\n-- Compiling module nested_vic\r\n-- Compiling interface nested_vic_if\r\n-- Compiling package coverage_submission_sv_unit\r\n-- Compiling module __vlsi_coverage_challenge_top\r\n\r\nTop level modules:\r\n\t__vlsi_coverage_challenge_top\r\nEnd time: 11:23:54 on Oct 08,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n",
+        "stderr": "",
+        "killed": false,
+        "success": true
+      },
+      "elaboration": {
+        "success": true
+      },
+      "execution": {
+        "exitCode": 0,
+        "signal": null,
+        "pid": 4944,
+        "command": "vsim.exe",
+        "args": [
+          "-c",
+          "-voptargs=+acc",
+          "-l",
+          "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791438467997_1791438495538\\transcript.log",
+          "__vlsi_coverage_challenge_top",
+          "-do",
+          "run.do"
+        ],
+        "cwd": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791438467997_1791438495538",
+        "spawnError": null,
+        "stdout": "Reading pref.tcl\r\n\r\n# 2024.1\r\n\r\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791438467997_1791438495538\\transcript.log __vlsi_coverage_challenge_top -do \"run.do\" \r\n# Start time: 11:23:55 on Oct 08,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.coverage_submission_sv_unit(fast)\r\n# Loading work.__vlsi_coverage_challenge_top(fast)\r\n# Loading work.nested_vic_if(fast__2)\r\n# Loading work.nested_vic(fast)\r\n# Loading work.nested_vic_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# COVERAGE_BASELINE: 41.67%\r\n# COVERAGE: 100.00%\r\n# ** Note: $finish    : coverage_submission.sv(182)\r\n#    Time: 170 ns  Iteration: 0  Instance: /__vlsi_coverage_challenge_top\r\n# End time: 11:23:58 on Oct 08,2026, Elapsed time: 0:00:03\r\n# Errors: 0, Warnings: 1\r\n",
+        "stderr": "",
+        "killed": false,
+        "success": true,
+        "started": true,
+        "completed": true
+      },
+      "diagnostics": {
+        "errorLines": [],
+        "warningLines": [
+          "** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+        ],
+        "noteLines": [
+          "** Note: (vsim-3813) Design is being optimized due to module recompilation...",
+          "** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.",
+          "** Note: $finish    : coverage_submission.sv(182)"
+        ],
+        "errorCount": 0,
+        "warningCount": 1,
+        "hasCompileOrElaborationFailure": false
+      }
+    },
+    "hasHarnessEvidence": true,
+    "evidence": {
+      "harness": "lockstep",
+      "simulator": "questa",
+      "casesParsed": 1
+    }
+  },
+  "verdict": "AC",
+  "verdictLabel": "Accepted",
+  "v1Compatible": {
+    "overallScore": 100,
+    "static": {
+      "passed": true,
+      "summary": "Structure: 90/100",
+      "errors": [],
+      "warnings": []
+    },
+    "simulation": {
+      "passed": true,
+      "executed": true,
+      "score": 80
+    }
+  }
+}
