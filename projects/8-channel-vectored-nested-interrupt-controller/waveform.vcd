@@ -1,0 +1,487 @@
+$date
+	Thu Oct  8 11:23:58 2026
+$end
+$version
+	QuestaSim Version 2024.1
+$end
+$timescale
+	1ns
+$end
+
+$scope module __vlsi_coverage_challenge_top $end
+
+$scope module vif $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+$var reg 4 # reg_addr [3:0] $end
+$var reg 8 $ reg_wdata [7:0] $end
+$var reg 1 % reg_we $end
+$var reg 8 & reg_rdata [7:0] $end
+$var reg 8 ' irq_src [7:0] $end
+$var reg 1 ( cpu_ack $end
+$var reg 1 ) cpu_eoi $end
+$var reg 1 * cpu_irq $end
+$var reg 8 + cpu_vector [7:0] $end
+$var reg 4 , nest_level [3:0] $end
+$var reg 8 - reg_rdata_ref [7:0] $end
+$var reg 1 . cpu_irq_ref $end
+$var reg 8 / cpu_vector_ref [7:0] $end
+$var reg 4 0 nest_level_ref [3:0] $end
+$upscope $end
+
+$scope module dut $end
+$var parameter 32 1 NUM_CHANNELS $end
+$var wire 1 2 clk $end
+$var wire 1 3 rst_n $end
+$var wire 1 4 reg_addr [3] $end
+$var wire 1 5 reg_addr [2] $end
+$var wire 1 6 reg_addr [1] $end
+$var wire 1 7 reg_addr [0] $end
+$var wire 1 8 reg_wdata [7] $end
+$var wire 1 9 reg_wdata [6] $end
+$var wire 1 : reg_wdata [5] $end
+$var wire 1 ; reg_wdata [4] $end
+$var wire 1 < reg_wdata [3] $end
+$var wire 1 = reg_wdata [2] $end
+$var wire 1 > reg_wdata [1] $end
+$var wire 1 ? reg_wdata [0] $end
+$var wire 1 @ reg_we $end
+$var reg 8 A reg_rdata [7:0] $end
+$var wire 1 B irq_src [7] $end
+$var wire 1 C irq_src [6] $end
+$var wire 1 D irq_src [5] $end
+$var wire 1 E irq_src [4] $end
+$var wire 1 F irq_src [3] $end
+$var wire 1 G irq_src [2] $end
+$var wire 1 H irq_src [1] $end
+$var wire 1 I irq_src [0] $end
+$var wire 1 J cpu_ack $end
+$var wire 1 K cpu_eoi $end
+$var reg 1 L cpu_irq $end
+$var reg 8 M cpu_vector [7:0] $end
+$var reg 4 N nest_level [3:0] $end
+$var reg 8 O reg_mask [7:0] $end
+$var reg 8 P reg_trg_mode [7:0] $end
+$var reg 8 Q edge_pend [7:0] $end
+$var reg 8 R vect_base [7:0] $end
+$var reg 8 S irq_src_d1 [7:0] $end
+$var reg 4 T stack_ptr [3:0] $end
+$var reg 1 U stack_full $end
+$var reg 8 V eff_pend [7:0] $end
+$var reg 8 W unmasked_pend [7:0] $end
+$var reg 1 X best_valid $end
+$var reg 3 Y best_channel [2:0] $end
+$var reg 3 Z best_prio [2:0] $end
+$var reg 8 [ best_vector [7:0] $end
+$var reg 1 \ can_preempt $end
+
+$scope begin gen_eff_pend[7] $end
+$var parameter 32 ] c $end
+$upscope $end
+
+$scope begin gen_eff_pend[6] $end
+$var parameter 32 ^ c $end
+$upscope $end
+
+$scope begin gen_eff_pend[5] $end
+$var parameter 32 _ c $end
+$upscope $end
+
+$scope begin gen_eff_pend[4] $end
+$var parameter 32 ` c $end
+$upscope $end
+
+$scope begin gen_eff_pend[3] $end
+$var parameter 32 a c $end
+$upscope $end
+
+$scope begin gen_eff_pend[2] $end
+$var parameter 32 b c $end
+$upscope $end
+
+$scope begin gen_eff_pend[1] $end
+$var parameter 32 c c $end
+$upscope $end
+
+$scope begin gen_eff_pend[0] $end
+$var parameter 32 d c $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+b0 #
+b0 $
+0%
+b11111111 &
+b0 '
+0(
+0)
+0*
+b0 +
+b0 ,
+bx -
+x.
+bx /
+bx 0
+b11111111 A
+0L
+b0 M
+b0 N
+b11111111 O
+b0 P
+b0 Q
+b0 R
+b0 S
+b0 T
+0U
+b0 V
+b0 W
+0X
+b0 Y
+b111 Z
+b0 [
+0\
+b1000 1
+b0 d
+b1 c
+b10 b
+b11 a
+b100 `
+b101 _
+b110 ^
+b111 ]
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+$end
+#40
+1!
+12
+#50
+0!
+1"
+02
+13
+#60
+0"
+b1111 #
+03
+17
+16
+15
+14
+b0 A
+b0 &
+#70
+b0 #
+1!
+1"
+b1111 #
+b11111111 $
+1%
+b11111111 '
+1(
+1)
+1@
+1I
+1H
+1G
+1F
+1E
+1D
+1C
+1B
+1?
+1>
+1=
+1<
+1;
+1:
+19
+18
+1J
+1K
+b10000000 V
+b11000000 V
+b11100000 V
+b11110000 V
+b11111000 V
+b11111100 V
+b11111110 V
+b11111111 V
+12
+13
+b11111111 S
+#80
+0!
+0"
+b0 #
+b0 $
+0%
+b0 '
+0(
+0)
+b11111111 $
+0@
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0J
+0K
+b1111111 V
+b111111 V
+b11111 V
+b1111 V
+b111 V
+b11 V
+b1 V
+b0 V
+02
+03
+07
+06
+05
+04
+b11111111 A
+b11111111 &
+b0 S
+#90
+b0 $
+1%
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+1@
+#100
+0%
+b11111111 '
+0@
+1I
+1H
+1G
+1F
+1E
+1D
+1C
+1B
+b10000000 V
+b11000000 V
+b11100000 V
+b11110000 V
+b11111000 V
+b11111100 V
+b11111110 V
+b11111111 V
+b0 A
+b11111111 A
+#110
+b0 '
+1!
+1"
+b1111 #
+b11111111 $
+1%
+b11111111 '
+1(
+1)
+1?
+1>
+1=
+1<
+1;
+1:
+19
+18
+1@
+1J
+1K
+12
+13
+17
+16
+15
+14
+b0 A
+b0 &
+b11111111 S
+#120
+0!
+0"
+b0 #
+b0 $
+0%
+b0 '
+0(
+0)
+1(
+0@
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+0K
+b1111111 V
+b111111 V
+b11111 V
+b1111 V
+b111 V
+b11 V
+b1 V
+b0 V
+02
+03
+07
+06
+05
+04
+b11111111 A
+b11111111 &
+b0 S
+#130
+0(
+1)
+0J
+1K
+#140
+0)
+1!
+0K
+12
+#150
+0!
+1!
+1"
+b1111 #
+b11111111 $
+1%
+b11111111 '
+1(
+1)
+1@
+1I
+1H
+1G
+1F
+1E
+1D
+1C
+1B
+1?
+1>
+1=
+1<
+1;
+1:
+19
+18
+1J
+1K
+b10000000 V
+b11000000 V
+b11100000 V
+b11110000 V
+b11111000 V
+b11111100 V
+b11111110 V
+b11111111 V
+13
+17
+16
+15
+14
+b0 A
+b0 &
+#160
+0!
+0"
+b0 #
+b0 $
+0%
+b0 '
+0(
+0)
+1"
+0@
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+0J
+0K
+b1111111 V
+b111111 V
+b11111 V
+b1111 V
+b111 V
+b11 V
+b1 V
+b0 V
+02
+07
+06
+05
+04
+b11111111 A
+b11111111 &
+#170
+0"
