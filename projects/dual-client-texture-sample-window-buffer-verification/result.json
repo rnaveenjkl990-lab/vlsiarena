@@ -1,0 +1,927 @@
+{
+  "success": true,
+  "category": "sv",
+  "static": 45,
+  "compilation": 100,
+  "functional": 20,
+  "coverage": null,
+  "codeQuality": 46,
+  "structureScore": 45,
+  "simulationScore": 20,
+  "compileScore": 100,
+  "finalScore": 100,
+  "overallScore": 100,
+  "score": 100,
+  "passed": true,
+  "tier": "excellent",
+  "tierLabel": "excellent",
+  "weights": {
+    "static": 0.1,
+    "compilation": 0.15,
+    "functional": 0.5,
+    "coverage": 0.15,
+    "codeQuality": 0.1
+  },
+  "confidence": 1,
+  "findings": [
+    "FAULT_INJECTION: Testbench detected issues in DUT"
+  ],
+  "legacyDiagnostics": [
+    "REJECT: SV task contains RTL or coverage constructs (forbidden pattern detected)",
+    "REJECT: Coverage constructs found in SV submission"
+  ],
+  "errors": [],
+  "warnings": [],
+  "info": [
+    "FAULT_INJECTION: Testbench detected issues in DUT"
+  ],
+  "simulationExecuted": true,
+  "simulationStatus": "Failed",
+  "simulationTranscript": "QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 23:00:22 on Oct 11,2026\r\nvlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv \r\n-- Compiling module tex_window_buffer\r\n-- Compiling module tex_window_buffer_ref\r\n-- Compiling interface tex_window_buffer_if\r\n-- Compiling package tb_tex_window_buffer_sv_unit\r\n-- Compiling module tb_tex_window_buffer\r\n\r\nTop level modules:\r\n\ttb_tex_window_buffer\r\nEnd time: 23:00:22 on Oct 11,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148\\transcript.log tb_tex_window_buffer -do \"run.do\" \r\n# Start time: 23:00:24 on Oct 11,2026\r\n# ** Note: (vsim-8009) Loading existing optimized design _opt\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.tb_tex_window_buffer_sv_unit(fast)\r\n# Loading work.tb_tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer_if(fast__2)\r\n# Loading work.tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer_ref(fast)\r\n# Loading work.tex_window_buffer_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757\r\n# [TEST] All 48 transactions passed successfully with ZERO mismatches.\r\n# ** Note: $finish    : tb_tex_window_buffer.sv(764)\r\n#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer\r\n# End time: 23:00:25 on Oct 11,2026, Elapsed time: 0:00:01\r\n# Errors: 0, Warnings: 1\r\n\n::TEST_START:: {\"id\":0,\"name\":\"Verification accepts the correct DUT\",\"category\":\"checker_effectiveness\",\"scenario\":\"The submitted verification environment is run against the unmodified correct DUT.\",\"expectedBehavior\":\"A correct DUT must complete without the verification environment reporting a functional mismatch.\",\"implementationHint\":\"Check expected-value calculation and output comparisons for false positives before changing DUT-facing stimulus.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":0,\"nonce\":\"72e51ab775ef4795\"}\nQuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 23:00:25 on Oct 11,2026\r\nvlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv \r\n-- Compiling module tex_window_buffer__challenge_reference\r\n-- Compiling module tex_window_buffer\r\n-- Compiling module tex_window_buffer_ref\r\n-- Compiling interface tex_window_buffer_if\r\n-- Compiling package tb_tex_window_buffer_sv_unit\r\n-- Compiling module tb_tex_window_buffer\r\n\r\nTop level modules:\r\n\ttb_tex_window_buffer\r\nEnd time: 23:00:26 on Oct 11,2026, Elapsed time: 0:00:01\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-1\\transcript.log tb_tex_window_buffer -do \"run.do\" \r\n# Start time: 23:00:27 on Oct 11,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.tb_tex_window_buffer_sv_unit(fast)\r\n# Loading work.tb_tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer_if(fast__2)\r\n# Loading work.tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer__challenge_reference(fast)\r\n# Loading work.tex_window_buffer_ref(fast)\r\n# Loading work.tex_window_buffer_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:gnt0\r\n# ** Error: [SCOREBOARD] Cycle 1: Grant mismatch! DUT=(0,0) REF=(1,0)\r\n#    Time: 35001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 496\r\n# ** Error: [TEST] Finished with 1 errors across 48 checked transactions.\r\n#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697\r\n# ** Note: $finish    : tb_tex_window_buffer.sv(764)\r\n#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer\r\n# End time: 23:00:30 on Oct 11,2026, Elapsed time: 0:00:03\r\n# Errors: 2, Warnings: 2\r\n\n::TEST_START:: {\"id\":1,\"name\":\"Verification exercises published behavior for gnt0\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_push_sample_client0\\\",\\\"antecedent\\\":{\\\"req0\\\":1,\\\"req1\\\":0,\\\"cmd0\\\":\\\"2'b01\\\",\\\"cmd1\\\":\\\"2'b00\\\",\\\"data_in0\\\":\\\"8'h3A\\\",\\\"data_in1\\\":\\\"8'h00\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":0,\\\"expected\\\":{\\\"gnt0\\\":1,\\\"gnt1\\\":0,\\\"err_pulse\\\":0},\\\"holdCycles\\\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.\",\"scenario\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The verification environment must exercise the public behavior before its checker can be credited.\",\"implementationHint\":\"Inspect stimulus and monitoring so the public behavior producing gnt0 is exercised.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":1,\"nonce\":\"72e51ab775ef4795\"}\n::TEST_START:: {\"id\":2,\"name\":\"Verification detects violation on gnt0\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_push_sample_client0\\\",\\\"antecedent\\\":{\\\"req0\\\":1,\\\"req1\\\":0,\\\"cmd0\\\":\\\"2'b01\\\",\\\"cmd1\\\":\\\"2'b00\\\",\\\"data_in0\\\":\\\"8'h3A\\\",\\\"data_in1\\\":\\\"8'h00\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":0,\\\"expected\\\":{\\\"gnt0\\\":1,\\\"gnt1\\\":0,\\\"err_pulse\\\":0},\\\"holdCycles\\\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.\",\"scenario\":\"A hidden deterministic proxy perturbs gnt0 only after the mapped public behavior is exercised.\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.\",\"implementationHint\":\"Inspect the checker/assertions for the published behavior of gnt0.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":2,\"nonce\":\"72e51ab775ef4795\"}\nQuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 23:00:30 on Oct 11,2026\r\nvlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv \r\n-- Compiling module tex_window_buffer__challenge_reference\r\n-- Compiling module tex_window_buffer\r\n-- Compiling module tex_window_buffer_ref\r\n-- Compiling interface tex_window_buffer_if\r\n-- Compiling package tb_tex_window_buffer_sv_unit\r\n-- Compiling module tb_tex_window_buffer\r\n\r\nTop level modules:\r\n\ttb_tex_window_buffer\r\nEnd time: 23:00:31 on Oct 11,2026, Elapsed time: 0:00:01\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-2\\transcript.log tb_tex_window_buffer -do \"run.do\" \r\n# Start time: 23:00:32 on Oct 11,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.tb_tex_window_buffer_sv_unit(fast)\r\n# Loading work.tb_tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer_if(fast__2)\r\n# Loading work.tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer__challenge_reference(fast)\r\n# Loading work.tex_window_buffer_ref(fast)\r\n# Loading work.tex_window_buffer_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:gnt1\r\n# ** Error: [SCOREBOARD] Cycle 3: Invariant violation: gnt0 and gnt1 asserted concurrently!\r\n#    Time: 55001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 490\r\n# ** Error: [SCOREBOARD] Cycle 3: Grant mismatch! DUT=(1,1) REF=(1,0)\r\n#    Time: 55001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 496\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:gnt1\r\n# ** Error: [SCOREBOARD] Cycle 5: Grant mismatch! DUT=(0,0) REF=(0,1)\r\n#    Time: 75001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 496\r\n# ** Error: [TEST] Finished with 3 errors across 48 checked transactions.\r\n#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697\r\n# ** Note: $finish    : tb_tex_window_buffer.sv(764)\r\n#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer\r\n# End time: 23:00:34 on Oct 11,2026, Elapsed time: 0:00:02\r\n# Errors: 4, Warnings: 2\r\n\n::TEST_START:: {\"id\":3,\"name\":\"Verification exercises published behavior for gnt1\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_simultaneous_contention_client1_wins\\\",\\\"antecedent\\\":{\\\"req0\\\":1,\\\"req1\\\":1,\\\"cmd0\\\":\\\"2'b01\\\",\\\"cmd1\\\":\\\"2'b01\\\",\\\"data_in0\\\":\\\"8'h4B\\\",\\\"data_in1\\\":\\\"8'h5C\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":0,\\\"expected\\\":{\\\"gnt0\\\":0,\\\"gnt1\\\":1},\\\"holdCycles\\\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.\",\"scenario\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The verification environment must exercise the public behavior before its checker can be credited.\",\"implementationHint\":\"Inspect stimulus and monitoring so the public behavior producing gnt1 is exercised.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":3,\"nonce\":\"72e51ab775ef4795\"}\n::TEST_START:: {\"id\":4,\"name\":\"Verification detects violation on gnt1\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_simultaneous_contention_client1_wins\\\",\\\"antecedent\\\":{\\\"req0\\\":1,\\\"req1\\\":1,\\\"cmd0\\\":\\\"2'b01\\\",\\\"cmd1\\\":\\\"2'b01\\\",\\\"data_in0\\\":\\\"8'h4B\\\",\\\"data_in1\\\":\\\"8'h5C\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":0,\\\"expected\\\":{\\\"gnt0\\\":0,\\\"gnt1\\\":1},\\\"holdCycles\\\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.\",\"scenario\":\"A hidden deterministic proxy perturbs gnt1 only after the mapped public behavior is exercised.\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.\",\"implementationHint\":\"Inspect the checker/assertions for the published behavior of gnt1.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":4,\"nonce\":\"72e51ab775ef4795\"}\nQuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 23:00:35 on Oct 11,2026\r\nvlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv \r\n-- Compiling module tex_window_buffer__challenge_reference\r\n-- Compiling module tex_window_buffer\r\n-- Compiling module tex_window_buffer_ref\r\n-- Compiling interface tex_window_buffer_if\r\n-- Compiling package tb_tex_window_buffer_sv_unit\r\n-- Compiling module tb_tex_window_buffer\r\n\r\nTop level modules:\r\n\ttb_tex_window_buffer\r\nEnd time: 23:00:35 on Oct 11,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-3\\transcript.log tb_tex_window_buffer -do \"run.do\" \r\n# Start time: 23:00:37 on Oct 11,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.tb_tex_window_buffer_sv_unit(fast)\r\n# Loading work.tb_tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer_if(fast__2)\r\n# Loading work.tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer__challenge_reference(fast)\r\n# Loading work.tex_window_buffer_ref(fast)\r\n# Loading work.tex_window_buffer_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757\r\n# ** Error: [SCOREBOARD] Cycle 11: resp_valid mismatch! DUT=0 REF=1\r\n#    Time: 135001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 512\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_valid\r\n# ** Error: [SCOREBOARD] Cycle 25: resp_valid mismatch! DUT=0 REF=1\r\n#    Time: 275001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 512\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_valid\r\n# ** Error: [TEST] Finished with 2 errors across 48 checked transactions.\r\n#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697\r\n# ** Note: $finish    : tb_tex_window_buffer.sv(764)\r\n#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer\r\n# End time: 23:00:39 on Oct 11,2026, Elapsed time: 0:00:02\r\n# Errors: 3, Warnings: 2\r\n\n::TEST_START:: {\"id\":5,\"name\":\"Verification exercises published behavior for resp_valid\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_read_sample_client0\\\",\\\"antecedent\\\":{\\\"req0\\\":1,\\\"req1\\\":0,\\\"cmd0\\\":\\\"2'b00\\\",\\\"cmd1\\\":\\\"2'b00\\\",\\\"data_in0\\\":\\\"8'h00\\\",\\\"data_in1\\\":\\\"8'h00\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":1,\\\"expected\\\":{\\\"resp_valid\\\":1,\\\"resp_client\\\":0,\\\"resp_data\\\":\\\"8'h3A\\\",\\\"err_pulse\\\":0},\\\"holdCycles\\\":1} | Drive SETOFF for Client 0 with offset 0, followed by READ, verifying resp_valid asserts 1 cycle later with the sample originally pushed | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count.\",\"scenario\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The verification environment must exercise the public behavior before its checker can be credited.\",\"implementationHint\":\"Inspect stimulus and monitoring so the public behavior producing resp_valid is exercised.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":5,\"nonce\":\"72e51ab775ef4795\"}\n::TEST_START:: {\"id\":6,\"name\":\"Verification detects violation on resp_valid\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_read_sample_client0\\\",\\\"antecedent\\\":{\\\"req0\\\":1,\\\"req1\\\":0,\\\"cmd0\\\":\\\"2'b00\\\",\\\"cmd1\\\":\\\"2'b00\\\",\\\"data_in0\\\":\\\"8'h00\\\",\\\"data_in1\\\":\\\"8'h00\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":1,\\\"expected\\\":{\\\"resp_valid\\\":1,\\\"resp_client\\\":0,\\\"resp_data\\\":\\\"8'h3A\\\",\\\"err_pulse\\\":0},\\\"holdCycles\\\":1} | Drive SETOFF for Client 0 with offset 0, followed by READ, verifying resp_valid asserts 1 cycle later with the sample originally pushed | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count.\",\"scenario\":\"A hidden deterministic proxy perturbs resp_valid only after the mapped public behavior is exercised.\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.\",\"implementationHint\":\"Inspect the checker/assertions for the published behavior of resp_valid.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":6,\"nonce\":\"72e51ab775ef4795\"}\nQuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 23:00:40 on Oct 11,2026\r\nvlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv \r\n-- Compiling module tex_window_buffer__challenge_reference\r\n-- Compiling module tex_window_buffer\r\n-- Compiling module tex_window_buffer_ref\r\n-- Compiling interface tex_window_buffer_if\r\n-- Compiling package tb_tex_window_buffer_sv_unit\r\n-- Compiling module tb_tex_window_buffer\r\n\r\nTop level modules:\r\n\ttb_tex_window_buffer\r\nEnd time: 23:00:40 on Oct 11,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-4\\transcript.log tb_tex_window_buffer -do \"run.do\" \r\n# Start time: 23:00:42 on Oct 11,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.tb_tex_window_buffer_sv_unit(fast)\r\n# Loading work.tb_tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer_if(fast__2)\r\n# Loading work.tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer__challenge_reference(fast)\r\n# Loading work.tex_window_buffer_ref(fast)\r\n# Loading work.tex_window_buffer_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757\r\n# ** Error: [SCOREBOARD] Cycle 11: Response payload mismatch! client DUT=1 REF=0, data DUT=0x3a REF=0x3a\r\n#    Time: 135001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 518\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_client\r\n# ** Error: [SCOREBOARD] Cycle 25: Response payload mismatch! client DUT=1 REF=0, data DUT=0xa1 REF=0xa1\r\n#    Time: 275001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 518\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_client\r\n# ** Error: [TEST] Finished with 2 errors across 48 checked transactions.\r\n#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697\r\n# ** Note: $finish    : tb_tex_window_buffer.sv(764)\r\n#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer\r\n# End time: 23:00:44 on Oct 11,2026, Elapsed time: 0:00:02\r\n# Errors: 3, Warnings: 2\r\n\n::TEST_START:: {\"id\":7,\"name\":\"Verification exercises published behavior for resp_client\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_read_sample_client0\\\",\\\"antecedent\\\":{\\\"req0\\\":1,\\\"req1\\\":0,\\\"cmd0\\\":\\\"2'b00\\\",\\\"cmd1\\\":\\\"2'b00\\\",\\\"data_in0\\\":\\\"8'h00\\\",\\\"data_in1\\\":\\\"8'h00\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":1,\\\"expected\\\":{\\\"resp_valid\\\":1,\\\"resp_client\\\":0,\\\"resp_data\\\":\\\"8'h3A\\\",\\\"err_pulse\\\":0},\\\"holdCycles\\\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).\",\"scenario\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The verification environment must exercise the public behavior before its checker can be credited.\",\"implementationHint\":\"Inspect stimulus and monitoring so the public behavior producing resp_client is exercised.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":7,\"nonce\":\"72e51ab775ef4795\"}\n::TEST_START:: {\"id\":8,\"name\":\"Verification detects violation on resp_client\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_read_sample_client0\\\",\\\"antecedent\\\":{\\\"req0\\\":1,\\\"req1\\\":0,\\\"cmd0\\\":\\\"2'b00\\\",\\\"cmd1\\\":\\\"2'b00\\\",\\\"data_in0\\\":\\\"8'h00\\\",\\\"data_in1\\\":\\\"8'h00\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":1,\\\"expected\\\":{\\\"resp_valid\\\":1,\\\"resp_client\\\":0,\\\"resp_data\\\":\\\"8'h3A\\\",\\\"err_pulse\\\":0},\\\"holdCycles\\\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).\",\"scenario\":\"A hidden deterministic proxy perturbs resp_client only after the mapped public behavior is exercised.\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.\",\"implementationHint\":\"Inspect the checker/assertions for the published behavior of resp_client.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":8,\"nonce\":\"72e51ab775ef4795\"}\nQuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 23:00:45 on Oct 11,2026\r\nvlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv \r\n-- Compiling module tex_window_buffer__challenge_reference\r\n-- Compiling module tex_window_buffer\r\n-- Compiling module tex_window_buffer_ref\r\n-- Compiling interface tex_window_buffer_if\r\n-- Compiling package tb_tex_window_buffer_sv_unit\r\n-- Compiling module tb_tex_window_buffer\r\n\r\nTop level modules:\r\n\ttb_tex_window_buffer\r\nEnd time: 23:00:45 on Oct 11,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-5\\transcript.log tb_tex_window_buffer -do \"run.do\" \r\n# Start time: 23:00:47 on Oct 11,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.tb_tex_window_buffer_sv_unit(fast)\r\n# Loading work.tb_tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer_if(fast__2)\r\n# Loading work.tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer__challenge_reference(fast)\r\n# Loading work.tex_window_buffer_ref(fast)\r\n# Loading work.tex_window_buffer_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757\r\n# ** Error: [SCOREBOARD] Cycle 11: Response payload mismatch! client DUT=0 REF=0, data DUT=0x3b REF=0x3a\r\n#    Time: 135001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 518\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_data\r\n# ** Error: [SCOREBOARD] Cycle 25: Response payload mismatch! client DUT=0 REF=0, data DUT=0xa2 REF=0xa1\r\n#    Time: 275001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 518\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_data\r\n# ** Error: [TEST] Finished with 2 errors across 48 checked transactions.\r\n#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697\r\n# ** Note: $finish    : tb_tex_window_buffer.sv(764)\r\n#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer\r\n# End time: 23:00:50 on Oct 11,2026, Elapsed time: 0:00:03\r\n# Errors: 3, Warnings: 2\r\n\n::TEST_START:: {\"id\":9,\"name\":\"Verification exercises published behavior for resp_data\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_read_sample_client0\\\",\\\"antecedent\\\":{\\\"req0\\\":1,\\\"req1\\\":0,\\\"cmd0\\\":\\\"2'b00\\\",\\\"cmd1\\\":\\\"2'b00\\\",\\\"data_in0\\\":\\\"8'h00\\\",\\\"data_in1\\\":\\\"8'h00\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":1,\\\"expected\\\":{\\\"resp_valid\\\":1,\\\"resp_client\\\":0,\\\"resp_data\\\":\\\"8'h3A\\\",\\\"err_pulse\\\":0},\\\"holdCycles\\\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).\",\"scenario\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The verification environment must exercise the public behavior before its checker can be credited.\",\"implementationHint\":\"Inspect stimulus and monitoring so the public behavior producing resp_data is exercised.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":9,\"nonce\":\"72e51ab775ef4795\"}\n::TEST_START:: {\"id\":10,\"name\":\"Verification detects violation on resp_data\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_read_sample_client0\\\",\\\"antecedent\\\":{\\\"req0\\\":1,\\\"req1\\\":0,\\\"cmd0\\\":\\\"2'b00\\\",\\\"cmd1\\\":\\\"2'b00\\\",\\\"data_in0\\\":\\\"8'h00\\\",\\\"data_in1\\\":\\\"8'h00\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":1,\\\"expected\\\":{\\\"resp_valid\\\":1,\\\"resp_client\\\":0,\\\"resp_data\\\":\\\"8'h3A\\\",\\\"err_pulse\\\":0},\\\"holdCycles\\\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).\",\"scenario\":\"A hidden deterministic proxy perturbs resp_data only after the mapped public behavior is exercised.\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.\",\"implementationHint\":\"Inspect the checker/assertions for the published behavior of resp_data.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":10,\"nonce\":\"72e51ab775ef4795\"}\nQuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024\r\nStart time: 23:00:50 on Oct 11,2026\r\nvlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv \r\n-- Compiling module tex_window_buffer__challenge_reference\r\n-- Compiling module tex_window_buffer\r\n-- Compiling module tex_window_buffer_ref\r\n-- Compiling interface tex_window_buffer_if\r\n-- Compiling package tb_tex_window_buffer_sv_unit\r\n-- Compiling module tb_tex_window_buffer\r\n\r\nTop level modules:\r\n\ttb_tex_window_buffer\r\nEnd time: 23:00:50 on Oct 11,2026, Elapsed time: 0:00:00\r\nErrors: 0, Warnings: 0\r\n\n# vsim -c -voptargs=\"+acc\" -l C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-6\\transcript.log tb_tex_window_buffer -do \"run.do\" \r\n# Start time: 23:00:52 on Oct 11,2026\r\n# ** Note: (vsim-3813) Design is being optimized due to module recompilation...\r\n# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.\r\n# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.\r\n# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.\r\n# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.\r\n# //  Questa Sim-64\r\n# //  Version 2024.1 win64 Feb  1 2024\r\n# //\r\n# // Unpublished work. Copyright 2024 Siemens\r\n# //\r\n# // This material contains trade secrets or otherwise confidential information\r\n# // owned by Siemens Industry Software Inc. or its affiliates (collectively,\r\n# // \"SISW\"), or its licensors. Access to and use of this information is strictly\r\n# // limited as set forth in the Customer's applicable agreements with SISW.\r\n# //\r\n# // This material may not be copied, distributed, or otherwise disclosed outside\r\n# // of the Customer's facilities without the express written permission of SISW,\r\n# // and may not be used in any way not expressly authorized by SISW.\r\n# //\r\n# Loading sv_std.std\r\n# Loading work.tb_tex_window_buffer_sv_unit(fast)\r\n# Loading work.tb_tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer_if(fast__2)\r\n# Loading work.tex_window_buffer(fast)\r\n# Loading work.tex_window_buffer__challenge_reference(fast)\r\n# Loading work.tex_window_buffer_ref(fast)\r\n# Loading work.tex_window_buffer_if(fast)\r\n# do run.do\r\n# 0\r\n# 0\r\n# 0\r\n# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()\r\n# for multiple files.\r\n#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:buf_count\r\n# ** Error: [SCOREBOARD] Cycle 2: Buffer status mismatch! count DUT=2 REF=1, full DUT=0 REF=0, empty DUT=0 REF=0\r\n#    Time: 45001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 505\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:buf_count\r\n# ** Error: [SCOREBOARD] Cycle 4: Buffer status mismatch! count DUT=3 REF=2, full DUT=0 REF=0, empty DUT=0 REF=0\r\n#    Time: 65001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 505\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:buf_count\r\n# ** Error: [SCOREBOARD] Cycle 7: Buffer status mismatch! count DUT=5 REF=4, full DUT=1 REF=1, empty DUT=0 REF=0\r\n#    Time: 95001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 505\r\n# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:buf_count\r\n# ** Error: [SCOREBOARD] Cycle 17: Buffer status mismatch! count DUT=1 REF=0, full DUT=0 REF=0, empty DUT=1 REF=1\r\n#    Time: 195001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 505\r\n# ** Error: [TEST] Finished with 4 errors across 48 checked transactions.\r\n#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697\r\n# ** Note: $finish    : tb_tex_window_buffer.sv(764)\r\n#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer\r\n# End time: 23:00:55 on Oct 11,2026, Elapsed time: 0:00:03\r\n# Errors: 5, Warnings: 2\r\n\n::TEST_START:: {\"id\":11,\"name\":\"Verification exercises published behavior for buf_count\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_buf_occupancy_after_push\\\",\\\"antecedent\\\":{\\\"req0\\\":0,\\\"req1\\\":0,\\\"cmd0\\\":\\\"2'b00\\\",\\\"cmd1\\\":\\\"2'b00\\\",\\\"data_in0\\\":\\\"8'h00\\\",\\\"data_in1\\\":\\\"8'h00\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":0,\\\"expected\\\":{\\\"buf_count\\\":\\\"3'd1\\\",\\\"buf_empty\\\":0,\\\"buf_full\\\":0},\\\"holdCycles\\\":1} | Drive a POP command when buf_empty=1 and verify err_pulse asserts 1 cycle later while buf_count remains 0 | Drive sequential PUSH commands to fill all 4 buffer entries from empty to full, verifying buf_count increments 0->1->2->3->4 and buf_full asserts\",\"scenario\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The verification environment must exercise the public behavior before its checker can be credited.\",\"implementationHint\":\"Inspect stimulus and monitoring so the public behavior producing buf_count is exercised.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":11,\"nonce\":\"72e51ab775ef4795\"}\n::TEST_START:: {\"id\":12,\"name\":\"Verification detects violation on buf_count\",\"category\":\"checker_effectiveness\",\"requirement\":\"{\\\"name\\\":\\\"check_buf_occupancy_after_push\\\",\\\"antecedent\\\":{\\\"req0\\\":0,\\\"req1\\\":0,\\\"cmd0\\\":\\\"2'b00\\\",\\\"cmd1\\\":\\\"2'b00\\\",\\\"data_in0\\\":\\\"8'h00\\\",\\\"data_in1\\\":\\\"8'h00\\\"},\\\"repeatCycles\\\":1,\\\"delayCycles\\\":0,\\\"expected\\\":{\\\"buf_count\\\":\\\"3'd1\\\",\\\"buf_empty\\\":0,\\\"buf_full\\\":0},\\\"holdCycles\\\":1} | Drive a POP command when buf_empty=1 and verify err_pulse asserts 1 cycle later while buf_count remains 0 | Drive sequential PUSH commands to fill all 4 buffer entries from empty to full, verifying buf_count increments 0->1->2->3->4 and buf_full asserts\",\"scenario\":\"A hidden deterministic proxy perturbs buf_count only after the mapped public behavior is exercised.\",\"stimulus\":\"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1\",\"expectedBehavior\":\"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.\",\"implementationHint\":\"Inspect the checker/assertions for the published behavior of buf_count.\",\"nonce\":\"72e51ab775ef4795\"}\n::TEST_PASS:: {\"id\":12,\"nonce\":\"72e51ab775ef4795\"}\n::TEST_SUMMARY:: {\"total\":13,\"passed\":13,\"failed\":0,\"nonce\":\"72e51ab775ef4795\"}\n::JUDGE_DONE:: {\"cases\":13,\"nonce\":\"72e51ab775ef4795\"}",
+  "waveformPath": "C:\\Users\\rnave\\AppData\\Roaming\\vlsi-tracker\\workspaces\\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148\\submission.vcd",
+  "waveformVcdText": "$date\r\n\tSun Oct 11 23:00:25 2026\r\n$end\r\n$version\r\n\tQuestaSim Version 2024.1\r\n$end\r\n$timescale\r\n\t1ps\r\n$end\r\n\r\n$scope module tb_tex_window_buffer $end\r\n\r\n$scope module vif $end\r\n$var reg 1 ! clk $end\r\n$var reg 1 \" rst_n $end\r\n$var reg 1 # req0 $end\r\n$var reg 1 $ req1 $end\r\n$var reg 2 % cmd0 [1:0] $end\r\n$var reg 2 & cmd1 [1:0] $end\r\n$var reg 8 ' data_in0 [7:0] $end\r\n$var reg 8 ( data_in1 [7:0] $end\r\n$var reg 1 ) gnt0 $end\r\n$var reg 1 * gnt1 $end\r\n$var reg 1 + resp_valid $end\r\n$var reg 1 , resp_client $end\r\n$var reg 8 - resp_data [7:0] $end\r\n$var reg 3 . buf_count [2:0] $end\r\n$var reg 1 / buf_full $end\r\n$var reg 1 0 buf_empty $end\r\n$var reg 1 1 err_pulse $end\r\n$var reg 1 2 gnt0_ref $end\r\n$var reg 1 3 gnt1_ref $end\r\n$var reg 1 4 resp_valid_ref $end\r\n$var reg 1 5 resp_client_ref $end\r\n$var reg 8 6 resp_data_ref [7:0] $end\r\n$var reg 3 7 buf_count_ref [2:0] $end\r\n$var reg 1 8 buf_full_ref $end\r\n$var reg 1 9 buf_empty_ref $end\r\n$var reg 1 : err_pulse_ref $end\r\n$upscope $end\r\n\r\n$scope module dut $end\r\n$var wire 1 ; clk $end\r\n$var wire 1 < rst_n $end\r\n$var wire 1 = req0 $end\r\n$var wire 1 > req1 $end\r\n$var wire 1 ? cmd0 [1] $end\r\n$var wire 1 @ cmd0 [0] $end\r\n$var wire 1 A cmd1 [1] $end\r\n$var wire 1 B cmd1 [0] $end\r\n$var wire 1 C data_in0 [7] $end\r\n$var wire 1 D data_in0 [6] $end\r\n$var wire 1 E data_in0 [5] $end\r\n$var wire 1 F data_in0 [4] $end\r\n$var wire 1 G data_in0 [3] $end\r\n$var wire 1 H data_in0 [2] $end\r\n$var wire 1 I data_in0 [1] $end\r\n$var wire 1 J data_in0 [0] $end\r\n$var wire 1 K data_in1 [7] $end\r\n$var wire 1 L data_in1 [6] $end\r\n$var wire 1 M data_in1 [5] $end\r\n$var wire 1 N data_in1 [4] $end\r\n$var wire 1 O data_in1 [3] $end\r\n$var wire 1 P data_in1 [2] $end\r\n$var wire 1 Q data_in1 [1] $end\r\n$var wire 1 R data_in1 [0] $end\r\n$var reg 1 S gnt0 $end\r\n$var reg 1 T gnt1 $end\r\n$var reg 1 U resp_valid $end\r\n$var reg 1 V resp_client $end\r\n$var reg 8 W resp_data [7:0] $end\r\n$var reg 3 X buf_count [2:0] $end\r\n$var reg 1 Y buf_full $end\r\n$var reg 1 Z buf_empty $end\r\n$var reg 1 [ err_pulse $end\r\n$var reg 2 \\ head [1:0] $end\r\n$var reg 2 ] tail [1:0] $end\r\n$var reg 2 ^ offset0 [1:0] $end\r\n$var reg 2 _ offset1 [1:0] $end\r\n$var reg 1 ` last_served $end\r\n$var reg 1 a serv_req $end\r\n$var reg 1 b serv_client $end\r\n$var reg 2 c serv_cmd [1:0] $end\r\n$var reg 8 d serv_data [7:0] $end\r\n$var reg 2 e serv_offset [1:0] $end\r\n$upscope $end\r\n\r\n$scope module ref_model $end\r\n$var wire 1 f clk $end\r\n$var wire 1 g rst_n $end\r\n$var wire 1 h req0 $end\r\n$var wire 1 i req1 $end\r\n$var wire 1 j cmd0 [1] $end\r\n$var wire 1 k cmd0 [0] $end\r\n$var wire 1 l cmd1 [1] $end\r\n$var wire 1 m cmd1 [0] $end\r\n$var wire 1 n data_in0 [7] $end\r\n$var wire 1 o data_in0 [6] $end\r\n$var wire 1 p data_in0 [5] $end\r\n$var wire 1 q data_in0 [4] $end\r\n$var wire 1 r data_in0 [3] $end\r\n$var wire 1 s data_in0 [2] $end\r\n$var wire 1 t data_in0 [1] $end\r\n$var wire 1 u data_in0 [0] $end\r\n$var wire 1 v data_in1 [7] $end\r\n$var wire 1 w data_in1 [6] $end\r\n$var wire 1 x data_in1 [5] $end\r\n$var wire 1 y data_in1 [4] $end\r\n$var wire 1 z data_in1 [3] $end\r\n$var wire 1 { data_in1 [2] $end\r\n$var wire 1 | data_in1 [1] $end\r\n$var wire 1 } data_in1 [0] $end\r\n$var reg 1 ~ gnt0 $end\r\n$var reg 1 !! gnt1 $end\r\n$var reg 1 \"! resp_valid $end\r\n$var reg 1 #! resp_client $end\r\n$var reg 8 $! resp_data [7:0] $end\r\n$var reg 3 %! buf_count [2:0] $end\r\n$var reg 1 &! buf_full $end\r\n$var reg 1 '! buf_empty $end\r\n$var reg 1 (! err_pulse $end\r\n$var reg 2 )! head [1:0] $end\r\n$var reg 2 *! tail [1:0] $end\r\n$var reg 2 +! offset0 [1:0] $end\r\n$var reg 2 ,! offset1 [1:0] $end\r\n$var reg 1 -! last_served $end\r\n$var reg 1 .! serv_req $end\r\n$var reg 1 /! serv_client $end\r\n$var reg 2 0! serv_cmd [1:0] $end\r\n$var reg 8 1! serv_data [7:0] $end\r\n$var reg 2 2! serv_offset [1:0] $end\r\n$upscope $end\r\n\r\n$scope module dut $end\r\n$var wire 1 ; clk $end\r\n$var wire 1 < rst_n $end\r\n$var wire 1 = req0 $end\r\n$var wire 1 > req1 $end\r\n$var wire 1 ? cmd0 [1] $end\r\n$var wire 1 @ cmd0 [0] $end\r\n$var wire 1 A cmd1 [1] $end\r\n$var wire 1 B cmd1 [0] $end\r\n$var wire 1 C data_in0 [7] $end\r\n$var wire 1 D data_in0 [6] $end\r\n$var wire 1 E data_in0 [5] $end\r\n$var wire 1 F data_in0 [4] $end\r\n$var wire 1 G data_in0 [3] $end\r\n$var wire 1 H data_in0 [2] $end\r\n$var wire 1 I data_in0 [1] $end\r\n$var wire 1 J data_in0 [0] $end\r\n$var wire 1 K data_in1 [7] $end\r\n$var wire 1 L data_in1 [6] $end\r\n$var wire 1 M data_in1 [5] $end\r\n$var wire 1 N data_in1 [4] $end\r\n$var wire 1 O data_in1 [3] $end\r\n$var wire 1 P data_in1 [2] $end\r\n$var wire 1 Q data_in1 [1] $end\r\n$var wire 1 R data_in1 [0] $end\r\n$upscope $end\r\n\r\n$scope module ref_model $end\r\n$var wire 1 f clk $end\r\n$var wire 1 g rst_n $end\r\n$var wire 1 h req0 $end\r\n$var wire 1 i req1 $end\r\n$var wire 1 j cmd0 [1] $end\r\n$var wire 1 k cmd0 [0] $end\r\n$var wire 1 l cmd1 [1] $end\r\n$var wire 1 m cmd1 [0] $end\r\n$var wire 1 n data_in0 [7] $end\r\n$var wire 1 o data_in0 [6] $end\r\n$var wire 1 p data_in0 [5] $end\r\n$var wire 1 q data_in0 [4] $end\r\n$var wire 1 r data_in0 [3] $end\r\n$var wire 1 s data_in0 [2] $end\r\n$var wire 1 t data_in0 [1] $end\r\n$var wire 1 u data_in0 [0] $end\r\n$var wire 1 v data_in1 [7] $end\r\n$var wire 1 w data_in1 [6] $end\r\n$var wire 1 x data_in1 [5] $end\r\n$var wire 1 y data_in1 [4] $end\r\n$var wire 1 z data_in1 [3] $end\r\n$var wire 1 { data_in1 [2] $end\r\n$var wire 1 | data_in1 [1] $end\r\n$var wire 1 } data_in1 [0] $end\r\n$upscope $end\r\n$upscope $end\r\n$enddefinitions $end\r\n#0\r\n$dumpvars\r\n0!\r\n0\"\r\nx#\r\nx$\r\nbx %\r\nbx &\r\nbx '\r\nbx (\r\n0)\r\n0*\r\nx+\r\nx,\r\nbx -\r\nbx .\r\nx/\r\nx0\r\nx1\r\n02\r\n03\r\nx4\r\nx5\r\nbx 6\r\nbx 7\r\nx8\r\nx9\r\nx:\r\n0S\r\n0T\r\nxU\r\nxV\r\nbx W\r\nbx X\r\nxY\r\nxZ\r\nx[\r\nbx \\\r\nbx ]\r\nbx ^\r\nbx _\r\nx`\r\n0a\r\n0b\r\nbx c\r\nbx d\r\nbx e\r\n0~\r\n0!!\r\nx\"!\r\nx#!\r\nbx $!\r\nbx %!\r\nx&!\r\nx'!\r\nx(!\r\nbx )!\r\nbx *!\r\nbx +!\r\nbx ,!\r\nx-!\r\n0.!\r\n0/!\r\nbx 0!\r\nbx 1!\r\nbx 2!\r\nx}\r\nx|\r\nx{\r\nxz\r\nxy\r\nxx\r\nxw\r\nxv\r\nxu\r\nxt\r\nxs\r\nxr\r\nxq\r\nxp\r\nxo\r\nxn\r\nxm\r\nxl\r\nxk\r\nxj\r\nxi\r\nxh\r\n0g\r\n0f\r\nxR\r\nxQ\r\nxP\r\nxO\r\nxN\r\nxM\r\nxL\r\nxK\r\nxJ\r\nxI\r\nxH\r\nxG\r\nxF\r\nxE\r\nxD\r\nxC\r\nxB\r\nxA\r\nx@\r\nx?\r\nx>\r\nx=\r\n0<\r\n0;\r\n$end\r\n#5000\r\n1!\r\n1;\r\n1f\r\nb0 )!\r\nb0 *!\r\nb0 %!\r\nb0 +!\r\nb0 ,!\r\n1-!\r\n0\"!\r\n0#!\r\nb0 $!\r\n0(!\r\nb0 \\\r\nb0 ]\r\nb0 X\r\nb0 ^\r\nb0 _\r\n1`\r\n0U\r\n0V\r\nb0 W\r\n0[\r\n01\r\nb0 -\r\n0,\r\n0+\r\nb0 e\r\nb0 .\r\n0Y\r\n1Z\r\n0:\r\nb0 6\r\n05\r\n04\r\nb0 2!\r\nb0 7\r\n0&!\r\n1'!\r\n19\r\n08\r\n10\r\n0/\r\n#10000\r\n0!\r\n0;\r\n0f\r\n#15000\r\n1!\r\n1;\r\n1f\r\n#20000\r\n1\"\r\n0!\r\n1<\r\n1g\r\n0;\r\n0f\r\n0#\r\n0$\r\nb0 %\r\nb0 &\r\nb0 '\r\nb0 (\r\n1#\r\nb10 %\r\n0}\r\n0|\r\n0{\r\n0z\r\n0y\r\n0x\r\n0w\r\n0v\r\n0R\r\n0Q\r\n0P\r\n0O\r\n0N\r\n0M\r\n0L\r\n0K\r\n0u\r\n0t\r\n0s\r\n0r\r\n0q\r\n0p\r\n0o\r\n0n\r\n0J\r\n0I\r\n0H\r\n0G\r\n0F\r\n0E\r\n0D\r\n0C\r\n0m\r\n0l\r\n0B\r\n0A\r\n0k\r\n1j\r\n0@\r\n1?\r\nb10 c\r\nb10 0!\r\nb0 d\r\nb0 1!\r\n1=\r\n1h\r\n0>\r\n0i\r\n1~\r\n1S\r\n1)\r\n1a\r\n12\r\n1.!\r\n#25000\r\n1!\r\n1;\r\n1f\r\n0-!\r\n1(!\r\n0`\r\n1[\r\n11\r\n1:\r\n0S\r\n1S\r\n0~\r\n1~\r\n#30000\r\n0!\r\n0;\r\n0f\r\nb1 %\r\nb111010 '\r\n1t\r\n1r\r\n1q\r\n1p\r\n1I\r\n1G\r\n1F\r\n1E\r\n1k\r\n0j\r\n1@\r\n0?\r\nb1 c\r\nb1 0!\r\nb111010 d\r\nb111010 1!\r\n#35000\r\n1!\r\n1;\r\n1f\r\n0(!\r\nb1 *!\r\nb1 %!\r\n0[\r\nb1 ]\r\nb1 X\r\nb1 .\r\n0Z\r\n01\r\nb1 7\r\n0'!\r\n0:\r\n09\r\n00\r\n#40000\r\n0!\r\n0;\r\n0f\r\n0#\r\nb0 %\r\nb0 '\r\n0t\r\n0r\r\n0q\r\n0p\r\n0I\r\n0G\r\n0F\r\n0E\r\n0k\r\n0@\r\nb0 c\r\nb0 0!\r\nb0 d\r\nb0 1!\r\n0=\r\n0h\r\n0~\r\n0S\r\n0)\r\n0a\r\n02\r\n0.!\r\n#45000\r\n1!\r\n1;\r\n1f\r\n#50000\r\n0!\r\n0;\r\n0f\r\n1#\r\n1$\r\nb1 %\r\nb1 &\r\nb1001011 '\r\nb1011100 (\r\n1{\r\n1z\r\n1y\r\n1w\r\n1P\r\n1O\r\n1N\r\n1L\r\n1u\r\n1t\r\n1r\r\n1o\r\n1J\r\n1I\r\n1G\r\n1D\r\n1m\r\n1B\r\n1k\r\n1@\r\nb1 c\r\nb1 0!\r\nb1001011 d\r\nb1001011 1!\r\n1=\r\n1h\r\n1>\r\n1i\r\n1!!\r\n1T\r\n1*\r\n1a\r\n1b\r\nb1011100 d\r\n13\r\n1.!\r\n1/!\r\nb1011100 1!\r\n#55000\r\n1!\r\n1;\r\n1f\r\n1-!\r\nb10 *!\r\nb10 %!\r\n1`\r\nb10 ]\r\nb10 X\r\nb10 .\r\nb10 7\r\n0T\r\n1S\r\n0!!\r\n1~\r\n12\r\n03\r\n0/!\r\nb1001011 1!\r\n1)\r\n0*\r\n0b\r\nb1001011 d\r\n#60000\r\n0!\r\n0;\r\n0f\r\n0#\r\n0$\r\nb0 %\r\nb0 &\r\nb0 '\r\nb0 (\r\n0{\r\n0z\r\n0y\r\n0w\r\n0P\r\n0O\r\n0N\r\n0L\r\n0u\r\n0t\r\n0r\r\n0o\r\n0J\r\n0I\r\n0G\r\n0D\r\n0m\r\n0B\r\n0k\r\n0@\r\nb0 c\r\nb0 0!\r\nb0 d\r\nb0 1!\r\n0=\r\n0h\r\n0>\r\n0i\r\n0~\r\n0S\r\n0)\r\n0a\r\n02\r\n0.!\r\n#65000\r\n1!\r\n1;\r\n1f\r\n#70000\r\n0!\r\n0;\r\n0f\r\n1#\r\n1$\r\nb1 %\r\nb1 &\r\nb1001011 '\r\nb1011100 (\r\n1{\r\n1z\r\n1y\r\n1w\r\n1P\r\n1O\r\n1N\r\n1L\r\n1u\r\n1t\r\n1r\r\n1o\r\n1J\r\n1I\r\n1G\r\n1D\r\n1m\r\n1B\r\n1k\r\n1@\r\nb1 c\r\nb1 0!\r\nb1001011 d\r\nb1001011 1!\r\n1=\r\n1h\r\n1>\r\n1i\r\n1~\r\n1S\r\n1)\r\n1a\r\n12\r\n1.!\r\n#75000\r\n1!\r\n1;\r\n1f\r\n0-!\r\nb11 *!\r\nb11 %!\r\n0`\r\nb11 ]\r\nb11 X\r\nb11 .\r\nb11 7\r\n0S\r\n1T\r\n0~\r\n1!!\r\n13\r\n1/!\r\nb1011100 1!\r\n02\r\n1*\r\n1b\r\nb1011100 d\r\n0)\r\n#80000\r\n0!\r\n0;\r\n0f\r\n0$\r\nb0 &\r\nb1110111 '\r\nb0 (\r\n0{\r\n0z\r\n0y\r\n0w\r\n0P\r\n0O\r\n0N\r\n0L\r\n1s\r\n0r\r\n1q\r\n1p\r\n1H\r\n0G\r\n1F\r\n1E\r\n0m\r\n0B\r\nb0 c\r\nb0 0!\r\nb0 d\r\nb0 1!\r\n0>\r\n0i\r\n0!!\r\n1~\r\n0T\r\n1S\r\n1)\r\n0*\r\n0b\r\nb1 c\r\nb1110111 d\r\n12\r\n03\r\n0/!\r\nb1 0!\r\nb1110111 1!\r\n#85000\r\n1!\r\n1;\r\n1f\r\nb0 *!\r\nb100 %!\r\nb0 ]\r\nb100 X\r\nb100 .\r\n1Y\r\nb100 7\r\n1&!\r\n18\r\n1/\r\n#90000\r\n0!\r\n0;\r\n0f\r\n0#\r\nb0 %\r\nb0 '\r\n0u\r\n0t\r\n0s\r\n0q\r\n0p\r\n0o\r\n0J\r\n0I\r\n0H\r\n0F\r\n0E\r\n0D\r\n0k\r\n0@\r\nb0 c\r\nb0 0!\r\nb0 d\r\nb0 1!\r\n0=\r\n0h\r\n0~\r\n0S\r\n0)\r\n0a\r\n02\r\n0.!\r\n#95000\r\n1!\r\n1;\r\n1f\r\n#100000\r\n0!\r\n0;\r\n0f\r\n1#\r\nb1 %\r\nb11101110 '\r\n1t\r\n1s\r\n1r\r\n1p\r\n1o\r\n1n\r\n1I\r\n1H\r\n1G\r\n1E\r\n1D\r\n1C\r\n1k\r\n1@\r\nb1 c\r\nb1 0!\r\nb11101110 d\r\nb11101110 1!\r\n1=\r\n1h\r\n1~\r\n1S\r\n1)\r\n1a\r\n12\r\n1.!\r\n#105000\r\n1!\r\n1;\r\n1f\r\n1(!\r\n1[\r\n11\r\n1:\r\n#110000\r\n0!\r\n0;\r\n0f\r\nb11 %\r\nb0 '\r\n0t\r\n0s\r\n0r\r\n0p\r\n0o\r\n0n\r\n0I\r\n0H\r\n0G\r\n0E\r\n0D\r\n0C\r\n1j\r\n1?\r\nb11 c\r\nb11 0!\r\nb0 d\r\nb0 1!\r\n#115000\r\n1!\r\n1;\r\n1f\r\n0(!\r\n0[\r\n01\r\n0:\r\n#120000\r\n0!\r\n0;\r\n0f\r\n0#\r\n1$\r\nb0 %\r\nb11 &\r\nb1 (\r\n1}\r\n1R\r\n1m\r\n1l\r\n1B\r\n1A\r\n0k\r\n0j\r\n0@\r\n0?\r\nb0 c\r\nb0 0!\r\n0=\r\n0h\r\n1>\r\n1i\r\n0~\r\n1!!\r\n0S\r\n1T\r\n1*\r\n1b\r\nb11 c\r\nb1 d\r\n0)\r\n13\r\n1/!\r\nb11 0!\r\nb1 1!\r\n02\r\n#125000\r\n1!\r\n1;\r\n1f\r\n1-!\r\nb1 ,!\r\n1`\r\nb1 _\r\nb1 e\r\nb1 2!\r\n0T\r\n1T\r\n0!!\r\n1!!\r\n#130000\r\n0!\r\n0;\r\n0f\r\n1#\r\n0$\r\nb0 &\r\nb0 (\r\n0}\r\n0R\r\n0m\r\n0l\r\n0B\r\n0A\r\nb0 c\r\nb0 0!\r\nb0 d\r\nb0 1!\r\n1=\r\n1h\r\n0>\r\n0i\r\n0!!\r\n1~\r\n0T\r\n1S\r\n1)\r\n0*\r\n0b\r\nb0 e\r\n12\r\n03\r\n0/!\r\nb0 2!\r\n#135000\r\n1!\r\n1;\r\n1f\r\n0-!\r\n1\"!\r\nb111010 $!\r\n0`\r\n1U\r\nb111010 W\r\nb111010 -\r\n1+\r\nb111010 6\r\n14\r\n0S\r\n1S\r\n0~\r\n1~\r\n#140000\r\n0!\r\n0;\r\n0f\r\n0#\r\n1$\r\n0=\r\n0h\r\n1>\r\n1i\r\n0~\r\n1!!\r\n0S\r\n1T\r\n1*\r\n1b\r\nb1 e\r\n0)\r\n13\r\n1/!\r\nb1 2!\r\n02\r\n#145000\r\n1!\r\n1;\r\n1f\r\n0\"!\r\nb0 $!\r\n1-!\r\n1\"!\r\n1#!\r\nb1011100 $!\r\n0U\r\nb0 W\r\n1`\r\n1U\r\n1V\r\nb1011100 W\r\n1,\r\nb1011100 -\r\n15\r\nb1011100 6\r\n0T\r\n1T\r\n0!!\r\n1!!\r\n#150000\r\n0!\r\n0;\r\n0f\r\n1#\r\n0$\r\nb10 %\r\n1j\r\n1?\r\n1=\r\n1h\r\n0>\r\n0i\r\n0!!\r\n1~\r\n0T\r\n1S\r\n1)\r\n0*\r\n0b\r\nb10 c\r\nb0 e\r\n12\r\n03\r\n0/!\r\nb10 0!\r\nb0 2!\r\n#155000\r\n1!\r\n1;\r\n1f\r\n0\"!\r\nb0 $!\r\n0#!\r\n0-!\r\nb1 )!\r\nb11 %!\r\n0U\r\nb0 W\r\n0V\r\n0`\r\nb1 \\\r\nb11 X\r\nb11 .\r\n0Y\r\n0,\r\nb0 -\r\n0+\r\nb11 7\r\n0&!\r\n05\r\nb0 6\r\n04\r\n08\r\n0/\r\n0S\r\n1S\r\n0~\r\n1~\r\n#160000\r\n0!\r\n0;\r\n0f\r\n#165000\r\n1!\r\n1;\r\n1f\r\nb10 )!\r\nb10 %!\r\nb10 \\\r\nb10 X\r\nb10 .\r\nb10 7\r\n#170000\r\n0!\r\n0;\r\n0f\r\n#175000\r\n1!\r\n1;\r\n1f\r\nb11 )!\r\nb1 %!\r\nb11 \\\r\nb1 X\r\nb1 .\r\nb1 7\r\n#180000\r\n0!\r\n0;\r\n0f\r\n#185000\r\n1!\r\n1;\r\n1f\r\nb0 )!\r\nb0 %!\r\nb0 \\\r\nb0 X\r\nb0 .\r\n1Z\r\nb0 7\r\n1'!\r\n19\r\n10\r\n#190000\r\n0!\r\n0;\r\n0f\r\n0#\r\nb0 %\r\n0j\r\n0?\r\nb0 c\r\nb0 0!\r\n0=\r\n0h\r\n0~\r\n0S\r\n0)\r\n0a\r\n02\r\n0.!\r\n#195000\r\n1!\r\n1;\r\n1f\r\n#200000\r\n0!\r\n0;\r\n0f\r\n1#\r\n1$\r\nb1 %\r\nb1 &\r\nb10100001 '\r\nb10110010 (\r\n1|\r\n1y\r\n1x\r\n1v\r\n1Q\r\n1N\r\n1M\r\n1K\r\n1u\r\n1p\r\n1n\r\n1J\r\n1E\r\n1C\r\n1m\r\n1B\r\n1k\r\n1@\r\nb1 c\r\nb1 0!\r\nb10100001 d\r\nb10100001 1!\r\n1=\r\n1h\r\n1>\r\n1i\r\n1!!\r\n1T\r\n1*\r\n1a\r\n1b\r\nb10110010 d\r\nb1 e\r\n13\r\n1.!\r\n1/!\r\nb10110010 1!\r\nb1 2!\r\n#205000\r\n1!\r\n1;\r\n1f\r\n1-!\r\nb1 *!\r\nb1 %!\r\n1`\r\nb1 ]\r\nb1 X\r\nb1 .\r\n0Z\r\nb1 7\r\n0'!\r\n09\r\n00\r\n0T\r\n1S\r\n0!!\r\n1~\r\n12\r\n03\r\n0/!\r\nb10100001 1!\r\nb0 2!\r\n1)\r\n0*\r\n0b\r\nb10100001 d\r\nb0 e\r\n#210000\r\n0!\r\n0;\r\n0f\r\n#215000\r\n1!\r\n1;\r\n1f\r\n0-!\r\nb10 *!\r\nb10 %!\r\n0`\r\nb10 ]\r\nb10 X\r\nb10 .\r\nb10 7\r\n0S\r\n1T\r\n0~\r\n1!!\r\n13\r\n1/!\r\nb10110010 1!\r\nb1 2!\r\n02\r\n1*\r\n1b\r\nb10110010 d\r\nb1 e\r\n0)\r\n#220000\r\n0!\r\n0;\r\n0f\r\n#225000\r\n1!\r\n1;\r\n1f\r\n1-!\r\nb11 *!\r\nb11 %!\r\n1`\r\nb11 ]\r\nb11 X\r\nb11 .\r\nb11 7\r\n0T\r\n1S\r\n0!!\r\n1~\r\n12\r\n03\r\n0/!\r\nb10100001 1!\r\nb0 2!\r\n1)\r\n0*\r\n0b\r\nb10100001 d\r\nb0 e\r\n#230000\r\n0!\r\n0;\r\n0f\r\n#235000\r\n1!\r\n1;\r\n1f\r\n0-!\r\nb0 *!\r\nb100 %!\r\n0`\r\nb0 ]\r\nb100 X\r\nb100 .\r\n1Y\r\nb100 7\r\n1&!\r\n18\r\n1/\r\n0S\r\n1T\r\n0~\r\n1!!\r\n13\r\n1/!\r\nb10110010 1!\r\nb1 2!\r\n02\r\n1*\r\n1b\r\nb10110010 d\r\nb1 e\r\n0)\r\n#240000\r\n0!\r\n0;\r\n0f\r\n#245000\r\n1!\r\n1;\r\n1f\r\n1-!\r\n1(!\r\n1`\r\n1[\r\n11\r\n1:\r\n0T\r\n1S\r\n0!!\r\n1~\r\n12\r\n03\r\n0/!\r\nb10100001 1!\r\nb0 2!\r\n1)\r\n0*\r\n0b\r\nb10100001 d\r\nb0 e\r\n#250000\r\n0!\r\n0;\r\n0f\r\n#255000\r\n1!\r\n1;\r\n1f\r\n0(!\r\n0-!\r\n1(!\r\n0[\r\n0`\r\n1[\r\n0S\r\n1T\r\n0~\r\n1!!\r\n13\r\n1/!\r\nb10110010 1!\r\nb1 2!\r\n02\r\n1*\r\n1b\r\nb10110010 d\r\nb1 e\r\n0)\r\n#260000\r\n0!\r\n0;\r\n0f\r\n0$\r\nb11 %\r\nb0 &\r\nb11 '\r\nb0 (\r\n0|\r\n0y\r\n0x\r\n0v\r\n0Q\r\n0N\r\n0M\r\n0K\r\n1t\r\n0p\r\n0n\r\n1I\r\n0E\r\n0C\r\n0m\r\n0B\r\n1j\r\n1?\r\nb0 c\r\nb0 0!\r\nb0 d\r\nb0 1!\r\n0>\r\n0i\r\n0!!\r\n1~\r\n0T\r\n1S\r\n1)\r\n0*\r\n0b\r\nb11 c\r\nb11 d\r\nb0 e\r\n12\r\n03\r\n0/!\r\nb11 0!\r\nb11 1!\r\nb0 2!\r\n#265000\r\n1!\r\n1;\r\n1f\r\n0(!\r\nb11 +!\r\n0[\r\nb11 ^\r\nb11 e\r\n01\r\nb11 2!\r\n0:\r\n#270000\r\n0!\r\n0;\r\n0f\r\nb0 %\r\nb0 '\r\n0u\r\n0t\r\n0J\r\n0I\r\n0k\r\n0j\r\n0@\r\n0?\r\nb0 c\r\nb0 0!\r\nb0 d\r\nb0 1!\r\n#275000\r\n1!\r\n1;\r\n1f\r\n1\"!\r\nb10100001 $!\r\n1U\r\nb10100001 W\r\nb10100001 -\r\n1+\r\nb10100001 6\r\n14\r\n#280000\r\n0!\r\n0;\r\n0f\r\n1$\r\nb1 %\r\nb10 &\r\nb1010110 '\r\nb1110011 (\r\n1}\r\n1|\r\n1y\r\n1x\r\n1w\r\n1R\r\n1Q\r\n1N\r\n1M\r\n1L\r\n1t\r\n1s\r\n1q\r\n1o\r\n1I\r\n1H\r\n1F\r\n1D\r\n1l\r\n1A\r\n1k\r\n1@\r\nb1 c\r\nb1 0!\r\nb1010110 d\r\nb1010110 1!\r\n1>\r\n1i\r\n0~\r\n1!!\r\n0S\r\n1T\r\n1*\r\n1b\r\nb10 c\r\nb1110011 d\r\nb1 e\r\n0)\r\n13\r\n1/!\r\nb10 0!\r\nb1110011 1!\r\nb1 2!\r\n02\r\n#285000\r\n1!\r\n1;\r\n1f\r\n0\"!\r\nb0 $!\r\n1-!\r\nb1 )!\r\nb11 %!\r\n0U\r\nb0 W\r\n1`\r\nb1 \\\r\nb11 X\r\nb11 .\r\n0Y\r\nb0 -\r\n0+\r\nb11 7\r\n0&!\r\nb0 6\r\n04\r\n08\r\n0/\r\n0T\r\n1S\r\n0!!\r\n1~\r\n12\r\n03\r\n0/!\r\nb1 0!\r\nb1010110 1!\r\nb11 2!\r\n1)\r\n0*\r\n0b\r\nb1 c\r\nb1010110 d\r\nb11 e\r\n#290000\r\n0!\r\n0;\r\n0f\r\n0#\r\nb0 &\r\nb110101 '\r\nb1001110 (\r\n0}\r\n1{\r\n1z\r\n0y\r\n0x\r\n0R\r\n1P\r\n1O\r\n0N\r\n0M\r\n1u\r\n0t\r\n1p\r\n0o\r\n1J\r\n0I\r\n1E\r\n0D\r\n0l\r\n0A\r\nb110101 d\r\nb110101 1!\r\n0=\r\n0h\r\n0~\r\n1!!\r\n0S\r\n1T\r\n1*\r\n1b\r\nb0 c\r\nb1001110 d\r\nb1 e\r\n0)\r\n13\r\n1/!\r\nb0 0!\r\nb1001110 1!\r\nb1 2!\r\n02\r\n#295000\r\n1!\r\n1;\r\n1f\r\n1\"!\r\n1#!\r\nb10110010 $!\r\n1U\r\n1V\r\nb10110010 W\r\nb10110010 -\r\n1,\r\n1+\r\nb10110010 6\r\n15\r\n14\r\n#300000\r\n0!\r\n0;\r\n0f\r\n1#\r\n0$\r\nb11 %\r\nb0 '\r\nb10101010 (\r\n0{\r\n1x\r\n0w\r\n1v\r\n0P\r\n1M\r\n0L\r\n1K\r\n0u\r\n0s\r\n0q\r\n0p\r\n0J\r\n0H\r\n0F\r\n0E\r\n1j\r\n1?\r\nb10101010 d\r\nb10101010 1!\r\n1=\r\n1h\r\n0>\r\n0i\r\n0!!\r\n1~\r\n0T\r\n1S\r\n1)\r\n0*\r\n0b\r\nb11 c\r\nb0 d\r\nb11 e\r\n12\r\n03\r\n0/!\r\nb11 0!\r\nb0 1!\r\nb11 2!\r\n#305000\r\n1!\r\n1;\r\n1f\r\n0\"!\r\nb0 $!\r\n0#!\r\n0-!\r\nb0 +!\r\n0U\r\nb0 W\r\n0V\r\n0`\r\nb0 ^\r\nb0 e\r\n0,\r\nb0 -\r\n0+\r\nb0 2!\r\n05\r\nb0 6\r\n04\r\n0S\r\n1S\r\n0~\r\n1~\r\n#310000\r\n0!\r\n0;\r\n0f\r\nb0 %\r\nb1 &\r\nb1000 '\r\nb10110110 (\r\n1{\r\n0z\r\n1y\r\n1P\r\n0O\r\n1N\r\n1r\r\n1G\r\n1m\r\n1B\r\n0k\r\n0j\r\n0@\r\n0?\r\nb0 c\r\nb0 0!\r\nb1000 d\r\nb1000 1!\r\n#315000\r\n1!\r\n1;\r\n1f\r\n1\"!\r\nb10100001 $!\r\n1U\r\nb10100001 W\r\nb10100001 -\r\n1+\r\nb10100001 6\r\n14\r\n#320000\r\n0!\r\n0;\r\n0f\r\nb10 %\r\nb0 &\r\nb10001110 '\r\nb10101110 (\r\n1z\r\n0y\r\n1O\r\n0N\r\n1t\r\n1s\r\n1n\r\n1I\r\n1H\r\n1C\r\n0m\r\n0B\r\n1j\r\n1?\r\nb10 c\r\nb10 0!\r\nb10001110 d\r\nb10001110 1!\r\n#325000\r\n1!\r\n1;\r\n1f\r\n0\"!\r\nb0 $!\r\nb10 )!\r\nb10 %!\r\n0U\r\nb0 W\r\nb10 \\\r\nb10 X\r\nb10 .\r\nb0 -\r\n0+\r\nb10 7\r\nb0 6\r\n04\r\n#330000\r\n0!\r\n0;\r\n0f\r\n1$\r\nb0 %\r\nb1 &\r\nb10011110 '\r\nb110110 (\r\n0z\r\n1y\r\n0v\r\n0O\r\n1N\r\n0K\r\n1q\r\n1F\r\n1m\r\n1B\r\n0j\r\n0?\r\nb0 c\r\nb0 0!\r\nb10011110 d\r\nb10011110 1!\r\n1>\r\n1i\r\n0~\r\n1!!\r\n0S\r\n1T\r\n1*\r\n1b\r\nb1 c\r\nb110110 d\r\nb1 e\r\n0)\r\n13\r\n1/!\r\nb1 0!\r\nb110110 1!\r\nb1 2!\r\n02\r\n#335000\r\n1!\r\n1;\r\n1f\r\n1-!\r\nb1 *!\r\nb11 %!\r\n1`\r\nb1 ]\r\nb11 X\r\nb11 .\r\nb11 7\r\n0T\r\n1S\r\n0!!\r\n1~\r\n12\r\n03\r\n0/!\r\nb0 0!\r\nb10011110 1!\r\nb0 2!\r\n1)\r\n0*\r\n0b\r\nb0 c\r\nb10011110 d\r\nb0 e\r\n#340000\r\n0!\r\n0;\r\n0f\r\n0#\r\nb1011001 '\r\nb1111110 (\r\n1z\r\n1w\r\n1O\r\n1L\r\n1u\r\n0t\r\n0s\r\n1o\r\n0n\r\n1J\r\n0I\r\n0H\r\n1D\r\n0C\r\nb1011001 d\r\nb1011001 1!\r\n0=\r\n0h\r\n0~\r\n1!!\r\n0S\r\n1T\r\n1*\r\n1b\r\nb1 c\r\nb1111110 d\r\nb1 e\r\n0)\r\n13\r\n1/!\r\nb1 0!\r\nb1111110 1!\r\nb1 2!\r\n02\r\n#345000\r\n1!\r\n1;\r\n1f\r\nb10 *!\r\nb100 %!\r\nb10 ]\r\nb100 X\r\nb100 .\r\n1Y\r\nb100 7\r\n1&!\r\n18\r\n1/\r\n#350000\r\n0!\r\n0;\r\n0f\r\n0$\r\nb11 %\r\nb0 '\r\nb11 (\r\n1}\r\n0{\r\n0z\r\n0y\r\n0x\r\n0w\r\n1R\r\n0P\r\n0O\r\n0N\r\n0M\r\n0L\r\n0u\r\n0r\r\n0q\r\n0o\r\n0J\r\n0G\r\n0F\r\n0D\r\n1k\r\n1j\r\n1@\r\n1?\r\nb11 d\r\nb11 1!\r\n0>\r\n0i\r\n0!!\r\n0T\r\n0*\r\n0a\r\n0b\r\nb11 c\r\nb0 d\r\nb0 e\r\n03\r\n0.!\r\n0/!\r\nb11 0!\r\nb0 1!\r\nb0 2!\r\n#355000\r\n1!\r\n1;\r\n1f\r\n#360000\r\n0!\r\n0;\r\n0f\r\n1#\r\nb0 %\r\nb0 &\r\nb11011010 '\r\nb10011110 (\r\n0}\r\n1{\r\n1z\r\n1y\r\n1v\r\n0R\r\n1P\r\n1O\r\n1N\r\n1K\r\n1t\r\n1r\r\n1q\r\n1o\r\n1n\r\n1I\r\n1G\r\n1F\r\n1D\r\n1C\r\n0m\r\n0B\r\n0k\r\n0j\r\n0@\r\n0?\r\nb0 c\r\nb0 0!\r\nb11011010 d\r\nb11011010 1!\r\n1=\r\n1h\r\n1~\r\n1S\r\n1)\r\n1a\r\n12\r\n1.!\r\n#365000\r\n1!\r\n1;\r\n1f\r\n0-!\r\n1\"!\r\nb10110010 $!\r\n0`\r\n1U\r\nb10110010 W\r\nb10110010 -\r\n1+\r\nb10110010 6\r\n14\r\n0S\r\n1S\r\n0~\r\n1~\r\n#370000\r\n0!\r\n0;\r\n0f\r\n1$\r\nb10 %\r\nb1 '\r\nb1101011 (\r\n1}\r\n0{\r\n0y\r\n1x\r\n1w\r\n0v\r\n1R\r\n0P\r\n0N\r\n1M\r\n1L\r\n0K\r\n1u\r\n0t\r\n0r\r\n0q\r\n0o\r\n0n\r\n1J\r\n0I\r\n0G\r\n0F\r\n0D\r\n0C\r\n1j\r\n1?\r\nb10 c\r\nb10 0!\r\nb1 d\r\nb1 1!\r\n1>\r\n1i\r\n0~\r\n1!!\r\n0S\r\n1T\r\n1*\r\n1b\r\nb0 c\r\nb1101011 d\r\nb1 e\r\n0)\r\n13\r\n1/!\r\nb0 0!\r\nb1101011 1!\r\nb1 2!\r\n02\r\n#375000\r\n1!\r\n1;\r\n1f\r\n0\"!\r\nb0 $!\r\n1-!\r\n1\"!\r\n1#!\r\nb10100001 $!\r\n0U\r\nb0 W\r\n1`\r\n1U\r\n1V\r\nb10100001 W\r\n1,\r\nb10100001 -\r\n15\r\nb10100001 6\r\n0T\r\n1S\r\n0!!\r\n1~\r\n12\r\n03\r\n0/!\r\nb10 0!\r\nb1 1!\r\nb0 2!\r\n1)\r\n0*\r\n0b\r\nb10 c\r\nb1 d\r\nb0 e\r\n#380000\r\n0!\r\n0;\r\n0f\r\n0#\r\nb1 %\r\nb11100001 '\r\nb100011 (\r\n0z\r\n0w\r\n0O\r\n0L\r\n1p\r\n1o\r\n1n\r\n1E\r\n1D\r\n1C\r\n1k\r\n0j\r\n1@\r\n0?\r\nb1 c\r\nb1 0!\r\nb11100001 d\r\nb11100001 1!\r\n0=\r\n0h\r\n0~\r\n1!!\r\n0S\r\n1T\r\n1*\r\n1b\r\nb0 c\r\nb100011 d\r\nb1 e\r\n0)\r\n13\r\n1/!\r\nb0 0!\r\nb100011 1!\r\nb1 2!\r\n02\r\n#385000\r\n1!\r\n1;\r\n1f\r\n0\"!\r\nb0 $!\r\n0#!\r\n1\"!\r\n1#!\r\nb10100001 $!\r\n0U\r\nb0 W\r\n0V\r\n1U\r\n1V\r\nb10100001 W\r\n#390000\r\n0!\r\n0;\r\n0f\r\n0$\r\nb11 %\r\nb11 &\r\nb11 '\r\nb0 (\r\n0}\r\n0|\r\n0x\r\n0R\r\n0Q\r\n0M\r\n1t\r\n0p\r\n0o\r\n0n\r\n1I\r\n0E\r\n0D\r\n0C\r\n1m\r\n1l\r\n1B\r\n1A\r\n1j\r\n1?\r\nb11 c\r\nb11 0!\r\nb0 d\r\nb0 1!\r\n0>\r\n0i\r\n0!!\r\n0T\r\n0*\r\n0a\r\n0b\r\nb11 d\r\nb0 e\r\n03\r\n0.!\r\n0/!\r\nb11 1!\r\nb0 2!\r\n#395000\r\n1!\r\n1;\r\n1f\r\n0\"!\r\nb0 $!\r\n0#!\r\n0U\r\nb0 W\r\n0V\r\n0,\r\nb0 -\r\n0+\r\n05\r\nb0 6\r\n04\r\n#400000\r\n0!\r\n0;\r\n0f\r\n1#\r\n1$\r\nb0 %\r\nb0 &\r\nb11010011 '\r\nb1100010 (\r\n1|\r\n1x\r\n1w\r\n1Q\r\n1M\r\n1L\r\n1q\r\n1o\r\n1n\r\n1F\r\n1D\r\n1C\r\n0m\r\n0l\r\n0B\r\n0A\r\n0k\r\n0j\r\n0@\r\n0?\r\nb0 c\r\nb0 0!\r\nb11010011 d\r\nb11010011 1!\r\n1=\r\n1h\r\n1>\r\n1i\r\n1~\r\n1S\r\n1)\r\n1a\r\n12\r\n1.!\r\n#405000\r\n1!\r\n1;\r\n1f\r\n0-!\r\n1\"!\r\nb10110010 $!\r\n0`\r\n1U\r\nb10110010 W\r\nb10110010 -\r\n1+\r\nb10110010 6\r\n14\r\n0S\r\n1T\r\n0~\r\n1!!\r\n13\r\n1/!\r\nb1100010 1!\r\nb1 2!\r\n02\r\n1*\r\n1b\r\nb1100010 d\r\nb1 e\r\n0)\r\n#410000\r\n0!\r\n0;\r\n0f\r\n0#\r\nb10 &\r\nb11111010 '\r\nb11100000 (\r\n0|\r\n1v\r\n0Q\r\n1K\r\n0u\r\n1r\r\n1p\r\n0J\r\n1G\r\n1E\r\n1l\r\n1A\r\nb10 c\r\nb10 0!\r\nb11100000 d\r\nb11100000 1!\r\n0=\r\n0h\r\n0!!\r\n1!!\r\n0T\r\n1T\r\n#415000\r\n1!\r\n1;\r\n1f\r\n0\"!\r\nb0 $!\r\n1-!\r\nb11 )!\r\nb11 %!\r\n0U\r\nb0 W\r\n1`\r\nb11 \\\r\nb11 X\r\nb11 .\r\n0Y\r\nb0 -\r\n0+\r\nb11 7\r\n0&!\r\nb0 6\r\n04\r\n08\r\n0/\r\n0T\r\n1T\r\n0!!\r\n1!!\r\n#420000\r\n0!\r\n0;\r\n0f\r\n1#\r\n0$\r\nb10 %\r\nb11 &\r\nb1000110 '\r\nb10 (\r\n1|\r\n0x\r\n0w\r\n0v\r\n1Q\r\n0M\r\n0L\r\n0K\r\n1s\r\n0r\r\n0q\r\n0p\r\n0n\r\n1H\r\n0G\r\n0F\r\n0E\r\n0C\r\n1m\r\n1B\r\n1j\r\n1?\r\nb11 c\r\nb11 0!\r\nb10 d\r\nb10 1!\r\n1=\r\n1h\r\n0>\r\n0i\r\n0!!\r\n1~\r\n0T\r\n1S\r\n1)\r\n0*\r\n0b\r\nb10 c\r\nb1000110 d\r\nb0 e\r\n12\r\n03\r\n0/!\r\nb10 0!\r\nb1000110 1!\r\nb0 2!\r\n#425000\r\n1!\r\n1;\r\n1f\r\n0-!\r\nb0 )!\r\nb10 %!\r\n0`\r\nb0 \\\r\nb10 X\r\nb10 .\r\nb10 7\r\n0S\r\n1S\r\n0~\r\n1~\r\n#430000\r\n0!\r\n0;\r\n0f\r\n0#\r\nb10 &\r\nb1000011 '\r\nb100100 (\r\n0|\r\n1{\r\n1x\r\n0Q\r\n1P\r\n1M\r\n1u\r\n0s\r\n1J\r\n0H\r\n0m\r\n0B\r\nb1000011 d\r\nb1000011 1!\r\n0=\r\n0h\r\n0~\r\n0S\r\n0)\r\n0a\r\n02\r\n0.!\r\n#435000\r\n1!\r\n1;\r\n1f\r\n#440000\r\n0!\r\n0;\r\n0f\r\n1#\r\nb1 &\r\nb1010100 '\r\nb1001011 (\r\n1}\r\n1|\r\n0{\r\n1z\r\n0x\r\n1w\r\n1R\r\n1Q\r\n0P\r\n1O\r\n0M\r\n1L\r\n0u\r\n0t\r\n1s\r\n1q\r\n0J\r\n0I\r\n1H\r\n1F\r\n1m\r\n0l\r\n1B\r\n0A\r\nb1010100 d\r\nb1010100 1!\r\n1=\r\n1h\r\n1~\r\n1S\r\n1)\r\n1a\r\n12\r\n1.!\r\n#445000\r\n1!\r\n1;\r\n1f\r\nb1 )!\r\nb1 %!\r\nb1 \\\r\nb1 X\r\nb1 .\r\nb1 7\r\n#450000\r\n0!\r\n0;\r\n0f\r\n1$\r\nb0 %\r\nb10 &\r\nb10111001 '\r\nb1000101 (\r\n0|\r\n1{\r\n0z\r\n0Q\r\n1P\r\n0O\r\n1u\r\n0s\r\n1r\r\n1p\r\n0o\r\n1n\r\n1J\r\n0H\r\n1G\r\n1E\r\n0D\r\n1C\r\n0m\r\n1l\r\n0B\r\n1A\r\n0j\r\n0?\r\nb0 c\r\nb0 0!\r\nb10111001 d\r\nb10111001 1!\r\n1>\r\n1i\r\n0~\r\n1!!\r\n0S\r\n1T\r\n1*\r\n1b\r\nb10 c\r\nb1000101 d\r\nb1 e\r\n0)\r\n13\r\n1/!\r\nb10 0!\r\nb1000101 1!\r\nb1 2!\r\n02\r\n#455000\r\n1!\r\n1;\r\n1f\r\n1-!\r\nb10 )!\r\nb0 %!\r\n1`\r\nb10 \\\r\nb0 X\r\nb0 .\r\n1Z\r\nb0 7\r\n1'!\r\n19\r\n10\r\n0T\r\n1S\r\n0!!\r\n1~\r\n12\r\n03\r\n0/!\r\nb0 0!\r\nb10111001 1!\r\nb0 2!\r\n1)\r\n0*\r\n0b\r\nb0 c\r\nb10111001 d\r\nb0 e\r\n#460000\r\n0!\r\n0;\r\n0f\r\nb11101100 (\r\n0}\r\n1z\r\n1x\r\n1v\r\n0R\r\n1O\r\n1M\r\n1K\r\n#465000\r\n1!\r\n1;\r\n1f\r\n0-!\r\n1(!\r\n0`\r\n1[\r\n11\r\n1:\r\n0S\r\n1T\r\n0~\r\n1!!\r\n13\r\n1/!\r\nb10 0!\r\nb11101100 1!\r\nb1 2!\r\n02\r\n1*\r\n1b\r\nb10 c\r\nb11101100 d\r\nb1 e\r\n0)\r\n#470000\r\n0!\r\n0;\r\n0f\r\n0#\r\nb11 &\r\nb11101100 '\r\nb0 (\r\n0{\r\n0z\r\n0x\r\n0w\r\n0v\r\n0P\r\n0O\r\n0M\r\n0L\r\n0K\r\n0u\r\n1s\r\n0q\r\n1o\r\n0J\r\n1H\r\n0F\r\n1D\r\n1m\r\n1B\r\nb11 c\r\nb11 0!\r\nb0 d\r\nb0 1!\r\n0=\r\n0h\r\n0!!\r\n1!!\r\n0T\r\n1T\r\n#475000\r\n1!\r\n1;\r\n1f\r\n0(!\r\n1-!\r\nb0 ,!\r\n0[\r\n1`\r\nb0 _\r\nb0 e\r\n01\r\nb0 2!\r\n0:\r\n0T\r\n1T\r\n0!!\r\n1!!\r\n#480000\r\n0!\r\n0;\r\n0f\r\n1#\r\nb1 %\r\nb1 &\r\nb10111100 '\r\nb10010100 (\r\n1{\r\n1y\r\n1v\r\n1P\r\n1N\r\n1K\r\n1q\r\n0o\r\n1F\r\n0D\r\n0l\r\n0A\r\n1k\r\n1@\r\nb1 c\r\nb1 0!\r\nb10010100 d\r\nb10010100 1!\r\n1=\r\n1h\r\n0!!\r\n1~\r\n0T\r\n1S\r\n1)\r\n0*\r\n0b\r\nb10111100 d\r\n12\r\n03\r\n0/!\r\nb10111100 1!\r\n#485000\r\n1!\r\n1;\r\n1f\r\n0-!\r\nb11 *!\r\nb1 %!\r\n0`\r\nb11 ]\r\nb1 X\r\nb1 .\r\n0Z\r\nb1 7\r\n0'!\r\n09\r\n00\r\n0S\r\n1T\r\n0~\r\n1!!\r\n13\r\n1/!\r\nb10010100 1!\r\n02\r\n1*\r\n1b\r\nb10010100 d\r\n0)\r\n#490000\r\n0!\r\n0;\r\n0f\r\nb1011100 '\r\nb1110000 (\r\n0{\r\n1x\r\n1w\r\n0v\r\n0P\r\n1M\r\n1L\r\n0K\r\n0p\r\n1o\r\n0n\r\n0E\r\n1D\r\n0C\r\nb1110000 d\r\nb1110000 1!\r\n#495000\r\n1!\r\n1;\r\n1f\r\n1-!\r\nb0 *!\r\nb10 %!\r\n1`\r\nb0 ]\r\nb10 X\r\nb10 .\r\nb10 7\r\n0T\r\n1S\r\n0!!\r\n1~\r\n12\r\n03\r\n0/!\r\nb1011100 1!\r\n1)\r\n0*\r\n0b\r\nb1011100 d\r\n#500000\r\n0!\r\n0;\r\n0f\r\n",
+  "simulator": "questa",
+  "passedCases": [
+    {
+      "id": 0,
+      "name": "Verification accepts the correct DUT",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": null,
+      "scenario": "The submitted verification environment is run against the unmodified correct DUT.",
+      "expectedBehavior": "A correct DUT must complete without the verification environment reporting a functional mismatch.",
+      "implementationHint": "Check expected-value calculation and output comparisons for false positives before changing DUT-facing stimulus.",
+      "expected": null,
+      "actual": null,
+      "stimulus": null,
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 1,
+      "name": "Verification exercises published behavior for gnt0",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_push_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h3A\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":1,\"gnt1\":0,\"err_pulse\":0},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.",
+      "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+      "implementationHint": "Inspect stimulus and monitoring so the public behavior producing gnt0 is exercised.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 2,
+      "name": "Verification detects violation on gnt0",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_push_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h3A\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":1,\"gnt1\":0,\"err_pulse\":0},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.",
+      "scenario": "A hidden deterministic proxy perturbs gnt0 only after the mapped public behavior is exercised.",
+      "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+      "implementationHint": "Inspect the checker/assertions for the published behavior of gnt0.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 3,
+      "name": "Verification exercises published behavior for gnt1",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_simultaneous_contention_client1_wins\",\"antecedent\":{\"req0\":1,\"req1\":1,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b01\",\"data_in0\":\"8'h4B\",\"data_in1\":\"8'h5C\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":0,\"gnt1\":1},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.",
+      "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+      "implementationHint": "Inspect stimulus and monitoring so the public behavior producing gnt1 is exercised.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 4,
+      "name": "Verification detects violation on gnt1",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_simultaneous_contention_client1_wins\",\"antecedent\":{\"req0\":1,\"req1\":1,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b01\",\"data_in0\":\"8'h4B\",\"data_in1\":\"8'h5C\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":0,\"gnt1\":1},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.",
+      "scenario": "A hidden deterministic proxy perturbs gnt1 only after the mapped public behavior is exercised.",
+      "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+      "implementationHint": "Inspect the checker/assertions for the published behavior of gnt1.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 5,
+      "name": "Verification exercises published behavior for resp_valid",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | Drive SETOFF for Client 0 with offset 0, followed by READ, verifying resp_valid asserts 1 cycle later with the sample originally pushed | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count.",
+      "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+      "implementationHint": "Inspect stimulus and monitoring so the public behavior producing resp_valid is exercised.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 6,
+      "name": "Verification detects violation on resp_valid",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | Drive SETOFF for Client 0 with offset 0, followed by READ, verifying resp_valid asserts 1 cycle later with the sample originally pushed | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count.",
+      "scenario": "A hidden deterministic proxy perturbs resp_valid only after the mapped public behavior is exercised.",
+      "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+      "implementationHint": "Inspect the checker/assertions for the published behavior of resp_valid.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 7,
+      "name": "Verification exercises published behavior for resp_client",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).",
+      "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+      "implementationHint": "Inspect stimulus and monitoring so the public behavior producing resp_client is exercised.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 8,
+      "name": "Verification detects violation on resp_client",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).",
+      "scenario": "A hidden deterministic proxy perturbs resp_client only after the mapped public behavior is exercised.",
+      "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+      "implementationHint": "Inspect the checker/assertions for the published behavior of resp_client.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 9,
+      "name": "Verification exercises published behavior for resp_data",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).",
+      "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+      "implementationHint": "Inspect stimulus and monitoring so the public behavior producing resp_data is exercised.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 10,
+      "name": "Verification detects violation on resp_data",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).",
+      "scenario": "A hidden deterministic proxy perturbs resp_data only after the mapped public behavior is exercised.",
+      "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+      "implementationHint": "Inspect the checker/assertions for the published behavior of resp_data.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 11,
+      "name": "Verification exercises published behavior for buf_count",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_buf_occupancy_after_push\",\"antecedent\":{\"req0\":0,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"buf_count\":\"3'd1\",\"buf_empty\":0,\"buf_full\":0},\"holdCycles\":1} | Drive a POP command when buf_empty=1 and verify err_pulse asserts 1 cycle later while buf_count remains 0 | Drive sequential PUSH commands to fill all 4 buffer entries from empty to full, verifying buf_count increments 0->1->2->3->4 and buf_full asserts",
+      "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+      "implementationHint": "Inspect stimulus and monitoring so the public behavior producing buf_count is exercised.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    },
+    {
+      "id": 12,
+      "name": "Verification detects violation on buf_count",
+      "status": "passed",
+      "category": "checker_effectiveness",
+      "requirement": "{\"name\":\"check_buf_occupancy_after_push\",\"antecedent\":{\"req0\":0,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"buf_count\":\"3'd1\",\"buf_empty\":0,\"buf_full\":0},\"holdCycles\":1} | Drive a POP command when buf_empty=1 and verify err_pulse asserts 1 cycle later while buf_count remains 0 | Drive sequential PUSH commands to fill all 4 buffer entries from empty to full, verifying buf_count increments 0->1->2->3->4 and buf_full asserts",
+      "scenario": "A hidden deterministic proxy perturbs buf_count only after the mapped public behavior is exercised.",
+      "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+      "implementationHint": "Inspect the checker/assertions for the published behavior of buf_count.",
+      "expected": null,
+      "actual": null,
+      "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+      "cycle": null,
+      "message": null
+    }
+  ],
+  "failedCases": [],
+  "notRunCases": [],
+  "uncoveredCases": [],
+  "compileErrors": [],
+  "simulationErrors": [],
+  "coverageScore": 0,
+  "coverageMeasured": false,
+  "gateStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "assertions": "not_run"
+  },
+  "shortCircuit": null,
+  "reachedCompilation": true,
+  "reachedSimulation": true,
+  "stageStates": {
+    "environment": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "coverage": "not_applicable",
+    "assertions": "not_run"
+  },
+  "profile": {
+    "environment": "required",
+    "compile": "required",
+    "execution": "required",
+    "functional": "required",
+    "coverage": "not_applicable",
+    "assertions": "optional"
+  },
+  "components": {
+    "static": 45,
+    "compilation": 100,
+    "functional": 20,
+    "coverage": 0,
+    "codeQuality": 46,
+    "simulation": 20
+  },
+  "durationMs": 37853,
+  "judge": {
+    "verdict": "AC",
+    "verdictLabel": "Accepted",
+    "passed": true,
+    "score": 100,
+    "gates": {
+      "environment": "pass",
+      "compile": "pass",
+      "execution": "pass",
+      "functional": "pass",
+      "assertions": "not_run"
+    },
+    "shortCircuit": null,
+    "reachedCompilation": true,
+    "reachedSimulation": true,
+    "coverageMeasured": false,
+    "failureReasons": [],
+    "testCases": [
+      {
+        "id": 0,
+        "name": "Verification accepts the correct DUT",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "scenario": "The submitted verification environment is run against the unmodified correct DUT.",
+        "expectedBehavior": "A correct DUT must complete without the verification environment reporting a functional mismatch.",
+        "implementationHint": "Check expected-value calculation and output comparisons for false positives before changing DUT-facing stimulus."
+      },
+      {
+        "id": 1,
+        "name": "Verification exercises published behavior for gnt0",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_push_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h3A\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":1,\"gnt1\":0,\"err_pulse\":0},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.",
+        "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+        "implementationHint": "Inspect stimulus and monitoring so the public behavior producing gnt0 is exercised."
+      },
+      {
+        "id": 2,
+        "name": "Verification detects violation on gnt0",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_push_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h3A\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":1,\"gnt1\":0,\"err_pulse\":0},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.",
+        "scenario": "A hidden deterministic proxy perturbs gnt0 only after the mapped public behavior is exercised.",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+        "implementationHint": "Inspect the checker/assertions for the published behavior of gnt0."
+      },
+      {
+        "id": 3,
+        "name": "Verification exercises published behavior for gnt1",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_simultaneous_contention_client1_wins\",\"antecedent\":{\"req0\":1,\"req1\":1,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b01\",\"data_in0\":\"8'h4B\",\"data_in1\":\"8'h5C\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":0,\"gnt1\":1},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.",
+        "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+        "implementationHint": "Inspect stimulus and monitoring so the public behavior producing gnt1 is exercised."
+      },
+      {
+        "id": 4,
+        "name": "Verification detects violation on gnt1",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_simultaneous_contention_client1_wins\",\"antecedent\":{\"req0\":1,\"req1\":1,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b01\",\"data_in0\":\"8'h4B\",\"data_in1\":\"8'h5C\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":0,\"gnt1\":1},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.",
+        "scenario": "A hidden deterministic proxy perturbs gnt1 only after the mapped public behavior is exercised.",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+        "implementationHint": "Inspect the checker/assertions for the published behavior of gnt1."
+      },
+      {
+        "id": 5,
+        "name": "Verification exercises published behavior for resp_valid",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | Drive SETOFF for Client 0 with offset 0, followed by READ, verifying resp_valid asserts 1 cycle later with the sample originally pushed | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count.",
+        "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+        "implementationHint": "Inspect stimulus and monitoring so the public behavior producing resp_valid is exercised."
+      },
+      {
+        "id": 6,
+        "name": "Verification detects violation on resp_valid",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | Drive SETOFF for Client 0 with offset 0, followed by READ, verifying resp_valid asserts 1 cycle later with the sample originally pushed | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count.",
+        "scenario": "A hidden deterministic proxy perturbs resp_valid only after the mapped public behavior is exercised.",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+        "implementationHint": "Inspect the checker/assertions for the published behavior of resp_valid."
+      },
+      {
+        "id": 7,
+        "name": "Verification exercises published behavior for resp_client",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).",
+        "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+        "implementationHint": "Inspect stimulus and monitoring so the public behavior producing resp_client is exercised."
+      },
+      {
+        "id": 8,
+        "name": "Verification detects violation on resp_client",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).",
+        "scenario": "A hidden deterministic proxy perturbs resp_client only after the mapped public behavior is exercised.",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+        "implementationHint": "Inspect the checker/assertions for the published behavior of resp_client."
+      },
+      {
+        "id": 9,
+        "name": "Verification exercises published behavior for resp_data",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).",
+        "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+        "implementationHint": "Inspect stimulus and monitoring so the public behavior producing resp_data is exercised."
+      },
+      {
+        "id": 10,
+        "name": "Verification detects violation on resp_data",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).",
+        "scenario": "A hidden deterministic proxy perturbs resp_data only after the mapped public behavior is exercised.",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+        "implementationHint": "Inspect the checker/assertions for the published behavior of resp_data."
+      },
+      {
+        "id": 11,
+        "name": "Verification exercises published behavior for buf_count",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_buf_occupancy_after_push\",\"antecedent\":{\"req0\":0,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"buf_count\":\"3'd1\",\"buf_empty\":0,\"buf_full\":0},\"holdCycles\":1} | Drive a POP command when buf_empty=1 and verify err_pulse asserts 1 cycle later while buf_count remains 0 | Drive sequential PUSH commands to fill all 4 buffer entries from empty to full, verifying buf_count increments 0->1->2->3->4 and buf_full asserts",
+        "scenario": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The verification environment must exercise the public behavior before its checker can be credited.",
+        "implementationHint": "Inspect stimulus and monitoring so the public behavior producing buf_count is exercised."
+      },
+      {
+        "id": 12,
+        "name": "Verification detects violation on buf_count",
+        "status": "passed",
+        "category": "checker_effectiveness",
+        "requirement": "{\"name\":\"check_buf_occupancy_after_push\",\"antecedent\":{\"req0\":0,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"buf_count\":\"3'd1\",\"buf_empty\":0,\"buf_full\":0},\"holdCycles\":1} | Drive a POP command when buf_empty=1 and verify err_pulse asserts 1 cycle later while buf_count remains 0 | Drive sequential PUSH commands to fill all 4 buffer entries from empty to full, verifying buf_count increments 0->1->2->3->4 and buf_full asserts",
+        "scenario": "A hidden deterministic proxy perturbs buf_count only after the mapped public behavior is exercised.",
+        "stimulus": "Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1",
+        "expectedBehavior": "The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.",
+        "implementationHint": "Inspect the checker/assertions for the published behavior of buf_count."
+      }
+    ],
+    "coverage": null,
+    "compileErrors": [],
+    "summary": {
+      "total": 13,
+      "passed": 13,
+      "failed": 0,
+      "score": null
+    },
+    "stats": {
+      "total": 13,
+      "passed": 13,
+      "failed": 0,
+      "timeouts": 0,
+      "unresolved": 0,
+      "cycles": null,
+      "runtimeMs": 37850
+    },
+    "failurePhase": null,
+    "execution": null,
+    "validatorQuality": {
+      "ok": true,
+      "independent": true,
+      "challengePlan": {
+        "schemaVersion": 1,
+        "category": "sv",
+        "source": "structured-specification",
+        "scenarios": [
+          {
+            "id": "scenario_1",
+            "description": "Drive a POP command when buf_empty=1 and verify err_pulse asserts 1 cycle later while buf_count remains 0"
+          },
+          {
+            "id": "scenario_2",
+            "description": "Drive sequential PUSH commands to fill all 4 buffer entries from empty to full, verifying buf_count increments 0->1->2->3->4 and buf_full asserts"
+          },
+          {
+            "id": "scenario_3",
+            "description": "Drive SETOFF for Client 0 with offset 0, followed by READ, verifying resp_valid asserts 1 cycle later with the sample originally pushed"
+          },
+          {
+            "id": "scenario_4",
+            "description": "Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle"
+          },
+          {
+            "id": "scenario_5",
+            "description": "Drive a PUSH when buf_full=1 and verify err_pulse asserts 1 cycle later while buf_count remains 4 and existing samples are preserved"
+          }
+        ],
+        "stimulusPolicy": {
+          "schemaVersion": 2,
+          "entries": [
+            {
+              "name": "clk",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            },
+            {
+              "name": "rst_n",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            },
+            {
+              "name": "req0",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            },
+            {
+              "name": "req1",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            },
+            {
+              "name": "cmd0",
+              "width": 2,
+              "role": "payload",
+              "referenced": false
+            },
+            {
+              "name": "cmd1",
+              "width": 2,
+              "role": "payload",
+              "referenced": false
+            },
+            {
+              "name": "data_in0",
+              "width": 8,
+              "role": "payload",
+              "referenced": false
+            },
+            {
+              "name": "data_in1",
+              "width": 8,
+              "role": "payload",
+              "referenced": false
+            }
+          ],
+          "sourceControls": [],
+          "backpressure": [],
+          "cancel": [],
+          "framing": [],
+          "payload": [
+            {
+              "name": "cmd0",
+              "width": 2,
+              "role": "payload",
+              "referenced": false
+            },
+            {
+              "name": "cmd1",
+              "width": 2,
+              "role": "payload",
+              "referenced": false
+            },
+            {
+              "name": "data_in0",
+              "width": 8,
+              "role": "payload",
+              "referenced": false
+            },
+            {
+              "name": "data_in1",
+              "width": 8,
+              "role": "payload",
+              "referenced": false
+            }
+          ],
+          "controls": [
+            {
+              "name": "clk",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            },
+            {
+              "name": "req0",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            },
+            {
+              "name": "req1",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            },
+            {
+              "name": "rst_n",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            }
+          ],
+          "activationInputs": [
+            {
+              "name": "clk",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            },
+            {
+              "name": "req0",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            },
+            {
+              "name": "req1",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            },
+            {
+              "name": "rst_n",
+              "width": 1,
+              "role": "control",
+              "referenced": true
+            },
+            {
+              "name": "cmd0",
+              "width": 2,
+              "role": "payload",
+              "referenced": false
+            },
+            {
+              "name": "cmd1",
+              "width": 2,
+              "role": "payload",
+              "referenced": false
+            },
+            {
+              "name": "data_in0",
+              "width": 8,
+              "role": "payload",
+              "referenced": false
+            },
+            {
+              "name": "data_in1",
+              "width": 8,
+              "role": "payload",
+              "referenced": false
+            }
+          ],
+          "referencedSignals": [
+            "clk",
+            "rst_n",
+            "req0",
+            "req1"
+          ],
+          "protocolAware": false
+        },
+        "requirements": [
+          {
+            "id": "req_1",
+            "description": "Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served."
+          },
+          {
+            "id": "req_2",
+            "description": "A granted PUSH command (cmd=2'b01) appends data_in to tail and increments buf_count by 1 if buf_count < 4."
+          },
+          {
+            "id": "req_3",
+            "description": "A granted POP command (cmd=2'b10) increments head by 1 and decrements buf_count by 1 if buf_count > 0."
+          },
+          {
+            "id": "req_4",
+            "description": "A granted SETOFF command (cmd=2'b11) updates the requesting client's indirect offset register with data_in[1:0]."
+          },
+          {
+            "id": "req_5",
+            "description": "A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count."
+          },
+          {
+            "id": "req_6",
+            "description": "Attempting PUSH when buf_full=1, POP when buf_empty=1, or READ with client_offset >= buf_count leaves buffer state intact and asserts err_pulse for 1 cycle 1 cycle after the grant."
+          },
+          {
+            "id": "req_7",
+            "description": "Clients initiate requests by asserting req0 or req1 along with cmd and data_in on posedge clk."
+          },
+          {
+            "id": "req_8",
+            "description": "The DUT combinationally asserts gnt0 or gnt1 in the cycle of request if accepted by arbitration."
+          },
+          {
+            "id": "req_9",
+            "description": "Unselected client request in contention receives gnt=0; the client must retain or reassert request in subsequent cycle if it desires service."
+          },
+          {
+            "id": "req_10",
+            "description": "Read response pipeline returns data exactly 1 clock cycle after grant: resp_valid is a 1-cycle pulse."
+          },
+          {
+            "id": "req_11",
+            "description": "resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1)."
+          },
+          {
+            "id": "req_12",
+            "description": "Write commands (PUSH, POP, SETOFF) do not generate a read response on resp_valid."
+          },
+          {
+            "id": "req_13",
+            "description": "Testbench verifies round-robin fairness under simultaneous dual-client request bursts without starvation"
+          },
+          {
+            "id": "req_14",
+            "description": "Circular buffer wrap-around pointer arithmetic correctly handles sample insertion and deletion beyond index 3"
+          },
+          {
+            "id": "req_15",
+            "description": "Read response pipeline correctly tags returning data with appropriate resp_client matching granted client"
+          },
+          {
+            "id": "req_16",
+            "description": "All invalid operations (push full, pop empty, unpopulated read) trigger err_pulse and preserve buffer integrity"
+          }
+        ],
+        "activity": {
+          "requireExecution": true,
+          "requireGoldenAcceptance": true,
+          "requireNegativeChallenge": true
+        },
+        "negativeChallenge": {
+          "mode": "contract_output_perturbation",
+          "maxRuns": 6,
+          "requireActivation": true,
+          "requireDetection": true
+        },
+        "assertionIntent": null,
+        "coverageIntent": null
+      },
+      "challengeId": "requirement_mapped_output_matrix",
+      "challengedOutputs": [
+        "gnt0",
+        "gnt1",
+        "resp_valid",
+        "resp_client",
+        "resp_data",
+        "buf_count"
+      ],
+      "challengeMatrix": [
+        {
+          "challengeId": "public_output_perturbation:gnt0",
+          "output": "gnt0",
+          "requirementIds": [
+            "verification_check:check_push_sample_client0",
+            "scenario_4",
+            "constraint_1",
+            "protocol_2",
+            "timing_2",
+            "expected_3"
+          ],
+          "activationInputs": [
+            "req0",
+            "req1",
+            "cmd0",
+            "cmd1",
+            "data_in0",
+            "data_in1"
+          ],
+          "activated": true,
+          "detected": true,
+          "passed": true
+        },
+        {
+          "challengeId": "public_output_perturbation:gnt1",
+          "output": "gnt1",
+          "requirementIds": [
+            "verification_check:check_simultaneous_contention_client1_wins",
+            "scenario_4",
+            "constraint_1",
+            "protocol_2",
+            "timing_2",
+            "expected_3"
+          ],
+          "activationInputs": [
+            "req0",
+            "req1",
+            "cmd0",
+            "cmd1",
+            "data_in0",
+            "data_in1"
+          ],
+          "activated": true,
+          "detected": true,
+          "passed": true
+        },
+        {
+          "challengeId": "public_output_perturbation:resp_valid",
+          "output": "resp_valid",
+          "requirementIds": [
+            "verification_check:check_read_sample_client0",
+            "scenario_3",
+            "constraint_5",
+            "protocol_4",
+            "protocol_6",
+            "timing_3",
+            "error_3",
+            "expected_2"
+          ],
+          "activationInputs": [
+            "req0",
+            "req1",
+            "cmd0",
+            "cmd1",
+            "data_in0",
+            "data_in1"
+          ],
+          "activated": true,
+          "detected": true,
+          "passed": true
+        },
+        {
+          "challengeId": "public_output_perturbation:resp_client",
+          "output": "resp_client",
+          "requirementIds": [
+            "verification_check:check_read_sample_client0",
+            "constraint_5",
+            "protocol_5",
+            "acceptance_3",
+            "timing_3",
+            "expected_2"
+          ],
+          "activationInputs": [
+            "req0",
+            "req1",
+            "cmd0",
+            "cmd1",
+            "data_in0",
+            "data_in1"
+          ],
+          "activated": true,
+          "detected": true,
+          "passed": true
+        },
+        {
+          "challengeId": "public_output_perturbation:resp_data",
+          "output": "resp_data",
+          "requirementIds": [
+            "verification_check:check_read_sample_client0",
+            "constraint_5",
+            "protocol_5",
+            "timing_3",
+            "expected_2"
+          ],
+          "activationInputs": [
+            "req0",
+            "req1",
+            "cmd0",
+            "cmd1",
+            "data_in0",
+            "data_in1"
+          ],
+          "activated": true,
+          "detected": true,
+          "passed": true
+        },
+        {
+          "challengeId": "public_output_perturbation:buf_count",
+          "output": "buf_count",
+          "requirementIds": [
+            "verification_check:check_buf_occupancy_after_push",
+            "scenario_1",
+            "scenario_2",
+            "scenario_5",
+            "constraint_2",
+            "constraint_3",
+            "constraint_5",
+            "constraint_6",
+            "timing_4",
+            "error_1",
+            "error_2",
+            "error_3",
+            "corner_1",
+            "corner_3",
+            "expected_1"
+          ],
+          "activationInputs": [
+            "req0",
+            "req1",
+            "cmd0",
+            "cmd1",
+            "data_in0",
+            "data_in1"
+          ],
+          "activated": true,
+          "detected": true,
+          "passed": true
+        }
+      ],
+      "reason": "Correct DUT accepted; every bounded public-requirement-mapped output challenge was exercised and detected."
+    },
+    "processEvidence": {
+      "compile": null,
+      "elaboration": null,
+      "execution": null,
+      "diagnostics": null
+    },
+    "hasHarnessEvidence": true,
+    "evidence": {
+      "harness": "lockstep",
+      "simulator": "questa",
+      "casesParsed": 13
+    }
+  },
+  "verdict": "AC",
+  "verdictLabel": "Accepted",
+  "v1Compatible": {
+    "overallScore": 100,
+    "static": {
+      "passed": false,
+      "summary": "Structure: 45/100",
+      "errors": [],
+      "warnings": []
+    },
+    "simulation": {
+      "passed": false,
+      "executed": true,
+      "score": 20
+    }
+  }
+}
