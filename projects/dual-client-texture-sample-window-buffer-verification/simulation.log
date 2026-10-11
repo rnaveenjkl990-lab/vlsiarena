@@ -1,0 +1,468 @@
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Start time: 23:00:22 on Oct 11,2026
+vlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv 
+-- Compiling module tex_window_buffer
+-- Compiling module tex_window_buffer_ref
+-- Compiling interface tex_window_buffer_if
+-- Compiling package tb_tex_window_buffer_sv_unit
+-- Compiling module tb_tex_window_buffer
+
+Top level modules:
+	tb_tex_window_buffer
+End time: 23:00:22 on Oct 11,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+# vsim -c -voptargs="+acc" -l C:\Users\rnave\AppData\Roaming\vlsi-tracker\workspaces\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148\transcript.log tb_tex_window_buffer -do "run.do" 
+# Start time: 23:00:24 on Oct 11,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_tex_window_buffer_sv_unit(fast)
+# Loading work.tb_tex_window_buffer(fast)
+# Loading work.tex_window_buffer_if(fast__2)
+# Loading work.tex_window_buffer(fast)
+# Loading work.tex_window_buffer_ref(fast)
+# Loading work.tex_window_buffer_if(fast)
+# do run.do
+# 0
+# 0
+# 0
+# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()
+# for multiple files.
+#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757
+# [TEST] All 48 transactions passed successfully with ZERO mismatches.
+# ** Note: $finish    : tb_tex_window_buffer.sv(764)
+#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer
+# End time: 23:00:25 on Oct 11,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+
+::TEST_START:: {"id":0,"name":"Verification accepts the correct DUT","category":"checker_effectiveness","scenario":"The submitted verification environment is run against the unmodified correct DUT.","expectedBehavior":"A correct DUT must complete without the verification environment reporting a functional mismatch.","implementationHint":"Check expected-value calculation and output comparisons for false positives before changing DUT-facing stimulus.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":0,"nonce":"72e51ab775ef4795"}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Start time: 23:00:25 on Oct 11,2026
+vlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv 
+-- Compiling module tex_window_buffer__challenge_reference
+-- Compiling module tex_window_buffer
+-- Compiling module tex_window_buffer_ref
+-- Compiling interface tex_window_buffer_if
+-- Compiling package tb_tex_window_buffer_sv_unit
+-- Compiling module tb_tex_window_buffer
+
+Top level modules:
+	tb_tex_window_buffer
+End time: 23:00:26 on Oct 11,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+# vsim -c -voptargs="+acc" -l C:\Users\rnave\AppData\Roaming\vlsi-tracker\workspaces\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-1\transcript.log tb_tex_window_buffer -do "run.do" 
+# Start time: 23:00:27 on Oct 11,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_tex_window_buffer_sv_unit(fast)
+# Loading work.tb_tex_window_buffer(fast)
+# Loading work.tex_window_buffer_if(fast__2)
+# Loading work.tex_window_buffer(fast)
+# Loading work.tex_window_buffer__challenge_reference(fast)
+# Loading work.tex_window_buffer_ref(fast)
+# Loading work.tex_window_buffer_if(fast)
+# do run.do
+# 0
+# 0
+# 0
+# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()
+# for multiple files.
+#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:gnt0
+# ** Error: [SCOREBOARD] Cycle 1: Grant mismatch! DUT=(0,0) REF=(1,0)
+#    Time: 35001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 496
+# ** Error: [TEST] Finished with 1 errors across 48 checked transactions.
+#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697
+# ** Note: $finish    : tb_tex_window_buffer.sv(764)
+#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer
+# End time: 23:00:30 on Oct 11,2026, Elapsed time: 0:00:03
+# Errors: 2, Warnings: 2
+
+::TEST_START:: {"id":1,"name":"Verification exercises published behavior for gnt0","category":"checker_effectiveness","requirement":"{\"name\":\"check_push_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h3A\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":1,\"gnt1\":0,\"err_pulse\":0},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.","scenario":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The verification environment must exercise the public behavior before its checker can be credited.","implementationHint":"Inspect stimulus and monitoring so the public behavior producing gnt0 is exercised.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":1,"nonce":"72e51ab775ef4795"}
+::TEST_START:: {"id":2,"name":"Verification detects violation on gnt0","category":"checker_effectiveness","requirement":"{\"name\":\"check_push_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h3A\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":1,\"gnt1\":0,\"err_pulse\":0},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.","scenario":"A hidden deterministic proxy perturbs gnt0 only after the mapped public behavior is exercised.","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.","implementationHint":"Inspect the checker/assertions for the published behavior of gnt0.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":2,"nonce":"72e51ab775ef4795"}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Start time: 23:00:30 on Oct 11,2026
+vlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv 
+-- Compiling module tex_window_buffer__challenge_reference
+-- Compiling module tex_window_buffer
+-- Compiling module tex_window_buffer_ref
+-- Compiling interface tex_window_buffer_if
+-- Compiling package tb_tex_window_buffer_sv_unit
+-- Compiling module tb_tex_window_buffer
+
+Top level modules:
+	tb_tex_window_buffer
+End time: 23:00:31 on Oct 11,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+# vsim -c -voptargs="+acc" -l C:\Users\rnave\AppData\Roaming\vlsi-tracker\workspaces\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-2\transcript.log tb_tex_window_buffer -do "run.do" 
+# Start time: 23:00:32 on Oct 11,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_tex_window_buffer_sv_unit(fast)
+# Loading work.tb_tex_window_buffer(fast)
+# Loading work.tex_window_buffer_if(fast__2)
+# Loading work.tex_window_buffer(fast)
+# Loading work.tex_window_buffer__challenge_reference(fast)
+# Loading work.tex_window_buffer_ref(fast)
+# Loading work.tex_window_buffer_if(fast)
+# do run.do
+# 0
+# 0
+# 0
+# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()
+# for multiple files.
+#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:gnt1
+# ** Error: [SCOREBOARD] Cycle 3: Invariant violation: gnt0 and gnt1 asserted concurrently!
+#    Time: 55001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 490
+# ** Error: [SCOREBOARD] Cycle 3: Grant mismatch! DUT=(1,1) REF=(1,0)
+#    Time: 55001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 496
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:gnt1
+# ** Error: [SCOREBOARD] Cycle 5: Grant mismatch! DUT=(0,0) REF=(0,1)
+#    Time: 75001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 496
+# ** Error: [TEST] Finished with 3 errors across 48 checked transactions.
+#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697
+# ** Note: $finish    : tb_tex_window_buffer.sv(764)
+#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer
+# End time: 23:00:34 on Oct 11,2026, Elapsed time: 0:00:02
+# Errors: 4, Warnings: 2
+
+::TEST_START:: {"id":3,"name":"Verification exercises published behavior for gnt1","category":"checker_effectiveness","requirement":"{\"name\":\"check_simultaneous_contention_client1_wins\",\"antecedent\":{\"req0\":1,\"req1\":1,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b01\",\"data_in0\":\"8'h4B\",\"data_in1\":\"8'h5C\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":0,\"gnt1\":1},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.","scenario":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The verification environment must exercise the public behavior before its checker can be credited.","implementationHint":"Inspect stimulus and monitoring so the public behavior producing gnt1 is exercised.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":3,"nonce":"72e51ab775ef4795"}
+::TEST_START:: {"id":4,"name":"Verification detects violation on gnt1","category":"checker_effectiveness","requirement":"{\"name\":\"check_simultaneous_contention_client1_wins\",\"antecedent\":{\"req0\":1,\"req1\":1,\"cmd0\":\"2'b01\",\"cmd1\":\"2'b01\",\"data_in0\":\"8'h4B\",\"data_in1\":\"8'h5C\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"gnt0\":0,\"gnt1\":1},\"holdCycles\":1} | Drive concurrent req0 and req1 for consecutive clock cycles and verify gnt0 and gnt1 strictly alternate every clock cycle | Grant signals gnt0 and gnt1 must be evaluated combinationally within the request cycle based on req0, req1, and last_served.","scenario":"A hidden deterministic proxy perturbs gnt1 only after the mapped public behavior is exercised.","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.","implementationHint":"Inspect the checker/assertions for the published behavior of gnt1.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":4,"nonce":"72e51ab775ef4795"}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Start time: 23:00:35 on Oct 11,2026
+vlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv 
+-- Compiling module tex_window_buffer__challenge_reference
+-- Compiling module tex_window_buffer
+-- Compiling module tex_window_buffer_ref
+-- Compiling interface tex_window_buffer_if
+-- Compiling package tb_tex_window_buffer_sv_unit
+-- Compiling module tb_tex_window_buffer
+
+Top level modules:
+	tb_tex_window_buffer
+End time: 23:00:35 on Oct 11,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+# vsim -c -voptargs="+acc" -l C:\Users\rnave\AppData\Roaming\vlsi-tracker\workspaces\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-3\transcript.log tb_tex_window_buffer -do "run.do" 
+# Start time: 23:00:37 on Oct 11,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_tex_window_buffer_sv_unit(fast)
+# Loading work.tb_tex_window_buffer(fast)
+# Loading work.tex_window_buffer_if(fast__2)
+# Loading work.tex_window_buffer(fast)
+# Loading work.tex_window_buffer__challenge_reference(fast)
+# Loading work.tex_window_buffer_ref(fast)
+# Loading work.tex_window_buffer_if(fast)
+# do run.do
+# 0
+# 0
+# 0
+# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()
+# for multiple files.
+#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757
+# ** Error: [SCOREBOARD] Cycle 11: resp_valid mismatch! DUT=0 REF=1
+#    Time: 135001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 512
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_valid
+# ** Error: [SCOREBOARD] Cycle 25: resp_valid mismatch! DUT=0 REF=1
+#    Time: 275001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 512
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_valid
+# ** Error: [TEST] Finished with 2 errors across 48 checked transactions.
+#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697
+# ** Note: $finish    : tb_tex_window_buffer.sv(764)
+#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer
+# End time: 23:00:39 on Oct 11,2026, Elapsed time: 0:00:02
+# Errors: 3, Warnings: 2
+
+::TEST_START:: {"id":5,"name":"Verification exercises published behavior for resp_valid","category":"checker_effectiveness","requirement":"{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | Drive SETOFF for Client 0 with offset 0, followed by READ, verifying resp_valid asserts 1 cycle later with the sample originally pushed | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count.","scenario":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The verification environment must exercise the public behavior before its checker can be credited.","implementationHint":"Inspect stimulus and monitoring so the public behavior producing resp_valid is exercised.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":5,"nonce":"72e51ab775ef4795"}
+::TEST_START:: {"id":6,"name":"Verification detects violation on resp_valid","category":"checker_effectiveness","requirement":"{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | Drive SETOFF for Client 0 with offset 0, followed by READ, verifying resp_valid asserts 1 cycle later with the sample originally pushed | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count.","scenario":"A hidden deterministic proxy perturbs resp_valid only after the mapped public behavior is exercised.","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.","implementationHint":"Inspect the checker/assertions for the published behavior of resp_valid.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":6,"nonce":"72e51ab775ef4795"}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Start time: 23:00:40 on Oct 11,2026
+vlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv 
+-- Compiling module tex_window_buffer__challenge_reference
+-- Compiling module tex_window_buffer
+-- Compiling module tex_window_buffer_ref
+-- Compiling interface tex_window_buffer_if
+-- Compiling package tb_tex_window_buffer_sv_unit
+-- Compiling module tb_tex_window_buffer
+
+Top level modules:
+	tb_tex_window_buffer
+End time: 23:00:40 on Oct 11,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+# vsim -c -voptargs="+acc" -l C:\Users\rnave\AppData\Roaming\vlsi-tracker\workspaces\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-4\transcript.log tb_tex_window_buffer -do "run.do" 
+# Start time: 23:00:42 on Oct 11,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_tex_window_buffer_sv_unit(fast)
+# Loading work.tb_tex_window_buffer(fast)
+# Loading work.tex_window_buffer_if(fast__2)
+# Loading work.tex_window_buffer(fast)
+# Loading work.tex_window_buffer__challenge_reference(fast)
+# Loading work.tex_window_buffer_ref(fast)
+# Loading work.tex_window_buffer_if(fast)
+# do run.do
+# 0
+# 0
+# 0
+# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()
+# for multiple files.
+#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757
+# ** Error: [SCOREBOARD] Cycle 11: Response payload mismatch! client DUT=1 REF=0, data DUT=0x3a REF=0x3a
+#    Time: 135001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 518
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_client
+# ** Error: [SCOREBOARD] Cycle 25: Response payload mismatch! client DUT=1 REF=0, data DUT=0xa1 REF=0xa1
+#    Time: 275001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 518
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_client
+# ** Error: [TEST] Finished with 2 errors across 48 checked transactions.
+#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697
+# ** Note: $finish    : tb_tex_window_buffer.sv(764)
+#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer
+# End time: 23:00:44 on Oct 11,2026, Elapsed time: 0:00:02
+# Errors: 3, Warnings: 2
+
+::TEST_START:: {"id":7,"name":"Verification exercises published behavior for resp_client","category":"checker_effectiveness","requirement":"{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).","scenario":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The verification environment must exercise the public behavior before its checker can be credited.","implementationHint":"Inspect stimulus and monitoring so the public behavior producing resp_client is exercised.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":7,"nonce":"72e51ab775ef4795"}
+::TEST_START:: {"id":8,"name":"Verification detects violation on resp_client","category":"checker_effectiveness","requirement":"{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).","scenario":"A hidden deterministic proxy perturbs resp_client only after the mapped public behavior is exercised.","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.","implementationHint":"Inspect the checker/assertions for the published behavior of resp_client.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":8,"nonce":"72e51ab775ef4795"}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Start time: 23:00:45 on Oct 11,2026
+vlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv 
+-- Compiling module tex_window_buffer__challenge_reference
+-- Compiling module tex_window_buffer
+-- Compiling module tex_window_buffer_ref
+-- Compiling interface tex_window_buffer_if
+-- Compiling package tb_tex_window_buffer_sv_unit
+-- Compiling module tb_tex_window_buffer
+
+Top level modules:
+	tb_tex_window_buffer
+End time: 23:00:45 on Oct 11,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+# vsim -c -voptargs="+acc" -l C:\Users\rnave\AppData\Roaming\vlsi-tracker\workspaces\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-5\transcript.log tb_tex_window_buffer -do "run.do" 
+# Start time: 23:00:47 on Oct 11,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_tex_window_buffer_sv_unit(fast)
+# Loading work.tb_tex_window_buffer(fast)
+# Loading work.tex_window_buffer_if(fast__2)
+# Loading work.tex_window_buffer(fast)
+# Loading work.tex_window_buffer__challenge_reference(fast)
+# Loading work.tex_window_buffer_ref(fast)
+# Loading work.tex_window_buffer_if(fast)
+# do run.do
+# 0
+# 0
+# 0
+# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()
+# for multiple files.
+#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757
+# ** Error: [SCOREBOARD] Cycle 11: Response payload mismatch! client DUT=0 REF=0, data DUT=0x3b REF=0x3a
+#    Time: 135001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 518
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_data
+# ** Error: [SCOREBOARD] Cycle 25: Response payload mismatch! client DUT=0 REF=0, data DUT=0xa2 REF=0xa1
+#    Time: 275001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 518
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:resp_data
+# ** Error: [TEST] Finished with 2 errors across 48 checked transactions.
+#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697
+# ** Note: $finish    : tb_tex_window_buffer.sv(764)
+#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer
+# End time: 23:00:50 on Oct 11,2026, Elapsed time: 0:00:03
+# Errors: 3, Warnings: 2
+
+::TEST_START:: {"id":9,"name":"Verification exercises published behavior for resp_data","category":"checker_effectiveness","requirement":"{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).","scenario":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The verification environment must exercise the public behavior before its checker can be credited.","implementationHint":"Inspect stimulus and monitoring so the public behavior producing resp_data is exercised.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":9,"nonce":"72e51ab775ef4795"}
+::TEST_START:: {"id":10,"name":"Verification detects violation on resp_data","category":"checker_effectiveness","requirement":"{\"name\":\"check_read_sample_client0\",\"antecedent\":{\"req0\":1,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":1,\"expected\":{\"resp_valid\":1,\"resp_client\":0,\"resp_data\":\"8'h3A\",\"err_pulse\":0},\"holdCycles\":1} | A granted READ command (cmd=2'b00) computes target address (head + client_offset) mod 4 and asserts resp_valid, resp_client, and resp_data 1 cycle later if client_offset < buf_count. | resp_client identifies which client receives resp_data (0 for client 0, 1 for client 1).","scenario":"A hidden deterministic proxy perturbs resp_data only after the mapped public behavior is exercised.","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.","implementationHint":"Inspect the checker/assertions for the published behavior of resp_data.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":10,"nonce":"72e51ab775ef4795"}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Start time: 23:00:50 on Oct 11,2026
+vlog -sv tex_window_buffer.sv tb_tex_window_buffer.sv 
+-- Compiling module tex_window_buffer__challenge_reference
+-- Compiling module tex_window_buffer
+-- Compiling module tex_window_buffer_ref
+-- Compiling interface tex_window_buffer_if
+-- Compiling package tb_tex_window_buffer_sv_unit
+-- Compiling module tb_tex_window_buffer
+
+Top level modules:
+	tb_tex_window_buffer
+End time: 23:00:50 on Oct 11,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+# vsim -c -voptargs="+acc" -l C:\Users\rnave\AppData\Roaming\vlsi-tracker\workspaces\C__Users_rnave_AppData_Roaming_vlsi-tracker_workspaces_task_gen_1791739059188_1791739187148-challenge-6\transcript.log tb_tex_window_buffer -do "run.do" 
+# Start time: 23:00:52 on Oct 11,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_tex_window_buffer_sv_unit(fast)
+# Loading work.tb_tex_window_buffer(fast)
+# Loading work.tex_window_buffer_if(fast__2)
+# Loading work.tex_window_buffer(fast)
+# Loading work.tex_window_buffer__challenge_reference(fast)
+# Loading work.tex_window_buffer_ref(fast)
+# Loading work.tex_window_buffer_if(fast)
+# do run.do
+# 0
+# 0
+# 0
+# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()
+# for multiple files.
+#    Time: 0 ps  Iteration: 0  Process: /tb_tex_window_buffer/#INITIAL#755(#ublk#3518930#755) File: tb_tex_window_buffer.sv Line: 757
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:buf_count
+# ** Error: [SCOREBOARD] Cycle 2: Buffer status mismatch! count DUT=2 REF=1, full DUT=0 REF=0, empty DUT=0 REF=0
+#    Time: 45001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 505
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:buf_count
+# ** Error: [SCOREBOARD] Cycle 4: Buffer status mismatch! count DUT=3 REF=2, full DUT=0 REF=0, empty DUT=0 REF=0
+#    Time: 65001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 505
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:buf_count
+# ** Error: [SCOREBOARD] Cycle 7: Buffer status mismatch! count DUT=5 REF=4, full DUT=1 REF=1, empty DUT=0 REF=0
+#    Time: 95001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 505
+# ::VLSI_CHALLENGE_ACTIVATED::72e51ab775ef4795:buf_count
+# ** Error: [SCOREBOARD] Cycle 17: Buffer status mismatch! count DUT=1 REF=0, full DUT=0 REF=0, empty DUT=1 REF=1
+#    Time: 195001 ps  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_scoreboard.run File: tb_tex_window_buffer.sv Line: 505
+# ** Error: [TEST] Finished with 4 errors across 48 checked transactions.
+#    Time: 500 ns  Scope: tb_tex_window_buffer_sv_unit.tex_window_buffer_test.run File: tb_tex_window_buffer.sv Line: 697
+# ** Note: $finish    : tb_tex_window_buffer.sv(764)
+#    Time: 500 ns  Iteration: 1  Instance: /tb_tex_window_buffer
+# End time: 23:00:55 on Oct 11,2026, Elapsed time: 0:00:03
+# Errors: 5, Warnings: 2
+
+::TEST_START:: {"id":11,"name":"Verification exercises published behavior for buf_count","category":"checker_effectiveness","requirement":"{\"name\":\"check_buf_occupancy_after_push\",\"antecedent\":{\"req0\":0,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"buf_count\":\"3'd1\",\"buf_empty\":0,\"buf_full\":0},\"holdCycles\":1} | Drive a POP command when buf_empty=1 and verify err_pulse asserts 1 cycle later while buf_count remains 0 | Drive sequential PUSH commands to fill all 4 buffer entries from empty to full, verifying buf_count increments 0->1->2->3->4 and buf_full asserts","scenario":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The verification environment must exercise the public behavior before its checker can be credited.","implementationHint":"Inspect stimulus and monitoring so the public behavior producing buf_count is exercised.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":11,"nonce":"72e51ab775ef4795"}
+::TEST_START:: {"id":12,"name":"Verification detects violation on buf_count","category":"checker_effectiveness","requirement":"{\"name\":\"check_buf_occupancy_after_push\",\"antecedent\":{\"req0\":0,\"req1\":0,\"cmd0\":\"2'b00\",\"cmd1\":\"2'b00\",\"data_in0\":\"8'h00\",\"data_in1\":\"8'h00\"},\"repeatCycles\":1,\"delayCycles\":0,\"expected\":{\"buf_count\":\"3'd1\",\"buf_empty\":0,\"buf_full\":0},\"holdCycles\":1} | Drive a POP command when buf_empty=1 and verify err_pulse asserts 1 cycle later while buf_count remains 0 | Drive sequential PUSH commands to fill all 4 buffer entries from empty to full, verifying buf_count increments 0->1->2->3->4 and buf_full asserts","scenario":"A hidden deterministic proxy perturbs buf_count only after the mapped public behavior is exercised.","stimulus":"Exercise public behavior involving these non-control DUT inputs: req0, req1, cmd0, cmd1, data_in0, data_in1","expectedBehavior":"The submitted checker/scoreboard/assertions must report a functional failure for the observable violation.","implementationHint":"Inspect the checker/assertions for the published behavior of buf_count.","nonce":"72e51ab775ef4795"}
+::TEST_PASS:: {"id":12,"nonce":"72e51ab775ef4795"}
+::TEST_SUMMARY:: {"total":13,"passed":13,"failed":0,"nonce":"72e51ab775ef4795"}
+::JUDGE_DONE:: {"cases":13,"nonce":"72e51ab775ef4795"}
