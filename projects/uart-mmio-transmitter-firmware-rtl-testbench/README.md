@@ -13,11 +13,11 @@
 | Module / DUT | not specified |
 | Simulator | Verilator + WSL2 native firmware bridge |
 | Verdict | AC |
-| Submitted | 2026-10-20T07:58:15.981Z |
+| Submitted | 2026-10-20T13:29:33.690Z |
 
 ## Project Overview
 
-Build a polling C UART transmit driver, a synthesizable memory-mapped 8N1 UART transmitter and a monitor testbench. A C MMIO operation becomes a real bus transaction against the Verilated RTL. The Memory Map & Registers panel is populated from the resulting transaction/snapshot evidence, not from hardcoded demo values. firmware.c Ã¢â€ â€™ codesign_hal.h Ã¢â€ â€™ isolated native C/C++ MMIO bridge Ã¢â€ â€™ real Verilator uart_mmio model. The student testbench is compiled and executed separately; an independent checker remains the grading authority. 8N1 serial: idle high, one low start bit, eight LSB-first data bits and one high stop bit. Every UART bit lasts exactly 4 rising-edge clock periods.
+Build a polling C UART transmit driver, a synthesizable memory-mapped 8N1 UART transmitter and a monitor testbench. A C MMIO operation becomes a real bus transaction against the Verilated RTL. The Memory Map & Registers panel is populated from the resulting transaction/snapshot evidence, not from hardcoded demo values. firmware.c → codesign_hal.h → isolated native C/C++ MMIO bridge → real Verilator uart_mmio model. The student testbench is compiled and executed separately; an independent checker remains the grading authority. 8N1 serial: idle high, one low start bit, eight LSB-first data bits and one high stop bit. Every UART bit lasts exactly 4 rising-edge clock periods.
 
 ## Objective
 
@@ -54,7 +54,7 @@ Open this task in the VLSI Arena desktop app and click Run integrated simulation
 
 Build a polling C UART transmit driver, a synthesizable memory-mapped 8N1 UART transmitter and a monitor testbench. A C MMIO operation becomes a real bus transaction against the Verilated RTL. The Memory Map & Registers panel is populated from the resulting transaction/snapshot evidence, not from hardcoded demo values.
 
-firmware.c Ã¢â€ â€™ codesign_hal.h Ã¢â€ â€™ isolated native C/C++ MMIO bridge Ã¢â€ â€™ real Verilator uart_mmio model. The student testbench is compiled and executed separately; an independent checker remains the grading authority.
+firmware.c → codesign_hal.h → isolated native C/C++ MMIO bridge → real Verilator uart_mmio model. The student testbench is compiled and executed separately; an independent checker remains the grading authority.
 
 8N1 serial: idle high, one low start bit, eight LSB-first data bits and one high stop bit.
 Every UART bit lasts exactly 4 rising-edge clock periods.
