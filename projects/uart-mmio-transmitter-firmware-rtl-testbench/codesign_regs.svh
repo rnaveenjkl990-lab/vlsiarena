@@ -1,0 +1,14 @@
+`ifndef VLSI_CODESIGN_REGS_SVH
+`define VLSI_CODESIGN_REGS_SVH
+
+// Generated from the active VLSI Arena task register-map contract.
+
+// UART0: 0x00000000, size 0x00000010
+`define UART0_STATUS_ADDR 32'h00000000
+`define UART0_STATUS_TX_READY_LSB 0
+`define UART0_STATUS_TX_READY_MASK 32'h00000001
+`define UART0_TXDATA_ADDR 32'h00000004
+`define UART0_TXDATA_DATA_LSB 0
+`define UART0_TXDATA_DATA_MASK 32'h000000ff
+
+`endif
