@@ -1,0 +1,281 @@
+{
+  "success": true,
+  "graded": true,
+  "publicationId": "genverify_c86c619fe37592a6370397f03094c333",
+  "passed": true,
+  "verdict": "AC",
+  "verdictLabel": "Accepted",
+  "attribution": "student",
+  "failureStage": "none",
+  "checkerEffectivenessMeasured": true,
+  "score": 100,
+  "finalScore": 100,
+  "overallScore": 100,
+  "compileScore": 100,
+  "structureScore": 100,
+  "simulationScore": 100,
+  "simulationExecuted": true,
+  "category": "systemverilog",
+  "tier": "native_publication",
+  "tierLabel": "Verification challenge grading",
+  "stageStates": {
+    "environment": "pass",
+    "providedDut": "pass",
+    "static": "pass",
+    "compile": "pass",
+    "execution": "pass",
+    "functional": "pass",
+    "coverage": "not_applicable",
+    "assertions": "not_applicable"
+  },
+  "profile": {
+    "category": "systemverilog",
+    "mode": "private_verification_challenge",
+    "schemaVersion": 2,
+    "offline": true,
+    "taskKind": "systemverilog"
+  },
+  "findings": [],
+  "testCases": {
+    "passed": 3,
+    "failed": 0,
+    "notApplicable": 0,
+    "total": 3,
+    "cases": [
+      {
+        "name": "Correct DUT baseline",
+        "status": "passed",
+        "purpose": "The student verification environment must accept the intended DUT without false failures.",
+        "expected": "Correct DUT accepted",
+        "actual": "Accepted",
+        "attribution": "student",
+        "mismatches": []
+      },
+      {
+        "name": "Mutation 1 activation",
+        "status": "passed",
+        "purpose": "The generated fault must be exercised by the student verification environment.",
+        "expected": "Fault scenario activated",
+        "actual": "Activated",
+        "attribution": "student",
+        "mismatches": []
+      },
+      {
+        "name": "Mutation 1 detection",
+        "status": "passed",
+        "purpose": "The student checker must reject the faulty DUT once the fault is exercised.",
+        "expected": "Fault detected",
+        "actual": "Fault detected",
+        "attribution": "student",
+        "mismatches": []
+      }
+    ]
+  },
+  "baselineSummary": {
+    "total": 1,
+    "passed": 1,
+    "status": "passed"
+  },
+  "mutationSummary": {
+    "total": 2,
+    "exercised": 1,
+    "unavailable": 0
+  },
+  "passedCases": [
+    {
+      "name": "Correct DUT baseline",
+      "status": "passed",
+      "purpose": "The student verification environment must accept the intended DUT without false failures.",
+      "expected": "Correct DUT accepted",
+      "actual": "Accepted",
+      "attribution": "student",
+      "mismatches": []
+    },
+    {
+      "name": "Mutation 1 activation",
+      "status": "passed",
+      "purpose": "The generated fault must be exercised by the student verification environment.",
+      "expected": "Fault scenario activated",
+      "actual": "Activated",
+      "attribution": "student",
+      "mismatches": []
+    },
+    {
+      "name": "Mutation 1 detection",
+      "status": "passed",
+      "purpose": "The student checker must reject the faulty DUT once the fault is exercised.",
+      "expected": "Fault detected",
+      "actual": "Fault detected",
+      "attribution": "student",
+      "mismatches": []
+    }
+  ],
+  "failedCases": [],
+  "uncoveredCases": [],
+  "compileErrors": [],
+  "simulationErrors": [],
+  "judge": {
+    "verdict": "AC",
+    "verdictLabel": "Accepted",
+    "passed": true,
+    "score": 100,
+    "gates": {
+      "environment": "pass",
+      "providedDut": "pass",
+      "static": "pass",
+      "compile": "pass",
+      "execution": "pass",
+      "functional": "pass",
+      "coverage": "not_applicable",
+      "assertions": "not_applicable"
+    },
+    "failureReasons": [],
+    "stats": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "notApplicable": 0,
+      "raw": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "unavailable": 0,
+        "exercised": 1
+      }
+    },
+    "evidence": {
+      "category": "systemverilog",
+      "verdict": "AC",
+      "score": 100,
+      "reason": "Correct DUT accepted and every public requirement-mapped negative challenge was activated and detected.",
+      "stats": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "unavailable": 0,
+        "exercised": 1
+      },
+      "challengeMatrix": [
+        {
+          "challenge": 1,
+          "name": "Mutation check 1",
+          "activated": true,
+          "detected": true,
+          "passed": true,
+          "status": "passed",
+          "expected": "Fault detected",
+          "actual": "Fault detected",
+          "mismatches": []
+        }
+      ],
+      "baseline": {
+        "success": true,
+        "phase": "simulation",
+        "classification": "accepted",
+        "accepted": true,
+        "checkerRejected": false,
+        "failures": [],
+        "compileSucceeded": true,
+        "providedDutCompileDiagnostics": "",
+        "failureArtifact": "unknown"
+      },
+      "structural": {
+        "score": 100,
+        "findings": [
+          "FAULT_INJECTION: Testbench detected issues in DUT"
+        ],
+        "details": {
+          "hasAssertions": true,
+          "hasErrorReporting": true,
+          "hasScoreChecking": true,
+          "hasFunctionalChecks": true,
+          "faultInjectionPassed": true,
+          "hasClass": true,
+          "hasEndclass": true,
+          "hasRand": true,
+          "hasConstraint": true,
+          "hasMailbox": true,
+          "hasSemaphore": false,
+          "hasTlm": true,
+          "hasInterface": true,
+          "hasClocking": true,
+          "hasTask": true,
+          "hasFunction": true,
+          "svConstructCount": 8
+        }
+      }
+    }
+  },
+  "evidence": {
+    "category": "systemverilog",
+    "verdict": "AC",
+    "score": 100,
+    "reason": "Correct DUT accepted and every public requirement-mapped negative challenge was activated and detected.",
+    "stats": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "unavailable": 0,
+      "exercised": 1
+    },
+    "challengeMatrix": [
+      {
+        "challenge": 1,
+        "name": "Mutation check 1",
+        "activated": true,
+        "detected": true,
+        "passed": true,
+        "status": "passed",
+        "expected": "Fault detected",
+        "actual": "Fault detected",
+        "mismatches": []
+      }
+    ],
+    "baseline": {
+      "success": true,
+      "phase": "simulation",
+      "classification": "accepted",
+      "accepted": true,
+      "checkerRejected": false,
+      "failures": [],
+      "compileSucceeded": true,
+      "providedDutCompileDiagnostics": "",
+      "failureArtifact": "unknown"
+    },
+    "structural": {
+      "score": 100,
+      "findings": [
+        "FAULT_INJECTION: Testbench detected issues in DUT"
+      ],
+      "details": {
+        "hasAssertions": true,
+        "hasErrorReporting": true,
+        "hasScoreChecking": true,
+        "hasFunctionalChecks": true,
+        "faultInjectionPassed": true,
+        "hasClass": true,
+        "hasEndclass": true,
+        "hasRand": true,
+        "hasConstraint": true,
+        "hasMailbox": true,
+        "hasSemaphore": false,
+        "hasTlm": true,
+        "hasInterface": true,
+        "hasClocking": true,
+        "hasTask": true,
+        "hasFunction": true,
+        "svConstructCount": 8
+      }
+    }
+  },
+  "resultIdentity": {
+    "taskId": "genverify_c86c619fe37592a6370397f03094c333",
+    "codeHash": "f44f71e47b4d5293dae74f21019b4247daf1633aa0138baa46c622f23850c49b",
+    "simulator": "questa"
+  },
+  "elapsedMs": 12800,
+  "simulator": "questa",
+  "simulatorVersion": "Questa Sim-64 vsim 2024.1 Simulator 2024.02 Feb  1 2024",
+  "gradingAuthority": "verified_mutation_matrix",
+  "submissionHistoryId": "submission_1793028160202404700_33738f69403d"
+}
