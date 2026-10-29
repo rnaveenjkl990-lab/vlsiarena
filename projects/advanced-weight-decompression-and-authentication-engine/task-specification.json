@@ -1,0 +1,1479 @@
+{
+  "title": "Advanced Weight Decompression and Authentication Engine",
+  "difficulty": "advanced",
+  "taskKind": "rtl_design",
+  "publicationId": "genrtl_4eb92c0b51e7d1238688c921795a3c62",
+  "specification": {
+    "title": "Advanced Weight Decompression and Authentication Engine",
+    "category": "rtl_design",
+    "difficulty": "advanced",
+    "moduleName": "weight_auth_engine",
+    "requiredPorts": [
+      {
+        "name": "clk",
+        "dir": "input",
+        "width": 1,
+        "signed": false,
+        "description": "System clock",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "rst_n",
+        "dir": "input",
+        "width": 1,
+        "signed": false,
+        "description": "Synchronous active-low reset",
+        "polarity": "active_low",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "weight_valid",
+        "dir": "input",
+        "width": 1,
+        "signed": false,
+        "description": "Input weight chunk valid strobe",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "weight_data",
+        "dir": "input",
+        "width": 16,
+        "signed": false,
+        "description": "Compressed weight data input",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "tag_valid",
+        "dir": "input",
+        "width": 1,
+        "signed": false,
+        "description": "MAC tag ingestion valid",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "tag_data",
+        "dir": "input",
+        "width": 16,
+        "signed": false,
+        "description": "Expected authentication MAC tag",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "out_ready",
+        "dir": "input",
+        "width": 1,
+        "signed": false,
+        "description": "Downstream activation buffer ready",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "cache_collision",
+        "dir": "input",
+        "width": 1,
+        "signed": false,
+        "description": "Cache line fill collision with store indicator",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "out_valid",
+        "dir": "output",
+        "width": 1,
+        "signed": false,
+        "description": "Decompressed and verified activation valid",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "out_data",
+        "dir": "output",
+        "width": 16,
+        "signed": false,
+        "description": "Decompressed activation output data",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "mac_error",
+        "dir": "output",
+        "width": 1,
+        "signed": false,
+        "description": "MAC authentication mismatch fault alert",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "fault_alert",
+        "dir": "output",
+        "width": 1,
+        "signed": false,
+        "description": "Sideband asynchronous alert for collision/fault",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      },
+      {
+        "name": "fifo_count",
+        "dir": "output",
+        "width": 4,
+        "signed": false,
+        "description": "Internal activation buffer occupancy",
+        "polarity": "active_high",
+        "sampling": "pos_edge",
+        "timing": "T1"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "TAG_WIDTH",
+        "value": 16,
+        "min": 8,
+        "max": 32,
+        "description": "Width of MAC tag and data channels"
+      }
+    ],
+    "fixedConstants": [
+      {
+        "name": "MAX_FIFO_DEPTH",
+        "value": 8,
+        "width": 4,
+        "signed": false,
+        "description": "Maximum activation buffer slots"
+      }
+    ],
+    "clock": {
+      "signal": "clk",
+      "edge": "posedge"
+    },
+    "reset": {
+      "signal": "rst_n",
+      "active": 0,
+      "kind": "synchronous"
+    },
+    "description": "Decompresses incoming weight streams, computes a running MAC authentication code, manages cache line fill collisions, and streams valid activations into a buffer with sideband fault signaling.",
+    "functionalOverview": "The DUT ingests compressed weight chunks and MAC tags, performs decompression via run-length arithmetic, evaluates authenticity, handles cache store collisions by stalling or aborting, and buffers verified activations.",
+    "architecture": "Comprises an input ingest stage, an arithmetic decompression core, a lightweight MAC verification unit, a collision detection controller, and a 8-entry activation FIFO.",
+    "microarchitecture": "Controlled by an explicit 4-state FSM (IDLE, COMPRESS, VERIFY, FAULT) coordinating datapath registers, tag comparison, and sideband alert generation.",
+    "resetBehavior": "Synchronous active-low reset clears all FSM states, internal counters, FIFO pointers, and alert outputs to zero.",
+    "behaviorRules": [
+      {
+        "id": "B1",
+        "type": "protocol",
+        "rule": "Input weights are accepted only when the FSM is in COMPRESS or IDLE and internal FIFO is not full."
+      },
+      {
+        "id": "B2",
+        "type": "error",
+        "rule": "A cache line fill collision immediately asserts fault_alert and transitions the FSM to FAULT."
+      },
+      {
+        "id": "B3",
+        "type": "data",
+        "rule": "Decompressed output is emitted only when verification succeeds and out_ready is asserted."
+      }
+    ],
+    "controlModelKind": "fsm_datapath",
+    "controlFsm": {
+      "initialState": "IDLE",
+      "states": [
+        {
+          "id": "IDLE",
+          "description": "Waiting for weight or tag stream"
+        },
+        {
+          "id": "COMPRESS",
+          "description": "Decompressing and accumulating MAC"
+        },
+        {
+          "id": "VERIFY",
+          "description": "Validating computed MAC against expected tag"
+        },
+        {
+          "id": "FAULT",
+          "description": "Collision or authentication fault state"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "F1",
+          "from": "IDLE",
+          "to": "COMPRESS",
+          "event": "weight_valid",
+          "guard": "weight_valid == 1 & cache_collision == 0",
+          "priority": 1,
+          "effectRefs": [
+            "U1",
+            "D1"
+          ],
+          "ruleIds": [
+            "B1"
+          ],
+          "timingRef": "T1",
+          "verificationRequired": true
+        },
+        {
+          "id": "F2",
+          "from": "COMPRESS",
+          "to": "VERIFY",
+          "event": "tag_valid",
+          "guard": "tag_valid == 1",
+          "priority": 1,
+          "effectRefs": [
+            "U2"
+          ],
+          "ruleIds": [],
+          "timingRef": "T1",
+          "verificationRequired": true
+        },
+        {
+          "id": "F3",
+          "from": "VERIFY",
+          "to": "IDLE",
+          "guard": "mac_error == 0",
+          "priority": 1,
+          "effectRefs": [],
+          "ruleIds": [
+            "B3"
+          ],
+          "timingRef": "T1",
+          "verificationRequired": true
+        },
+        {
+          "id": "F4",
+          "from": "COMPRESS",
+          "to": "FAULT",
+          "event": "collision",
+          "guard": "cache_collision == 1",
+          "priority": 2,
+          "effectRefs": [
+            "U3"
+          ],
+          "ruleIds": [
+            "B2"
+          ],
+          "timingRef": "T1",
+          "verificationRequired": true
+        },
+        {
+          "id": "F5",
+          "from": "VERIFY",
+          "to": "FAULT",
+          "guard": "mac_error == 1",
+          "priority": 2,
+          "effectRefs": [
+            "U3"
+          ],
+          "ruleIds": [
+            "B2"
+          ],
+          "timingRef": "T1",
+          "verificationRequired": true
+        },
+        {
+          "id": "F6",
+          "from": "FAULT",
+          "to": "IDLE",
+          "event": "reset_or_clear",
+          "guard": "rst_n == 1 & cache_collision == 0",
+          "priority": 1,
+          "effectRefs": [
+            "U4"
+          ],
+          "ruleIds": [],
+          "timingRef": "T1",
+          "verificationRequired": true
+        }
+      ]
+    },
+    "stateVariables": [
+      {
+        "id": "SV1",
+        "name": "fifo_count",
+        "width": 4,
+        "signed": false,
+        "reset": 0,
+        "range": [
+          0,
+          8
+        ],
+        "updates": [
+          {
+            "id": "U1",
+            "transitionIds": [
+              "F1"
+            ],
+            "operation": "increment",
+            "value": "fifo_count + 1"
+          },
+          {
+            "id": "U4",
+            "transitionIds": [
+              "F6"
+            ],
+            "operation": "set",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "id": "SV2",
+        "name": "mac_accumulator",
+        "width": 16,
+        "signed": false,
+        "reset": 0,
+        "range": [
+          0,
+          65535
+        ],
+        "updates": [
+          {
+            "id": "U2",
+            "transitionIds": [
+              "F2"
+            ],
+            "operation": "set",
+            "value": "mac_accumulator ^ weight_data"
+          },
+          {
+            "id": "U3",
+            "transitionIds": [
+              "F4",
+              "F5"
+            ],
+            "operation": "set",
+            "value": 0
+          }
+        ]
+      }
+    ],
+    "datapathRules": [
+      {
+        "id": "D1",
+        "kind": "arithmetic",
+        "rule": "out_data = weight_data + 1",
+        "ruleIds": [
+          "B3"
+        ],
+        "stateVariableIds": [
+          "SV1"
+        ],
+        "verificationRequired": true
+      }
+    ],
+    "outputContracts": {
+      "out_valid": {
+        "reset": "0",
+        "idle": "0",
+        "active": "1",
+        "invalid": "0",
+        "stall": "hold",
+        "sourceRefs": [
+          "SV1"
+        ]
+      },
+      "out_data": {
+        "reset": "0",
+        "idle": "0",
+        "active": "data+1",
+        "invalid": "0",
+        "stall": "hold",
+        "sourceRefs": [
+          "D1"
+        ]
+      },
+      "mac_error": {
+        "reset": "0",
+        "idle": "0",
+        "active": "1",
+        "invalid": "0",
+        "stall": "hold",
+        "sourceRefs": [
+          "SV2"
+        ]
+      },
+      "fault_alert": {
+        "reset": "0",
+        "idle": "0",
+        "active": "1",
+        "invalid": "0",
+        "stall": "hold",
+        "sourceRefs": [
+          "B2"
+        ]
+      },
+      "fifo_count": {
+        "reset": "0",
+        "idle": "0",
+        "active": "count",
+        "invalid": "0",
+        "stall": "hold",
+        "sourceRefs": [
+          "SV1"
+        ]
+      }
+    },
+    "behaviorTables": [
+      {
+        "title": "FSM State and Collision Priority Table",
+        "columns": [
+          "Current State",
+          "Cache Collision",
+          "Weight Valid",
+          "Next State",
+          "Fault Alert"
+        ],
+        "rows": [
+          [
+            "IDLE",
+            "0",
+            "1",
+            "COMPRESS",
+            "0"
+          ],
+          [
+            "IDLE",
+            "1",
+            "1",
+            "FAULT",
+            "1"
+          ],
+          [
+            "COMPRESS",
+            "1",
+            "x",
+            "FAULT",
+            "1"
+          ],
+          [
+            "COMPRESS",
+            "0",
+            "x",
+            "VERIFY",
+            "0"
+          ],
+          [
+            "VERIFY",
+            "x",
+            "x",
+            "IDLE",
+            "0"
+          ],
+          [
+            "FAULT",
+            "0",
+            "x",
+            "IDLE",
+            "0"
+          ]
+        ]
+      }
+    ],
+    "designInvariants": [
+      "fifo_count never exceeds MAX_FIFO_DEPTH.; id: I1",
+      "fault_alert is mutually exclusive with normal out_valid during collision.; id: I2"
+    ],
+    "cornerCases": [
+      "Simultaneous weight_valid and cache_collision on IDLE.; id: C1",
+      "Tag valid arriving while FIFO is full.; id: C2",
+      "Reset asserted during FAULT state recovery.; id: C3"
+    ],
+    "errorHandling": [
+      "MAC verification mismatch asserts mac_error and triggers FAULT.; id: E1",
+      "Cache line fill collision asserts fault_alert immediately.; id: E2"
+    ],
+    "timingRequirements": [
+      "All inputs sampled and outputs registered on positive clock edge.; id: T1"
+    ],
+    "verificationScenarios": [
+      "S1: Reset assertion clears all outputs and FIFO count to zero.",
+      "S2: Weight valid ingestion transitions IDLE to COMPRESS and increments FIFO count.",
+      "S3: Cache collision during compression asserts fault_alert and transitions to FAULT.",
+      "S4: Successful tag verification yields valid output and returns to IDLE."
+    ],
+    "verificationChecks": [
+      {
+        "name": "check_reset",
+        "antecedent": {
+          "rst_n": 0,
+          "weight_valid": 0,
+          "weight_data": 0,
+          "tag_valid": 0,
+          "tag_data": 0,
+          "out_ready": 0,
+          "cache_collision": 0
+        },
+        "expected": {
+          "out_valid": 0,
+          "out_data": 0,
+          "mac_error": 0,
+          "fault_alert": 0,
+          "fifo_count": 0
+        },
+        "repeatCycles": 1,
+        "delayCycles": 0,
+        "holdCycles": 1,
+        "samplePhase": "post_edge",
+        "expectedTimings": {
+          "out_valid": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "out_data": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "mac_error": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "fault_alert": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "fifo_count": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          }
+        },
+        "timingSemanticsVersion": 2,
+        "timingSemantics": "explicit-edge-v2"
+      },
+      {
+        "name": "check_ingest",
+        "antecedent": {
+          "rst_n": 1,
+          "weight_valid": 1,
+          "weight_data": 5,
+          "tag_valid": 0,
+          "tag_data": 0,
+          "out_ready": 1,
+          "cache_collision": 0
+        },
+        "expected": {
+          "out_valid": 0,
+          "out_data": 6,
+          "mac_error": 0,
+          "fault_alert": 0,
+          "fifo_count": 1
+        },
+        "repeatCycles": 1,
+        "delayCycles": 0,
+        "holdCycles": 1,
+        "samplePhase": "post_edge",
+        "expectedTimings": {
+          "out_valid": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "out_data": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "mac_error": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "fault_alert": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "fifo_count": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          }
+        },
+        "timingSemanticsVersion": 2,
+        "timingSemantics": "explicit-edge-v2"
+      },
+      {
+        "name": "check_collision",
+        "antecedent": {
+          "rst_n": 1,
+          "weight_valid": 0,
+          "weight_data": 0,
+          "tag_valid": 0,
+          "tag_data": 0,
+          "out_ready": 1,
+          "cache_collision": 1
+        },
+        "expected": {
+          "out_valid": 0,
+          "out_data": 6,
+          "mac_error": 0,
+          "fault_alert": 1,
+          "fifo_count": 1
+        },
+        "repeatCycles": 1,
+        "delayCycles": 0,
+        "holdCycles": 1,
+        "samplePhase": "post_edge",
+        "expectedTimings": {
+          "out_valid": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "out_data": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "mac_error": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "fault_alert": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "fifo_count": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          }
+        },
+        "timingSemanticsVersion": 2,
+        "timingSemantics": "explicit-edge-v2"
+      },
+      {
+        "name": "check_verify",
+        "antecedent": {
+          "rst_n": 1,
+          "weight_valid": 0,
+          "weight_data": 0,
+          "tag_valid": 1,
+          "tag_data": 5,
+          "out_ready": 1,
+          "cache_collision": 0
+        },
+        "expected": {
+          "out_valid": 1,
+          "out_data": 6,
+          "mac_error": 0,
+          "fault_alert": 0,
+          "fifo_count": 1
+        },
+        "repeatCycles": 1,
+        "delayCycles": 0,
+        "holdCycles": 1,
+        "samplePhase": "post_edge",
+        "expectedTimings": {
+          "out_valid": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "out_data": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "mac_error": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "fault_alert": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          },
+          "fifo_count": {
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge"
+          }
+        },
+        "timingSemanticsVersion": 2,
+        "timingSemantics": "explicit-edge-v2"
+      }
+    ],
+    "scenarioCoverage": [
+      {
+        "scenarioId": "S1",
+        "checkIds": [
+          "check_reset"
+        ]
+      },
+      {
+        "scenarioId": "S2",
+        "checkIds": [
+          "check_ingest"
+        ]
+      },
+      {
+        "scenarioId": "S3",
+        "checkIds": [
+          "check_collision"
+        ]
+      },
+      {
+        "scenarioId": "S4",
+        "checkIds": [
+          "check_verify"
+        ]
+      }
+    ],
+    "arithmeticModels": [],
+    "topicConcept": "weight decompression and activation buffer with message authentication code generator and sideband fault signaling",
+    "learningObjectives": [
+      "Understand state machine sequencing for decompression pipelines",
+      "Implement sideband fault alerting during cache collision",
+      "Manage FIFO occupancy under handshake control"
+    ],
+    "implementationGuidance": [
+      "Ensure FSM priority checks collision before processing weight data",
+      "Register all output ports to meet T1 timing requirements"
+    ],
+    "commonMistakes": [
+      "Neglecting to clear FIFO count on reset",
+      "Allowing weight ingest during FAULT state"
+    ],
+    "testFamilies": [
+      "Reset and Initialization",
+      "Nominal Weight Ingest",
+      "Collision Fault Injection",
+      "MAC Verification Success"
+    ],
+    "coverageObligations": {
+      "reset": true,
+      "nominal": true,
+      "collision": true,
+      "fault": true
+    },
+    "scenarioContract": [
+      {
+        "id": "S1",
+        "name": "Reset Verification",
+        "requirementIds": [
+          "check_reset"
+        ],
+        "coverageTags": [
+          "reset"
+        ],
+        "visibility": "publicGraded",
+        "rationale": "Proves reset initializes all state variables and outputs to zero.",
+        "steps": [
+          {
+            "drive": {
+              "rst_n": 0,
+              "weight_valid": 0,
+              "weight_data": 0,
+              "tag_valid": 0,
+              "tag_data": 0,
+              "out_ready": 0,
+              "cache_collision": 0
+            },
+            "repeatCycles": 1,
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge",
+            "expected": {
+              "out_valid": 0,
+              "out_data": 0,
+              "mac_error": 0,
+              "fault_alert": 0,
+              "fifo_count": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "S2",
+        "name": "Weight Ingest and Decompression",
+        "requirementIds": [
+          "check_ingest"
+        ],
+        "coverageTags": [
+          "nominal"
+        ],
+        "visibility": "publicGraded",
+        "rationale": "Proves valid weight chunks increment FIFO count and compute data.",
+        "steps": [
+          {
+            "drive": {
+              "rst_n": 1,
+              "weight_valid": 1,
+              "weight_data": 5,
+              "tag_valid": 0,
+              "tag_data": 0,
+              "out_ready": 1,
+              "cache_collision": 0
+            },
+            "repeatCycles": 1,
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge",
+            "expected": {
+              "out_valid": 0,
+              "out_data": 6,
+              "mac_error": 0,
+              "fault_alert": 0,
+              "fifo_count": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "S3",
+        "name": "Cache Collision Fault",
+        "requirementIds": [
+          "check_collision"
+        ],
+        "coverageTags": [
+          "collision",
+          "fault"
+        ],
+        "visibility": "publicGraded",
+        "rationale": "Proves cache collision immediately asserts sideband fault alert.",
+        "steps": [
+          {
+            "drive": {
+              "rst_n": 1,
+              "weight_valid": 0,
+              "weight_data": 0,
+              "tag_valid": 0,
+              "tag_data": 0,
+              "out_ready": 1,
+              "cache_collision": 1
+            },
+            "repeatCycles": 1,
+            "delayCycles": 0,
+            "holdCycles": 1,
+            "samplePhase": "post_edge",
+            "expected": {
+              "out_valid": 0,
+              "out_data": 6,
+              "mac_error": 0,
+              "fault_alert": 1,
+              "fifo_count": 1
+            }
+          }
+        ]
+      }
+    ],
+    "taskKind": "rtl_design",
+    "functionalConstraints": [
+      "Input weights are accepted only when the FSM is in COMPRESS or IDLE and internal FIFO is not full.",
+      "A cache line fill collision immediately asserts fault_alert and transitions the FSM to FAULT.",
+      "Decompressed output is emitted only when verification succeeds and out_ready is asserted."
+    ],
+    "stateBehavior": [],
+    "protocolRules": [
+      "Input weights are accepted only when the FSM is in COMPRESS or IDLE and internal FIFO is not full."
+    ],
+    "expectedBehaviour": [
+      "B1: Input weights are accepted only when the FSM is in COMPRESS or IDLE and internal FIFO is not full.",
+      "B2: A cache line fill collision immediately asserts fault_alert and transitions the FSM to FAULT.",
+      "B3: Decompressed output is emitted only when verification succeeds and out_ready is asserted."
+    ],
+    "acceptanceCriteria": [
+      "Observed behavior must satisfy B1: Input weights are accepted only when the FSM is in COMPRESS or IDLE and internal FIFO is not full.",
+      "Observed behavior must satisfy B2: A cache line fill collision immediately asserts fault_alert and transitions the FSM to FAULT.",
+      "Observed behavior must satisfy B3: Decompressed output is emitted only when verification succeeds and out_ready is asserted."
+    ],
+    "derivedFields": [
+      "functionalConstraints",
+      "stateBehavior",
+      "protocolRules",
+      "expectedBehaviour",
+      "acceptanceCriteria"
+    ],
+    "timingSemanticsVersion": 2,
+    "timingSemantics": "explicit-edge-v2",
+    "executableContract": {
+      "schemaVersion": 1,
+      "compilerVersion": "canonical-contract-v1",
+      "timingSemanticsVersion": 2,
+      "timingSemantics": "explicit-edge-v2",
+      "moduleName": "weight_auth_engine",
+      "category": "rtl_design",
+      "difficulty": "advanced",
+      "interface": {
+        "ports": [
+          {
+            "name": "clk",
+            "direction": "input",
+            "width": 1,
+            "description": "System clock"
+          },
+          {
+            "name": "rst_n",
+            "direction": "input",
+            "width": 1,
+            "description": "Synchronous active-low reset"
+          },
+          {
+            "name": "weight_valid",
+            "direction": "input",
+            "width": 1,
+            "description": "Input weight chunk valid strobe"
+          },
+          {
+            "name": "weight_data",
+            "direction": "input",
+            "width": 16,
+            "description": "Compressed weight data input"
+          },
+          {
+            "name": "tag_valid",
+            "direction": "input",
+            "width": 1,
+            "description": "MAC tag ingestion valid"
+          },
+          {
+            "name": "tag_data",
+            "direction": "input",
+            "width": 16,
+            "description": "Expected authentication MAC tag"
+          },
+          {
+            "name": "out_ready",
+            "direction": "input",
+            "width": 1,
+            "description": "Downstream activation buffer ready"
+          },
+          {
+            "name": "cache_collision",
+            "direction": "input",
+            "width": 1,
+            "description": "Cache line fill collision with store indicator"
+          },
+          {
+            "name": "out_valid",
+            "direction": "output",
+            "width": 1,
+            "description": "Decompressed and verified activation valid"
+          },
+          {
+            "name": "out_data",
+            "direction": "output",
+            "width": 16,
+            "description": "Decompressed activation output data"
+          },
+          {
+            "name": "mac_error",
+            "direction": "output",
+            "width": 1,
+            "description": "MAC authentication mismatch fault alert"
+          },
+          {
+            "name": "fault_alert",
+            "direction": "output",
+            "width": 1,
+            "description": "Sideband asynchronous alert for collision/fault"
+          },
+          {
+            "name": "fifo_count",
+            "direction": "output",
+            "width": 4,
+            "description": "Internal activation buffer occupancy"
+          }
+        ],
+        "parameters": [
+          {
+            "name": "TAG_WIDTH",
+            "value": 16,
+            "min": 8,
+            "max": 32,
+            "description": "Width of MAC tag and data channels"
+          }
+        ],
+        "fixedConstants": [
+          {
+            "name": "MAX_FIFO_DEPTH",
+            "value": 8,
+            "width": 4,
+            "signed": false,
+            "description": "Maximum activation buffer slots"
+          }
+        ],
+        "clock": {
+          "signal": "clk",
+          "edge": "posedge"
+        },
+        "reset": {
+          "signal": "rst_n",
+          "active": 0,
+          "kind": "synchronous"
+        },
+        "resetBehavior": []
+      },
+      "behavior": {
+        "functionalOverview": "The DUT ingests compressed weight chunks and MAC tags, performs decompression via run-length arithmetic, evaluates authenticity, handles cache store collisions by stalling or aborting, and buffers verified activations.",
+        "architecture": "Comprises an input ingest stage, an arithmetic decompression core, a lightweight MAC verification unit, a collision detection controller, and a 8-entry activation FIFO.",
+        "microarchitecture": "Controlled by an explicit 4-state FSM (IDLE, COMPRESS, VERIFY, FAULT) coordinating datapath registers, tag comparison, and sideband alert generation.",
+        "stateBehavior": [],
+        "behaviorTables": [
+          {
+            "title": "FSM State and Collision Priority Table",
+            "columns": [
+              "Current State",
+              "Cache Collision",
+              "Weight Valid",
+              "Next State",
+              "Fault Alert"
+            ],
+            "rows": [
+              [
+                "IDLE",
+                "0",
+                "1",
+                "COMPRESS",
+                "0"
+              ],
+              [
+                "IDLE",
+                "1",
+                "1",
+                "FAULT",
+                "1"
+              ],
+              [
+                "COMPRESS",
+                "1",
+                "x",
+                "FAULT",
+                "1"
+              ],
+              [
+                "COMPRESS",
+                "0",
+                "x",
+                "VERIFY",
+                "0"
+              ],
+              [
+                "VERIFY",
+                "x",
+                "x",
+                "IDLE",
+                "0"
+              ],
+              [
+                "FAULT",
+                "0",
+                "x",
+                "IDLE",
+                "0"
+              ]
+            ]
+          }
+        ],
+        "outputContracts": {
+          "out_valid": {
+            "reset": "0",
+            "idle": "0",
+            "active": "1",
+            "invalid": "0",
+            "stall": "hold",
+            "sourceRefs": [
+              "SV1"
+            ]
+          },
+          "out_data": {
+            "reset": "0",
+            "idle": "0",
+            "active": "data+1",
+            "invalid": "0",
+            "stall": "hold",
+            "sourceRefs": [
+              "D1"
+            ]
+          },
+          "mac_error": {
+            "reset": "0",
+            "idle": "0",
+            "active": "1",
+            "invalid": "0",
+            "stall": "hold",
+            "sourceRefs": [
+              "SV2"
+            ]
+          },
+          "fault_alert": {
+            "reset": "0",
+            "idle": "0",
+            "active": "1",
+            "invalid": "0",
+            "stall": "hold",
+            "sourceRefs": [
+              "B2"
+            ]
+          },
+          "fifo_count": {
+            "reset": "0",
+            "idle": "0",
+            "active": "count",
+            "invalid": "0",
+            "stall": "hold",
+            "sourceRefs": [
+              "SV1"
+            ]
+          }
+        },
+        "designInvariants": [
+          "fifo_count never exceeds MAX_FIFO_DEPTH.; id: I1",
+          "fault_alert is mutually exclusive with normal out_valid during collision.; id: I2"
+        ],
+        "protocolRules": [
+          "Input weights are accepted only when the FSM is in COMPRESS or IDLE and internal FIFO is not full."
+        ],
+        "timingRequirements": [
+          "All inputs sampled and outputs registered on positive clock edge.; id: T1"
+        ],
+        "functionalConstraints": [
+          "Input weights are accepted only when the FSM is in COMPRESS or IDLE and internal FIFO is not full.",
+          "A cache line fill collision immediately asserts fault_alert and transitions the FSM to FAULT.",
+          "Decompressed output is emitted only when verification succeeds and out_ready is asserted."
+        ],
+        "cornerCases": [
+          "Simultaneous weight_valid and cache_collision on IDLE.; id: C1",
+          "Tag valid arriving while FIFO is full.; id: C2",
+          "Reset asserted during FAULT state recovery.; id: C3"
+        ],
+        "expectedBehaviour": [
+          "B1: Input weights are accepted only when the FSM is in COMPRESS or IDLE and internal FIFO is not full.",
+          "B2: A cache line fill collision immediately asserts fault_alert and transitions the FSM to FAULT.",
+          "B3: Decompressed output is emitted only when verification succeeds and out_ready is asserted."
+        ]
+      },
+      "scenarios": [
+        "S1: Reset assertion clears all outputs and FIFO count to zero.",
+        "S2: Weight valid ingestion transitions IDLE to COMPRESS and increments FIFO count.",
+        "S3: Cache collision during compression asserts fault_alert and transitions to FAULT.",
+        "S4: Successful tag verification yields valid output and returns to IDLE."
+      ],
+      "verificationChecks": [
+        {
+          "id": "check_reset",
+          "antecedent": {
+            "rst_n": 0,
+            "weight_valid": 0,
+            "weight_data": 0,
+            "tag_valid": 0,
+            "tag_data": 0,
+            "out_ready": 0,
+            "cache_collision": 0
+          },
+          "expected": {
+            "out_valid": 0,
+            "out_data": 0,
+            "mac_error": 0,
+            "fault_alert": 0,
+            "fifo_count": 0
+          },
+          "expectedTimings": {
+            "out_valid": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "out_data": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "mac_error": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "fault_alert": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "fifo_count": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            }
+          },
+          "expectedPhases": {},
+          "observations": [
+            {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "explicitTiming": true,
+              "expected": {
+                "out_valid": 0,
+                "out_data": 0,
+                "mac_error": 0,
+                "fault_alert": 0,
+                "fifo_count": 0
+              },
+              "expectedPhases": {
+                "out_valid": "post_edge",
+                "out_data": "post_edge",
+                "mac_error": "post_edge",
+                "fault_alert": "post_edge",
+                "fifo_count": "post_edge"
+              }
+            }
+          ],
+          "repeatCycles": 1,
+          "delayCycles": 0,
+          "holdCycles": 1,
+          "samplePhase": "post_edge",
+          "timingSemanticsVersion": 2,
+          "timingSemantics": "explicit-edge-v2"
+        },
+        {
+          "id": "check_ingest",
+          "antecedent": {
+            "rst_n": 1,
+            "weight_valid": 1,
+            "weight_data": 5,
+            "tag_valid": 0,
+            "tag_data": 0,
+            "out_ready": 1,
+            "cache_collision": 0
+          },
+          "expected": {
+            "out_valid": 0,
+            "out_data": 6,
+            "mac_error": 0,
+            "fault_alert": 0,
+            "fifo_count": 1
+          },
+          "expectedTimings": {
+            "out_valid": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "out_data": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "mac_error": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "fault_alert": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "fifo_count": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            }
+          },
+          "expectedPhases": {},
+          "observations": [
+            {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "explicitTiming": true,
+              "expected": {
+                "out_valid": 0,
+                "out_data": 6,
+                "mac_error": 0,
+                "fault_alert": 0,
+                "fifo_count": 1
+              },
+              "expectedPhases": {
+                "out_valid": "post_edge",
+                "out_data": "post_edge",
+                "mac_error": "post_edge",
+                "fault_alert": "post_edge",
+                "fifo_count": "post_edge"
+              }
+            }
+          ],
+          "repeatCycles": 1,
+          "delayCycles": 0,
+          "holdCycles": 1,
+          "samplePhase": "post_edge",
+          "timingSemanticsVersion": 2,
+          "timingSemantics": "explicit-edge-v2"
+        },
+        {
+          "id": "check_collision",
+          "antecedent": {
+            "rst_n": 1,
+            "weight_valid": 0,
+            "weight_data": 0,
+            "tag_valid": 0,
+            "tag_data": 0,
+            "out_ready": 1,
+            "cache_collision": 1
+          },
+          "expected": {
+            "out_valid": 0,
+            "out_data": 6,
+            "mac_error": 0,
+            "fault_alert": 1,
+            "fifo_count": 1
+          },
+          "expectedTimings": {
+            "out_valid": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "out_data": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "mac_error": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "fault_alert": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "fifo_count": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            }
+          },
+          "expectedPhases": {},
+          "observations": [
+            {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "explicitTiming": true,
+              "expected": {
+                "out_valid": 0,
+                "out_data": 6,
+                "mac_error": 0,
+                "fault_alert": 1,
+                "fifo_count": 1
+              },
+              "expectedPhases": {
+                "out_valid": "post_edge",
+                "out_data": "post_edge",
+                "mac_error": "post_edge",
+                "fault_alert": "post_edge",
+                "fifo_count": "post_edge"
+              }
+            }
+          ],
+          "repeatCycles": 1,
+          "delayCycles": 0,
+          "holdCycles": 1,
+          "samplePhase": "post_edge",
+          "timingSemanticsVersion": 2,
+          "timingSemantics": "explicit-edge-v2"
+        },
+        {
+          "id": "check_verify",
+          "antecedent": {
+            "rst_n": 1,
+            "weight_valid": 0,
+            "weight_data": 0,
+            "tag_valid": 1,
+            "tag_data": 5,
+            "out_ready": 1,
+            "cache_collision": 0
+          },
+          "expected": {
+            "out_valid": 1,
+            "out_data": 6,
+            "mac_error": 0,
+            "fault_alert": 0,
+            "fifo_count": 1
+          },
+          "expectedTimings": {
+            "out_valid": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "out_data": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "mac_error": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "fault_alert": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            },
+            "fifo_count": {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "samplePhase": "post_edge"
+            }
+          },
+          "expectedPhases": {},
+          "observations": [
+            {
+              "delayCycles": 0,
+              "holdCycles": 1,
+              "explicitTiming": true,
+              "expected": {
+                "out_valid": 1,
+                "out_data": 6,
+                "mac_error": 0,
+                "fault_alert": 0,
+                "fifo_count": 1
+              },
+              "expectedPhases": {
+                "out_valid": "post_edge",
+                "out_data": "post_edge",
+                "mac_error": "post_edge",
+                "fault_alert": "post_edge",
+                "fifo_count": "post_edge"
+              }
+            }
+          ],
+          "repeatCycles": 1,
+          "delayCycles": 0,
+          "holdCycles": 1,
+          "samplePhase": "post_edge",
+          "timingSemanticsVersion": 2,
+          "timingSemantics": "explicit-edge-v2"
+        }
+      ],
+      "contractHash": "jzshil"
+    },
+    "contractHash": "jzshil",
+    "contractCompilerVersion": "canonical-contract-v1"
+  }
+}
